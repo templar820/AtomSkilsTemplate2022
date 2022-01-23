@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "pretty": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "baseUrl": "./src",
+    "lib": ["es2019", "dom"],
+    "resolveJsonModule": true,
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noEmitOnError": false,
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["../src/*"],
+      "@pages/*": ["../src/pages/*"],
+      "@styles/*": ["../src/styles/*"],
+      "@icons/*": ["../public/static/icons/*"],
+      "@images/*": ["../public/static/images/*"],
+      "@/fonts": ["../public/static/fonts/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "public"]
+}

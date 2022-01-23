@@ -1,0 +1,130 @@
+version: '3.8'
+
+volumes:
+  db-volume:
+  db-es:
+    driver: local
+
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: _docker/backend/Dockerfile
+  depends_on:
+    - verdaccio
+  image: backend
+  container_name: "backend"
+  volumes:
+    - ./backend:/backend
+    - /backend/node_modules
+  restart: unless-stopped
+  env_file: .env
+
+x-db_transactions: &db_transactions
+  build:
+    context: .
+    dockerfile: _docker/db_transactions/Dockerfile
+  depends_on:
+    - verdaccio
+    - postgres
+  image: db_transactions
+  volumes:
+    - ./db_transactions:/db_transactions
+    - /db_transactions/node_modules
+    - ./backend/src:/db_transactions/backend/src
+  env_file: .env
+
+
+
+
+#x-frontend: &frontend
+#  build:
+#    context: .
+#    dockerfile: _docker/frontend/Dockerfile
+#  image: frontend
+#  container_name: "frontend"
+#  volumes:
+#    - ./frontend:/frontend
+#    - /frontend/node_modules
+
+services:
+#  nginx:
+#    restart: unless-stopped
+#    image: nginx:latest
+#    container_name: "nginx"
+#    ports:
+#      - 3000:3000
+#    depends_on:
+#      frontend:
+#          condition: service_completed_successfully
+#    volumes:
+#      - ./frontend/build:/frontend/build
+#      - ./nginx:/etc/nginx/conf.d
+#    command: /etc/nginx/conf.d/run_nginx.sh
+#    env_file:
+#      - .env
+
+  postgres:
+    image: postgres:latest
+    container_name: "postgres"
+    restart: unless-stopped
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
+    container_name: "elastic"
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - db-es:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+  kibana:
+    container_name: "kibana"
+    image: docker.elastic.co/kibana/kibana:7.6.2
+    ports:
+      - 5601:5601
+  config_db_verdaccio:
+    build:
+      context: .
+      dockerfile: _docker/verdaccio/Dockerfile
+    command: node index.js
+    volumes:
+      - "./verdaccio:/verdaccio"
+
+  verdaccio:
+    image: verdaccio/verdaccio
+    container_name: "verdaccio"
+    depends_on:
+      config_db_verdaccio:
+          condition: service_completed_successfully
+    restart: unless-stopped
+    environment:
+      - VERDACCIO_PORT=4873
+    ports:
+      - "4873:4873"
+    volumes:
+      - "./verdaccio/storage:/verdaccio/storage"
+      - "./verdaccio/conf:/verdaccio/conf"
+      - "./verdaccio/plugins:/verdaccio/plugins"
+  backend:
+    <<: *backend
+    command: npm run start
+    ports:
+      - 8080:8080
+  db_init:
+    <<: *db_transactions
+    container_name: "db_init"
+    command: npm run start
+  db_clean:
+    <<: *db_transactions
+    container_name: "db_clean"
+    command: npm run clean
+#  frontend:
+#    <<: *frontend
+#    command: npm run build
+

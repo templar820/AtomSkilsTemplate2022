@@ -1,0 +1,29 @@
+@import "~@styles/colors.modules.scss";
+.header {
+  background: $primary;
+  height: 3.5rem;
+  box-shadow: 0 0.25rem 1.25rem rgba($primary, 0.5);
+  &__logo:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  &__logo-box {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 4px;
+    background: $white;
+  }
+  &__logo-h2 {
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  &__logo-h4 {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}
+
+body {
+  padding-right: 0 !important;
+  overflow: auto !important;
+}

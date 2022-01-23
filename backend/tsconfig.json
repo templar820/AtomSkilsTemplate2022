@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "pretty": false,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "esnext",
+    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+
+  },
+  "ts-node": {
+    "files": true,
+    "transpileOnly": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

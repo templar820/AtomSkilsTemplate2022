@@ -1,0 +1,26 @@
+{
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "header": {
+    "translations": "Translations"
+  },
+  "authorizationCard": {
+    "authorization": "Authorization",
+    "registration": "Registration",
+    "email": "Email",
+    "password": "Password",
+    "errorPasswordMismatch": "Password mismatch",
+    "repeatPassword": "Repeat password",
+    "rememberPassword": "Remember password",
+    "register": "Register",
+    "loginGoogle": "Login with Google"
+  },
+  "homePage": {
+    "products": "Products",
+    "button": "Button"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "common": {
+    "login": "Войти",
+    "logout": "Выйти",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "create": "Создать"
+  },
+  "header": {
+    "translations": "Переводы"
+  },
+  "authorizationCard": {
+    "authorization": "Авторизация",
+    "registration": "Регистрация",
+    "email": "Адрес электронной почты",
+    "password": "Пароль",
+    "errorPasswordMismatch": "Пароли не совпадают",
+    "repeatPassword": "Повторите пароль",
+    "rememberPassword": "Запомнить пароль",
+    "register": "Зарегистрироваться",
+    "loginGoogle": "Войти с Google"
+  },
+  "homePage": {
+    "products": "Продукты",
+    "button": "Кнопка",
+    "createProduct": "Создание продукта",
+    "updateProduct": "Редактирование продукта",
+    "productName": "Название продукта",
+    "substanceId": "Id вещества"
+  }
+}

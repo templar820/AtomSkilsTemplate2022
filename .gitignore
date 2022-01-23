@@ -1,0 +1,15 @@
+/frontend/node_modules
+/frontend/build
+/frontend/coverage
+/backend/dist
+/backend/node_modules
+/backend/coverage
+/backend/log
+/phone/.expo
+/phone/node_modules
+/verdaccio/storage
+/db_transactions/data/*
+
+.env
+*.idea
+*package-lock.json

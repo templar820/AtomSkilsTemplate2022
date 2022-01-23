@@ -1,0 +1,94 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "APPMODE": "readonly"
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "template-curly-spacing" : "off",
+    "arrow-body-style": "off",
+    "no-shadow": "off",
+    "comma-dangle": [
+      "warn",
+      "only-multiline"
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 120
+      }
+    ],
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ],
+    "keyword-spacing": [
+      "warn",
+      {
+        "after": true,
+        "before": true
+      }
+    ],
+    "arrow-parens": "off",
+    "arrow-spacing": "warn",
+    "prefer-template": "warn",
+    "no-restricted-syntax": "warn",
+    "consistent-return": "warn",
+    "no-plusplus": 0,
+    "no-console": 0,
+    "linebreak-style": 0,
+    "no-param-reassign": 0,
+    "indent": ["warn", 2, {
+      "ignoredNodes": ["TemplateLiteral"],
+      "SwitchCase": 1
+    }],
+
+
+    // TODO delete
+    "no-useless-escape": 0,
+    "no-return-await": 0,
+    "class-methods-use-this": 0,
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "plugins": [
+    "@babel",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts", ".tsx"]
+      }
+    }
+  }
+}

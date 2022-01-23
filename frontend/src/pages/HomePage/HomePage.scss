@@ -1,0 +1,43 @@
+@import "~@styles/colors.modules.scss";
+
+.home-page{
+
+
+  .product-card {
+    height: 13rem;
+    position: relative;
+    &__wrapper {
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+      border-radius: 5px;
+      background: $white;
+      .card-title {
+        height: 3rem;
+        overflow: hidden;
+      }
+      .card-text {
+        height: 1.5rem;
+        overflow: hidden;
+      }
+    }
+    &__button-group {
+      position: absolute;
+      display: none;
+      right: 0;
+      top: 0;
+      .btn {
+        color: rgba(#ffffff, 0.7);
+        background: rgba(0,0,0,0.5);
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    &:hover {
+      .product-card__button-group {
+        display: block;
+      }
+    }
+  }
+}
