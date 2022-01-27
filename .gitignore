@@ -8,7 +8,7 @@
 /phone/.expo
 /phone/node_modules
 /verdaccio/storage
-/db_transactions/data/*
+
 
 .env
 *.idea
