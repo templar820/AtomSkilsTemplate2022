@@ -1,0 +1,32 @@
+@use 'theme.figure';
+
+@import 'colors.modules';
+
+// base
+$border-width: 1px;
+$border-style: solid;
+
+@mixin border($prop) {
+  $property: '';
+  $value: #{$border-width} #{$border-style} get($primary, 'bgFill-light');
+
+  @if $prop == 'left' {
+    $property: 'border-left';
+  } @else if $prop == 'right' {
+    $property: 'border-right';
+  } @else if $prop == 'top' {
+    $property: 'border-top';
+  } @else if $prop == 'bottom' {
+    $property: 'border-bottom';
+  } @else {
+    $property: 'border';
+  }
+
+  #{$property}: $value;
+}
+
+$border-radius: (
+  'smooth': 5px,
+  'smooth-1.5x': 7px,
+  'smooth-2x': 10px,
+);

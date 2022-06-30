@@ -1,70 +1,65 @@
 import React from 'react';
-import Router from '@/Router';
-import NetworkService from '@/services/NetworkService';
-import { StoresNames } from '@/stores/StoresNames';
+import AppService from '@services/App.service';
 import { Provider } from 'mobx-react';
-import LoaderStore from '@/stores/LoaderStore';
-import ErrorWindow from '@/components/System/ErrorWindow';
-import Loader from '@/components/System/Loader';
-import { MuiThemeProvider } from '@material-ui/core';
-import AuthService from '@/services/AuthService';
-import ProductService from '@/services/ProductService';
-import SocketService from "@/services/SocketService";
+import { v4 as uuidv4 } from 'uuid';
+import { ThemeProvider } from '@mui/material';
+import { IServices, IStores, StoresNames } from '@globalTypes';
+import Loader from '@components/system/Loader';
+import { SnackbarProvider } from 'notistack';
+import Router from './Router';
+import AppStore from './stores/App.store';
 import theme from './styles/muiTheme';
-import ProductStore from './stores/ProductStore';
-import UserStore from './stores/UserStore';
+import { Api, HttpClient } from './api/api';
 
-class App extends React.Component {
-  stores: {[key: string]: any};
-
-  services: {[key: string]: any};
-
-  constructor(props: {}) {
-    super(props);
-
-    const endpoint = process.env.ENDPOINT;
-
-    const loaderStore = new LoaderStore();
-    const userStore = new UserStore();
-    const socketService = new SocketService(endpoint);
-    const productStore = new ProductStore();
-    const networkService = new NetworkService(endpoint);
-    networkService.setToken(localStorage.getItem('token') || null);
-    // this.requestService = new RequestService(this.networkService);
-    const authService = new AuthService(networkService, userStore, loaderStore, socketService);
-    const productService = new ProductService(networkService, productStore, loaderStore);
-
-    this.stores = {
-      [StoresNames.LoaderStore]: loaderStore,
-      [StoresNames.UserStore]: userStore,
-      [StoresNames.ProductStore]: productStore,
-      [StoresNames.URL]: endpoint,
-    };
-
-    this.services = {
-      networkService,
-      // requestService: this.requestService,
-      authService,
-      productService,
-    };
+function App() {
+  const endpoint = process.env.REACT_APP_ENDPOINT;
+  const localStorageKeyId = 'pick_spot_user_id';
+  let user_id = localStorage.getItem(localStorageKeyId);
+  if (!user_id) {
+    user_id = uuidv4();
+    localStorage.setItem(localStorageKeyId, user_id);
   }
 
-  componentDidMount() {
-    this.services.authService.authentication();
-  }
+  const httpClient = new HttpClient<any>({
+    securityWorker: securityData => securityData,
+    baseUrl: endpoint,
+  });
+  httpClient.setSecurityData({
+    headers: {
+      Authorization: `Bearer ${user_id}`
+    }
+  });
+  const apiService = new Api(httpClient);
 
-  render() {
-    return (
-      <MuiThemeProvider theme={theme}>
-        <Provider {...this.stores} services={this.services}>
-          <ErrorWindow />
-          <Loader>
-            <Router />
-          </Loader>
+  const appStore = new AppStore();
+
+  const appService = new AppService(appStore);
+
+
+  const stores = {
+    [StoresNames.AppStore]: appStore,
+  } as IStores;
+
+  const services = {
+    appService,
+  } as IServices;
+  return (
+    <ThemeProvider theme={theme}>
+      <SnackbarProvider
+        maxSnack={3}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+      >
+        <Provider {...stores} services={services}>
+          <Loader />
+          <Router />
+          {/* <YMapSingleton /> */}
         </Provider>
-      </MuiThemeProvider>
-    );
-  }
+      </SnackbarProvider>
+    </ThemeProvider>
+  );
 }
 
 export default App;

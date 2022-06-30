@@ -1,16 +1,26 @@
 import React from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { inject, observer } from 'mobx-react';
-import {StoresNames} from "@/stores/StoresNames";
+import { Backdrop, CircularProgress } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
+import { MOBXDefaultProps } from '@globalTypes';
 
-const Loader: React.FC<any> = (props) => {
-    const loaderStore = props[StoresNames.LoaderStore];
+const useStyles = makeStyles(theme => ({
+  backdrop: {
+    zIndex: 111111,
+    backgroundColor: 'transparent !important'
+  },
+}));
 
-    return loaderStore.isLoader
-      ? <div className="w-100 vh-100 d-flex justify-content-center align-items-center">
-        <CircularProgress size={80} />
-      </div>
-      : props.children;
+function Loader(props: MOBXDefaultProps) {
+  const classes = useStyles();
+  const open = props.AppStore.isLoader;
+  return (
+    <Backdrop className={classes.backdrop} open={open || false}>
+      <CircularProgress color="error" />
+    </Backdrop>
+  );
 }
 
-export default inject(StoresNames.LoaderStore, 'services')(observer(Loader));
+// export default Loader;
+
+export default MobXRouterDecorator(Loader, false);

@@ -1,0 +1,11 @@
+{
+  "addClasses": "Добавить классы",
+  "searchProjectOrClass": "Найти проект или класс",
+  "childClasses": "Потомки",
+  "childrenVisibleDescription": "Добавляет все классы-наследники выбранного класса",
+  "referencedFrom": "Текущие связи",
+  "referencedFromVisibleDescription": "Добавляет все классы, на которые ссылается выбранный класс",
+  "referTo": "Зависимые",
+  "referToVisibleDescription": "Добавляет все классы, которые ссылаются на выбранный класс",
+  "classes": "Классы"
+}

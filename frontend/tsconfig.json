@@ -1,30 +1,42 @@
 {
   "compilerOptions": {
-    "strictPropertyInitialization": false,
-    "strict": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+
+    "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "pretty": false,
-    "target": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "react",
-    "baseUrl": "./src",
-    "lib": ["es2019", "dom"],
     "resolveJsonModule": true,
-    "typeRoots": ["./src/types", "./node_modules/@types"],
-    "skipLibCheck": true,
-    "allowJs": true,
-    "noEmitOnError": false,
-    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["../src/*"],
-      "@pages/*": ["../src/pages/*"],
-      "@styles/*": ["../src/styles/*"],
-      "@icons/*": ["../public/static/icons/*"],
-      "@images/*": ["../public/static/images/*"],
-      "@/fonts": ["../public/static/fonts/*"]
-    }
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "ui-kit": ["components/ui-kit"],
+      "@svg-icons": ["assets/icons/index.ts"],
+      "@colors": ["styles/colors.module.scss"],
+      "@common/*": ["components/common/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@globalTypes": ["globals.d.ts"],
+      "@api": ["./api/Api.service.ts"],
+      "@services/*": ["services/*"]
+    },
+    "jsx": "react-jsx"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "public"]
+  "include": [
+    "src"
+  ]
 }

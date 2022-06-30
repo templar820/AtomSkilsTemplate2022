@@ -1,0 +1,45 @@
+{
+  "projectsNotFound": "Проектов не найдено, создайте или импортируйте проект",
+  "importProject": "Импортировать проект",
+  "deleteProjectTitle": "Удалить Проект",
+  "deleteProjectBody": "Проект ”%s” будет удалён.",
+  "createProject": "Создать проект",
+  "notifiers": {
+    "newProject": "Проект ”%s” успешно создан",
+    "updatedProject": "Проект «{{title}}» успешно сохранен.",
+    "deletedProject": "Проект ”%s” успешно удален."
+  },
+  "projectItem": {
+    "buildLink": "Собрать",
+    "publishLink": "Опубликовать",
+    "buildStatus": "Проект собран"
+  },
+  "newProjectDialog": {
+    "createProject": "Создать проект",
+    "editProjectTitle": "Редактировать проект",
+    "saveProject": "Сохранить проект",
+    "title": "Заголовок",
+    "description": "Описание",
+    "name": "Алиас",
+    "locale": "Локали",
+    "needBoilerplate": "Использовать шаблон"
+  },
+  "placeholders": {
+    "title": "Введите название проекта",
+    "description": "Введите описание проекта",
+    "name": "Введите алиас",
+    "locales": "Добавьте локали"
+  },
+  "importProjectDialog": {
+    "projectName": "Название проекта",
+    "projectImport": "Импорт проекта",
+    "notifyMessage": "Проект {{name}} уже существует. Заменить его?",
+    "fileInputText": "Перетащите сюда импортируемый файл.",
+    "invalidProjectName": "Неккоректное имя проекта"
+  },
+  "errors": {
+    "invalidJson": "Неккоректный файл «.mdproj»",
+    "alias": "Алиас не может быть пустым и содержать в себе спец. символы. Алиас должен состоять из символов A-Z, a-z. Алиас должен быть уникальным.",
+    "missingProject": "Проект не найден"
+  }
+}

@@ -1,0 +1,32 @@
+@import '../themes/colors.modules';
+
+.draggable-list {
+  &-item {
+    &__icon {
+      min-width: 20px;
+    }
+
+    &__delete-icon {
+      visibility: hidden;
+    }
+
+    &:hover .draggable-list-item__delete-icon {
+      visibility: visible;
+    }
+  }
+
+  &__item_dragging {
+    box-shadow: 0px 3px 8px rgba(5, 6, 36, 0.15), 0px 1px 4px rgba(5, 6, 36, 0.12);
+    border-radius: 6px;
+  }
+
+  &__item_draggedOver {
+    &.direction-up {
+      border-top: 1px solid get($common, 'violet-5');
+    }
+
+    &.direction-down {
+      border-bottom: 1px solid get($common, 'violet-5');
+    }
+  }
+}

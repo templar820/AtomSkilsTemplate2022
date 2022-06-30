@@ -1,0 +1,13 @@
+{
+  "profiles": "Профили",
+  "functionRole": "Функциональная роль",
+  "creatingProfile": "Создание профиля",
+  "addingRole": "Добавление функциональной роли",
+  "noProfiles": "Нет профилей, создать",
+  "enterProfileDescription": "Введите описание профиля",
+  "saveProfile": "Сохранить профиль",
+  "notActiveProfile": "Профиль не выбран",
+  "createProfile": "Создать профиль",
+  "nobodyRules": "Ролей для профиля не найдено",
+  "updatingProfile": "Редактирование профиля"
+}

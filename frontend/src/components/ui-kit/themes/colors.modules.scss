@@ -1,0 +1,188 @@
+// utils
+//* map-get alias
+@function get($map, $key) {
+  @return map-get($map, $key);
+}
+
+// opacity mixin
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+/*
+  base palette
+  будет перенесена на слой выше
+  при добавлении механизма переключения тем
+*/
+$common: (
+  'black': #000000,
+  'white': #ffffff,
+  'purple-7': #7a0ecc,
+  'gray': #ccc,
+  'gray-1': #f9f9fb,
+  'gray-2': #f0f0f5,
+  'gray-3': #dbdbe5,
+  'gray-4': #b9b9cb,
+  'gray-5': #9999ad,
+  'gray-6': #7a7a94,
+  'gray-7': #585874,
+  'gray-8': #2f2f46,
+  'gray-9': #202037,
+  'gray-10': #111122,
+  'darkgray': #999,
+  'nightgray': #2a2c39,
+  'highlighted': #4e4ee4,
+  'violet-1': #ebedff,
+  'violet-2': #d2d5fe,
+  'violet-3': #afb6fd,
+  'violet-5': #4e4ee4,
+  'violet-6': #3237b3,
+  'violet-8': #0e105d,
+  'violet-7': #1d188b,
+  'violet-9': #06073d,
+  'violet-10': #050624,
+  'red-1': #ffe3e3,
+  'red-2': #ffbdbd,
+  'red-3': #ff9b9b,
+  'red-4': #f86a6a,
+  'red-5': #ef4e4e,
+  'red-6': #df202d,
+  'red-7': #cf1124,
+  'red-8': #ab091e,
+  'red-9': #8a041a,
+  'red-10': #610316,
+  'green-1': #e3f9e5,
+  'green-2': #c1f2c7,
+  'green-3': #91e697,
+  'green-4': #51ca58,
+  'green-5': #31b237,
+  'green-6': #18981d,
+  'green-7': #0f8613,
+  'green-8': #0e7817,
+  'green-9': #07600e,
+  'green-10': #014807,
+  'active': #3237b3,
+  'selected': #ebedff,
+  'lightred': #ffe3e3,
+  'background': #e5e5e5,
+  'shadowColor': #dbdbe5,
+  'magenta-2': #f8c4fe,
+  'magenta-5': #ed47ed,
+  'magenta-7': #cb10b8,
+  'magenta-8': #b30ba3,
+  'hoverCard': #ebedff,
+  'indigo-1': #d9e8ff,
+  'indigo-2': #b0d0ff,
+  'indigo-3': #88b1fc,
+  'indigo-4': #5e8aee,
+  'indigo-5': #3a66db,
+  'indigo-6': #2251cc,
+  'indigo-7': #1d3dbf,
+  'indigo-8': #132dad,
+  'indigo-9': #0b1d96,
+  'indigo-10': #061178,
+  'cyan-8': #099aa4,
+);
+
+$primary: (
+  'light': rgba(63, 175, 213, 0.75),
+  'main': #4e4ee4,
+  'dark': rgba(9, 128, 167, 1),
+  'bgFill': get($common, 'black'),
+  'bgFill-gray': #f9f9fb,
+  'bgFill-dark': get($common, 'darkgray'),
+  'bgFill-night': get($common, 'nightgray'),
+  'bgFill-light': get($common, 'gray'),
+  'bgFill-hover': get($common, 'highlighted'),
+  'bgFill-active': get($common, 'active'),
+);
+
+$success: (
+  'contrastLight': #30da14,
+);
+
+$icons: (
+  'gray-icons': #7a7a94,
+);
+
+$error: (
+  'light': #e57373,
+  'main': #f44336,
+  'dark': #d32f2f,
+);
+
+$text: (
+  'primary': #202037,
+  'secondary': #585874,
+  'purple': #7a0ecc,
+  'disabled': #7a7a94,
+  'hint': rgba(0, 0, 0, 0.38),
+  'contrast': get($common, 'white'),
+);
+
+:export {
+  black: get($common, 'black');
+  primary: get($primary, 'main');
+  textPrimary: get($text, 'primary');
+  textSecondary: get($text, 'secondary');
+  disabledText: get($text, 'disabled');
+  background: get($common, 'background');
+  shadowColor: get($common, 'shadowColor');
+  hoverCard: get($common, 'hoverCard');
+  textPurple: get($text, 'purple');
+  magenta5: get($common, 'magenta-5');
+  magenta7: get($common, 'magenta-7');
+  gray1: get($common, 'gray-1');
+  gray2: get($common, 'gray-2');
+  gray3: get($common, 'gray-3');
+  gray4: get($common, 'gray-4');
+  gray5: get($common, 'gray-5');
+  gray6: get($common, 'gray-6');
+  gray7: get($common, 'gray-7');
+  gray8: get($common, 'gray-8');
+  gray9: get($common, 'gray-9');
+  gray10: get($common, 'gray-10');
+  highlighted: get($common, 'highlighted');
+  bgFillGray: get($primary, 'bgFill-gray');
+  violet1: get($common, 'violet-1');
+  violet2: get($common, 'violet-2');
+  violet5: get($common, 'violet-5');
+  violet6: get($common, 'violet-6');
+  violet9: get($common, 'violet-9');
+  violet7: get($common, 'violet-7');
+  violet8: get($common, 'violet-8');
+  indigo1: get($common, 'indigo-1');
+  indigo2: get($common, 'indigo-2');
+  indigo3: get($common, 'indigo-3');
+  indigo4: get($common, 'indigo-4');
+  indigo5: get($common, 'indigo-5');
+  indigo6: get($common, 'indigo-6');
+  indigo7: get($common, 'indigo-7');
+  indigo8: get($common, 'indigo-8');
+  indigo9: get($common, 'indigo-9');
+  indigo10: get($common, 'indigo-10');
+  purple7: get($common, 'purple-7');
+  cyan8: get($common, 'cyan-8');
+  white: get($common, 'white');
+  green1: get($common, 'green-1');
+  green2: get($common, 'green-2');
+  green3: get($common, 'green-3');
+  green4: get($common, 'green-4');
+  green5: get($common, 'green-5');
+  green6: get($common, 'green-6');
+  green7: get($common, 'green-7');
+  green8: get($common, 'green-8');
+  green9: get($common, 'green-9');
+  green10: get($common, 'green-10');
+  red1: get($common, 'red-1');
+  red2: get($common, 'red-2');
+  red3: get($common, 'red-3');
+  red4: get($common, 'red-4');
+  red5: get($common, 'red-5');
+  red6: get($common, 'red-6');
+  red7: get($common, 'red-7');
+  red8: get($common, 'red-8');
+  red9: get($common, 'red-9');
+  red10: get($common, 'red-10');
+}

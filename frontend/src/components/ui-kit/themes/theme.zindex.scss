@@ -1,0 +1,51 @@
+/*
+* 0 layer - body
+* 1201 - windows (MuiDraw-Paper - 1200)
+* 1500 layer - iframe's, dialog's, any dropdown's (select's and more)
+*/
+
+/*
+* Color Picker
+*/
+$color-picker-popover: 3;
+
+/*
+* Project Tree static root title
+*/
+$project-filepicker-header: 3;
+
+/*
+* New components draggable popup
+*/
+$floating-window-wrapper: 1506;
+
+/*
+  Temporary logic for valid shown sandbox iframe under full-screen mode, look up Event Handler at Windows component
+*/
+$custom-layers-sandbox: 1500;
+
+$sandbox: 1500;
+
+/*
+* Select dropdown (any component)
+*/
+$menu-dropdown: 1504;
+
+/*
+* Windows component
+*/
+$window-preview: 1201;
+$window-full: 1201;
+
+/*
+* Dialog's
+*/
+$dialog: 1504;
+
+$conflictsWidget: 1503;
+$historyWidget: 1503;
+
+/*
+* Notifiers
+*/
+$notifier: 1505;

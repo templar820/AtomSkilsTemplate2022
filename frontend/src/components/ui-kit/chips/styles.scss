@@ -1,0 +1,21 @@
+@import '../../ui-kit/themes/theme.common.scss';
+
+.commonChip {
+  width: calc(100% - 65px);
+  & :first-child {
+    margin-left: 0 !important;
+  }
+  &.all {
+    white-space: unset;
+  }
+  &.short {
+    overflow: hidden;
+    white-space: nowrap;
+    // margin-right: -99999px;
+  }
+  .MuiChip-root {
+    &.hidden {
+      display: none;
+    }
+  }
+}

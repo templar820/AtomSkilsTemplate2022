@@ -1,0 +1,65 @@
+{
+  "AC500": "Publish artifact error",
+  "AC501": "Build artifact error",
+
+  "BC500": "Create tag error",
+  "BC501": "Merge branches error",
+  "BC502": "Get branch error",
+  "BC503": "Get user's right error",
+  "BC504": "Get tags error",
+  "BC505": "Get last commit of the branch error",
+  "BC506": "Reset files to tag error",
+  "BC507": "Abort merge error",
+  "BC508": "Get conflicts error",
+  "BC509": "Replace files error",
+  "BC510": "Set conflict resolved error",
+  "BC511": "Checkout files to commit error",
+
+  "CFGC500": "Get branches error",
+  "CFGC501": "Delete branch error",
+  "CFGC502": "Delete contour error",
+  "CFGC503": "Set branch error",
+
+  "CIC500": "Get services error",
+  "CIC501": "Get methods error",
+  "CIC502": "Get models error",
+  "CIC503": "Get all information error",
+
+  "DUC500": "Get draft users error",
+  "DUC501": "Find draft user error",
+  "DUC502": "Get darft user's roles error",
+  "DUC503": "Create user error",
+  "DUC504": "Clone user from git error",
+  "DUC505": "Delete draft user error",
+  "DUC506": "Change user's role error",
+
+  "GUC500": "Get git users error",
+  "GUC501": "Set password for git user error",
+  "GUC502": "Change password for git user error",
+
+  "HC500": "Import HelpManual file error",
+
+  "PDTC500": "Get remote address error",
+
+  "PROJC500": "Create project error",
+  "PROJC501": "Update project error",
+  "PROJC502": "Check existence of the project error",
+
+  "PC500": "Publish script error",
+
+  "SFC500": "Create folder error",
+  "SFC501": "Delete folder error",
+  "SFC502": "Rename folder error",
+  "SFC503": "Upload static file error",
+  "SFC504": "Create static file error",
+  "SFC505": "Rename static file error",
+  "SFC506": "Save static file error",
+  "SFC507": "Download static file error",
+  "SFC508": "Upload folder error",
+  "SFC509": "Download folder error",
+  "SFC510": "Move objects error",
+  "SFC511": "Load folder configuration error",
+  "SFC512": "Load folder tree error",
+  "SFC513": "Get static file info error",
+  "SFC514": "Delete static file error"
+}

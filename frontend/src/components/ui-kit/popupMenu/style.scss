@@ -1,0 +1,26 @@
+@import '../themes/colors.modules';
+
+.popup-menu__item {
+  display: flex;
+  align-items: center;
+}
+.popup-menu__icon {
+  margin-right: 8px;
+  font-size: 0;
+  & > svg {
+    display: block;
+  }
+}
+.popup-menu__title {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 400;
+  color: get($common, 'gray-10');
+  line-height: 16px;
+}
+.popup-menu__title_red {
+  color: get($common, 'red-7');
+}
+.popup-menu-item_red:hover {
+  background-color: get($common, 'lightred') !important;
+}

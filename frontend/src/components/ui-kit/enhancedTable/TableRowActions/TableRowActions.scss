@@ -1,0 +1,27 @@
+@import '../../themes/theme.common';
+
+.EnhancedTable {
+  tr {
+    .TableRowActions {
+      display: inline-block;
+      visibility: hidden;
+      vertical-align: middle;
+
+      svg {
+        display: block;
+        cursor: pointer;
+        fill: get($common, 'gray-6');
+
+        &:hover {
+          fill: get($common, 'gray-8');
+        }
+      }
+    }
+
+    &:hover {
+      .TableRowActions {
+        visibility: visible;
+      }
+    }
+  }
+}

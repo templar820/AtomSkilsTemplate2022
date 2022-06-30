@@ -1,0 +1,36 @@
+{
+  "designMode": "Режим Дизайна",
+  "developMode": "Режим Разработки",
+  "preview": "Предпросмотр",
+  "saveDictionary": "Сохранить словарь",
+  "saveDictionaryNotice": "Все ключи были успешно сохранены в словарь {{path}}.",
+  "alreadySavedNotice": "Все ключи уже сохранены.",
+  "codeEditor": "Текстовый редактор",
+  "visualEditor": "Графический Редактор",
+  "addComponent": "Добавить компонент",
+  "componentProperties": "Свойства Компонента",
+  "noDictsAvaliable": "Словари не созданы",
+  "sandBoxError": "Ошибка в песочнице: {{error}}. Перейдите в Режим Разработки для внесения изменений",
+  "controlsListWindow": {
+    "title": "Компоненты",
+    "controls": "Контролы",
+    "partViews": "Фрагменты"
+  },
+  "controlPropertiesWidget": {
+    "searchPlaceholder": "Поиск по свойствам компонента",
+    "functionPlaceholder": "Введите код функции здесь",
+    "dictPlaceholder": "Введите ключ локализации",
+    "varPlaceholder": "Введите имя переменной",
+    "objectPlaceholder": "Введите json объект",
+    "arrayPlaceholder": "Введите json массив",
+    "numberPlaceholder": "Введите число",
+    "stringPlaceholder": "Введите текст",
+    "chooseDictionary": "Выберите словарь",
+    "chooseDicctionaryKey": "Выберите ключ",
+    "properties": "Свойства",
+    "events": "События"
+  },
+  "sandBox": {
+    "goToEdit": "Перейти к редактированию"
+  }
+}

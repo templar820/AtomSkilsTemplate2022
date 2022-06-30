@@ -1,0 +1,25 @@
+@import '../themes/theme.common.scss';
+
+.hintIcon {
+  &:hover {
+    path:first-of-type {
+      fill: get($common, 'gray-3');
+    }
+    path:last-of-type {
+      fill: get($common, 'gray-7');
+    }
+  }
+}
+.hint {
+  div {
+    font-size: 12px;
+    font-weight: 400;
+    background-color: get($common, 'white');
+    color: get($common, 'gray-9');
+    box-shadow: 0 3px 8px rgba(5, 6, 36, 0.15);
+    padding: 12px;
+  }
+  span {
+    color: get($common, 'white');
+  }
+}

@@ -1,54 +1,39 @@
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
 import React from 'react';
-import { observer, inject } from 'mobx-react';
-import Page from '@/components/System/Page';
-import HomePage from '@pages/HomePage/HomePage';
-import AuthorizationPage from '@pages/AuthorizationPage/AuthorizationPage';
-import NotFound from '@pages/System/NotFound';
-import {StoresNames} from "@/stores/StoresNames";
-import UserStore from "@/stores/UserStore";
+import PlaceCard from '@pages/Place';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
+import Page from '@components/system/Page';
+import ErrorBoundary from '@components/system/ErrorBoundary';
+import FavoritePlaceList from '@pages/FavoritePlaceList';
+import { MOBXDefaultProps } from '@globalTypes';
+import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
+import NotificationWindow from './NotificationWindow';
+import NotificationManager from './helpers/NotificationManager';
+import HomePage from '@pages/HomePage';
 
-class Router extends React.Component {
-  userStore: UserStore;
-  constructor(props: any) {
-    super(props);
-    this.userStore = props[StoresNames.UserStore]
-  }
-
-  getPage(routerProps: any, Component: React.ComponentClass) {
-    if (!this.userStore.isLogin) {
-      return <Redirect to="/authorization"/>
-    }
+function Router(props: MOBXDefaultProps) {
+  const getPage = (routerProps, Component, type?:any) => {
     return (
       <Page>
-        <Component {...routerProps} />
+        <Component type={type} {...routerProps} />
       </Page>
     );
-  }
+  };
 
-  render() {
-    if (!this.userStore.user) return null;
-    return (
-      <BrowserRouter>
+  return (
+    <BrowserRouter>
+      <NotificationWindow />
+      <ErrorBoundary throwError={props.services.appService.errorListener}>
         <Switch>
-          <Route exact path="/" render={p => this.getPage(p, HomePage)} />
-          <Route path="/authorization">
-            {
-              this.userStore.isLogin
-              && <Redirect to="/"/>
-            }
-            <AuthorizationPage/>
-          </Route>
-          <Route component={NotFound} />
+          <Route
+            exact
+            path="/"
+            render={p => getPage(p, HomePage)}
+          />
         </Switch>
-      </BrowserRouter>
-    );
-  }
+      </ErrorBoundary>
+    </BrowserRouter>
+  );
 }
-
-export default inject(StoresNames.UserStore, 'services')(observer(Router));
+export default MobXRouterDecorator(Router, false);

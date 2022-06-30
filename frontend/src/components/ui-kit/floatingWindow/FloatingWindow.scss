@@ -1,0 +1,26 @@
+@import '../themes/theme.common';
+
+.FloatingWindow {
+  z-index: $floating-window-wrapper;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  .closeButton {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .MuiDialogTitle-root {
+    padding-bottom: 0;
+    margin-bottom: 16px;
+  }
+
+  .MuiDialogContent-root {
+    height: 100%;
+    overflow: auto;
+    padding: 0;
+  }
+}

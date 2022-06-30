@@ -1,0 +1,30 @@
+{
+  "schemaWindowTitle": "Редактор схемы",
+  "propertiesWindowTitle": "Свойства",
+  "addContainer": "Добавить контейнер",
+  "commandAliasHint": "Alias необходим для перехода между контейнерами",
+  "actionTypes": {
+    "dataSet": "DataSet",
+    "graphQL": "GraphQL",
+    "portal": "Portal",
+    "staticLink": "Static",
+    "dynamicLink": "Dynamic",
+    "fragmentLink": "Fragment"
+  },
+  "labels": {
+    "name": "Название",
+    "type": "Тип",
+    "filePath": "Путь (выберите контейнер или схему)",
+    "service": "Сервис",
+    "methodName": "Метод"
+  },
+  "errors": {
+    "filePath": "Поле не должно быть пустым.",
+    "service": "Поле не должно быть пустым.",
+    "methodName": "Поле не должно быть пустым.",
+    "dynamicNoContainer": "Dynamic is container to container.",
+    "staticNoContainer": "Static is container to container.",
+    "targetsSelf": "Target should differ from source",
+    "invalid": "Invalid"
+  }
+}

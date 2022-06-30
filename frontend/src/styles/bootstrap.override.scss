@@ -1,0 +1,68 @@
+@import "colors.module";
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  dark: $gray-10
+);
+
+@import '~bootstrap/scss/bootstrap';
+
+.br-16{
+  border-radius: 16px;
+}
+
+
+.btn{
+  &.rounded{
+    border-radius: 100px !important;
+    background-color: $white !important;
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  &-secondary{
+    color: $white;
+    border-radius: 16px;
+  }
+
+  &.important{
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  padding: 8px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  transition: 0.2s ease;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+
+  &.green {
+    border: 4px solid $success;
+    color: $secondaryText;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      background: $success;
+      z-index: -1;
+      transition: 0.2s ease;
+    }
+    &:hover {
+      color: $white;
+      background: $success;
+      transition: 0.2s ease;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}

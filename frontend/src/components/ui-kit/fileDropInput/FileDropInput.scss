@@ -1,0 +1,36 @@
+@import '../themes/colors.modules';
+
+.FileDropInput {
+  .FileDropInput-area {
+    background-color: get($primary, 'bgFill-gray');
+    border: 2px dashed get($common, 'shadowColor');
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &.dragging {
+      border-color: get($common, 'highlighted');
+      outline: 1px dashed get($common, 'highlighted');
+    }
+
+    svg {
+      padding: 1px;
+      width: 52px;
+      height: 33px;
+    }
+  }
+
+  .FileDropInput-list {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .FileDropInput-list__item {
+      margin-top: 16px;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "dictNotFound": "Несуществующий словарь перевода {{dictName}}",
+  "translationKeyNotFound": "Несуществующий ключ перевода {{key}}",
+  "localesNotFill": "Ключ перевода {{key}} заполнен не для всех локалей"
+}

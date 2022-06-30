@@ -1,0 +1,175 @@
+{
+  "windows": {
+    "langSwitch": "Язык",
+    "roleSwitch": "Роль"
+  },
+  "treeDialog": {
+    "actionFile": "файл",
+    "actionFolder": "Папку",
+    "actionRename": "Переименовать",
+    "actionUpload": "Загрузить",
+    "prompt": "вы уверены?",
+    "pickOrDrag": "Перенесите файлы или нажмите на область",
+    "uniqueFile": "Название файла должн быть уникальным",
+    "fileExist": "Файл с таким именем уже соществует",
+    "folderExist": "Папка с таким именем уже соществует",
+    "fileName": "Имя файла",
+    "folderName": "Имя папки",
+    "extension": "Расширение",
+    "newFileName": "Введите имя файла",
+    "newFolderName": "Введите имя папки",
+    "alarmMessage": "Имя должно состоять хотя бы из 1 символа Имя должно содержать в себе символы английского языка Имя не должно содержать в себе спец. символов",
+    "notifications": {
+      "fileCreated": "Создан новый файл ”%s”.",
+      "fileRenamed": "Файл ”%s” переименован.",
+      "fileDeleted": "Файл ”%s” удалён.",
+      "folderCreated": "Создана новая папка ”%s”.",
+      "folderRenamed": "Папка ”%s” переименована.",
+      "folderDeleted": "Папка ”%s” удалёна.",
+      "filesUploaded": "Добавлены файлы: ”%s”"
+    }
+  },
+  "dialogs": {
+    "createTagDialog": {
+      "title": "Создание тэга пользователя",
+      "description": "описание тэга..."
+    },
+    "prompt": {
+      "title": "Вы уверены?",
+      "message": "При выполнении все локальные изменения будут потеряны"
+    },
+    "buttons": {
+      "cancel": "Отменить",
+      "continue": "Продолжить"
+    }
+  },
+  "filePicker": {
+    "rename": "Переименовать",
+    "createFolder": "Создать папку",
+    "createFile": "Создать файл",
+    "copy": "Копировать",
+    "cut": "Вырезать",
+    "paste": "Вставить",
+    "notifyReplace": "Файл(ы) {{names}} уже существуют в папке {{path}}. Заменить их?",
+    "upload": "Загрузить файлы",
+    "download": "Скачать",
+    "downloadFile": "Скачать файл",
+    "projectStructure": "Структура Проекта",
+    "hideStructure": "Скрыть Структуру",
+    "showStructure": "Показать Структуру"
+  },
+  "fileDropInput": {
+    "browse": "Обзор",
+    "text": "Перетащите файлы сюда",
+    "ondrag": "Бросьте чтобы начать загрузку…"
+  },
+  "enhancedTable": {
+    "prevPage": "Следующая страница",
+    "nextPage": "Предыдущая страница"
+  },
+  "navMenu": {
+    "saveAll": "Сохранить все",
+    "get": "Получить",
+    "send": "Отправить",
+    "apply": "Применить",
+    "publish": "Опубликовать",
+    "widgetTrigger": "Подробнее",
+    "pushStatus": "Изменения отправлены.",
+    "pullStatus": "Изменения получены.",
+    "commitStatus": "Изменения зафиксированы.",
+    "tools": "Инструменты",
+    "historyMenu": "История",
+    "standMenu": "Контуры",
+    "projectsMenu": "Проекты",
+    "conflictAlert": "У вас конфликт!",
+    "readModeAlert": "Вы находитесь в режиме чтения",
+    "checkoutToLast": "переключиться на последнюю версию",
+    "checkoutToCurrent": "переключиться на текущую",
+    "toggleSidebar": "Свернуть меню",
+    "untoggleSidebar": "Развернуть меню"
+  },
+  "userCard": {
+    "logoutLink": "Выход из системы",
+    "personalArea": "Личный кабинет"
+  },
+  "gitHistoryWidget": {
+    "title": "История",
+    "loading": "Загрузка истории...",
+    "rollback": "Откатить",
+    "switchOver": "Переключиться",
+    "user": "Пользователь",
+    "date": "Дата",
+    "restoreAlert": "Переключено на коммит",
+    "commitAlert": {
+      "title": "Внимание!",
+      "message": "Зафиксируйте изменения создав тэг"
+    }
+  },
+  "validationDialog": {
+    "integrityCheck": "Проверка целостности",
+    "wait": "Подождите, идет проверка...",
+    "build": "Сборка"
+  },
+  "emptyProjectFilter": {
+    "all": "Проверка завершена успешно",
+    "info": "Нет инфо сообщений",
+    "warning": "Нет предупреждений",
+    "error": "Нет ошибок",
+    "criticalError": "Нет критических ошибок"
+  },
+  "publishDialog": {
+    "publication": "Публикация",
+    "publish": "Публикация",
+    "publishAnyway": "Опубликовать в любом случае",
+    "republish": "Переопубликовать",
+    "project": "Проект",
+    "contour": "Контур",
+    "check": "Проверка",
+    "build": "Сборка",
+    "validation": "Проверка на сервере",
+    "commit": "Фиксация изменений",
+    "publishStep": "Публикация",
+    "inProgress": "В процессе...",
+    "launchedAfter": "Будет запущена после — {{reason}}.",
+    "firstStep": "Для старта нажмите кнопку — «Публикация».",
+    "publishNotify": "Проект {{proj}} опубликован.",
+    "success": "Успешно: {{types}}.",
+    "unsuccess": "Неуспешно: {{types}}.",
+    "successFullCommit": "commit и merge выполнены успешно",
+    "successFullBuildPart": "успех",
+    "errorOnServer": "Неизвестная ошибка на сервере",
+    "filterbar": {
+      "title": "Фильтр",
+      "all": "Все"
+    },
+    "reason": {
+      "check": "после нажатия на кнопку «Опубликовать»",
+      "build": "«Проверки»",
+      "validation": "«Сборки»",
+      "commit": "«Проверки на сервере»",
+      "publish": "«Фиксации изменений»"
+    }
+  },
+  "conflictsWidget": {
+    "conflicts": "Конфликты",
+    "merge": "Слияние",
+    "acceptYours": "Принять Свои",
+    "acceptTheirs": "Принять Другие",
+    "noConflicts": "Конфликты отсутствуют"
+  },
+  "mergeDialog": {
+    "acceptMyChanges": "Принять Свои Изменения",
+    "acceptTheirChanges": "Принять Другие Изменения",
+    "applyResult": "Принять Результат"
+  },
+  "diffMergeEditor": {
+    "yourChanges": "Ваши Изменения",
+    "theirChanges": "Удаленные Изменения",
+    "applyChange": "Применить изменение",
+    "cancelChange": "Отменить изменение"
+  },
+  "tokenLifeTime": {
+    "title": "Завершение сессии",
+    "message": "Ваша сессия завершится меньше чем через {{time}} минут, сохраните все изменения и выйдите из системы."
+  }
+}

@@ -3,8 +3,7 @@
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true,
-    "jest/globals": true
+    "node": true
   },
   "globals": {
     "APPMODE": "readonly"
@@ -38,7 +37,7 @@
       }
     ],
     "comma-dangle": [
-      "warn",
+      "error",
       "only-multiline"
     ],
     "max-len": [
@@ -48,62 +47,73 @@
       }
     ],
     "semi": [
-      "warn",
+      "error",
       "always"
     ],
     "no-unused-vars": [
-      "warn",
+      "error",
       {
         "args": "none"
       }
     ],
     "keyword-spacing": [
-      "warn",
+      "error",
       {
         "after": true,
         "before": true
       }
     ],
     "jsx-one-expression-per-line": 0,
+    "react-hooks/rules-of-hooks": 0,
+    "no-underscore-dangle": 0,
     "arrow-parens": "off",
-    "arrow-spacing": "warn",
-    "prefer-template": "warn",
+    "arrow-spacing": "error",
+    "prefer-template": 0,
     "no-restricted-syntax": "warn",
     "consistent-return": "warn",
     "no-plusplus": 0,
+    "react/no-array-index-key": 0,
     "no-console": 0,
     "linebreak-style": 0,
     "no-param-reassign": 0,
     "jsx-a11y/click-events-have-key-events": 0,
-    "indent": ["warn", 2, {
-      "ignoredNodes": ["TemplateLiteral"],
-      "SwitchCase": 1
-    }],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "warn",
-    "jest/no-identical-title": "warn",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "warn",
-
-
+    "no-mixed-spaces-and-tabs": 0,
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
+    "indent": [
+      "warn",
+      2,
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 1,
+        "ignoredNodes": [
+          "FunctionExpression > .params[decorators.length > 0]",
+          "TemplateLiteral",
+          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+        ]
+      }
+    ],
+    "camelcase": 0,
+    "import/no-unresolved": 0,
     // TODO delete
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/destructuring-assignment": 0,
     "no-useless-escape": 0,
-
-    "react-hooks/rules-of-hooks": "warn",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": 0,
+    "react/require-default-props": 0,
+    "react/react-in-jsx-scope": 0,
+    "jsx-a11y/alt-text": 0,
 
     "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/indent": 0,
-    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-empty-interface": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
     "import/extensions": [
-      "warn",
+      "error",
       "ignorePackages",
       {
         "js": "never",
@@ -114,8 +124,6 @@
     ]
   },
   "plugins": [
-    "jest",
-    "@babel",
     "react-hooks",
     "@typescript-eslint"
   ],
@@ -123,7 +131,8 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+      },
+      "typescript": {}
     }
   }
 }
