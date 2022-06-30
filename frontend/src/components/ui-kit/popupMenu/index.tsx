@@ -1,8 +1,8 @@
 import React, { ReactElement, useMemo, useState } from 'react';
-import { Menu, MenuItem, Divider } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Menu, MenuItem, Divider } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import './style.scss';
-import { MenuProps } from '@material-ui/core/Menu/Menu';
+import { MenuProps } from '@mui/material';
 
 /**
  * button - рендерится, отвечает за открытие меню

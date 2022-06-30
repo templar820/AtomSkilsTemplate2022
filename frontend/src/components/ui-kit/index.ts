@@ -62,7 +62,7 @@ export {
   Theme,
   Tooltip as MaterialTooltip,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 
 // ICONS
 export {
@@ -101,9 +101,9 @@ export {
   MenuBook as MenuBookIcon,
   VpnKey as VpnKeyIcon,
   Done as DoneIcon,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
-export { makeStyles, withStyles, ThemeProvider, createTheme } from '@material-ui/core/styles';
+export { makeStyles, withStyles, ThemeProvider, createTheme } from '@mui/styles';
 
 export { ErrorIcon } from './icons';
 
@@ -135,7 +135,7 @@ export {
 } from 'react-icons/ai';
 
 // COLORS...
-export { green, grey } from '@material-ui/core/colors';
+export { green, grey } from '@mui/material/colors';
 
 // LAB
 export {
@@ -144,7 +144,7 @@ export {
   TreeItem, // Alert
   ToggleButton,
   ToggleButtonGroup,
-} from '@material-ui/lab';
+} from '@mui/material';
 
 export { default as SvgIcons } from './svg';
 

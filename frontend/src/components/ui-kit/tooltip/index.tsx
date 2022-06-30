@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MaterialTooltip } from 'ui-kit';
 
-import { TooltipProps } from '@material-ui/core/Tooltip/Tooltip';
+import { TooltipProps } from '@mui/material';
 
 const MAX_LENGTH_TWO_LINE_TOOLTIP = 70;
 const DEFAULT_PROPS_TOOLTIP_CONFIG = { arrow: true };

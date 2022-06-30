@@ -1,4 +1,4 @@
-import { Error as MyErrorIcon } from '@material-ui/icons';
+import { Error as MyErrorIcon } from '@mui/icons-material';
 import React from 'react';
 
 function ErrorIcon(props) {

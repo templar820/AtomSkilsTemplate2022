@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { DialogProps } from '@material-ui/core/Dialog';
+import { DialogProps } from '@mui/material';
 
 export default interface IProps extends DialogProps {
   className?: string;
