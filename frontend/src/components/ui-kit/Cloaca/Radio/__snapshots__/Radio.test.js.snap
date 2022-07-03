@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton /> should match snapshot 1`] = `
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding-right: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4.hover {
+  opacity: 1;
+}
+
+.emotion-4.hover path {
+  color: #10E272;
+  stroke: #10E272;
+}
+
+.emotion-0 {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  margin: 0 8px 0 0;
+  color: #00B956;
+}
+
+.emotion-2 {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+<RadioButton
+  checked={false}
+  className="test-className"
+  css={Object {}}
+  disabled={false}
+  name="test name"
+  onCheckChange={[MockFunction]}
+  propId={11}
+  size="16px"
+  style={Object {}}
+>
+  <StyledLabel
+    _css={Object {}}
+    className="test-className CLR-radio"
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    disabled={false}
+    isChildrenExist={
+      <div
+        id="test8"
+      >
+        RadioButton children
+      </div>
+    }
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    size="16px"
+    style={Object {}}
+  >
+    <label
+      className="test-className CLR-radio emotion-4 emotion-5"
+      disabled={false}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="16px"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        disabled={false}
+        hidden={true}
+        id={11}
+        name="test name"
+        onChange={[Function]}
+        type="radio"
+      />
+      <StyledIcon
+        colors={
+          Object {
+            "GrayScale_0": "#ffffff",
+            "GrayScale_100": "#EDEDED",
+            "GrayScale_150": "#E5E5E5",
+            "GrayScale_200": "#D8D8D8",
+            "GrayScale_50": "#fafafa",
+            "GrayScale_500": "#999999",
+            "GrayScale_55": "#f6f6f6",
+            "GrayScale_600": "#7C7C7C",
+            "GrayScale_700": "#333333",
+            "GrayScale_900": "#000000",
+            "error": "#F62434",
+            "errorAccent": "#EB5A40",
+            "info": "#34AAF2",
+            "infoAccent": "#5BD9E5",
+            "primary": "#00B956",
+            "primaryAccent": "#10E272",
+            "secondary": "#731982",
+            "secondaryAccent": "#A500BF",
+            "tertiary": "#444189",
+            "tertiaryAccent": "#404D46",
+            "warning": "#FFA717",
+            "warningAccent": "#F36F20",
+          }
+        }
+        isChildrenExist={
+          <div
+            id="test8"
+          >
+            RadioButton children
+          </div>
+        }
+        isHovered={false}
+        size="16px"
+      >
+        <span
+          className="emotion-0 emotion-1"
+          size="16px"
+        >
+          <CheckboxSvg
+            checked={false}
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            disabled={false}
+            isHovered={false}
+          >
+            <svg
+              fill="none"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 16C7 11.0294 11.0294 7 16 7C20.9706 7 25 11.0294 25 16C25 20.9706 20.9706 25 16 25C11.0294 25 7 20.9706 7 16Z"
+                stroke="#D8D8D8"
+                strokeWidth="2"
+              />
+            </svg>
+          </CheckboxSvg>
+        </span>
+      </StyledIcon>
+      <StyledCaption
+        size="16px"
+      >
+        <span
+          className="emotion-2 emotion-3"
+          size="16px"
+        >
+          <div
+            id="test8"
+          >
+            RadioButton children
+          </div>
+        </span>
+      </StyledCaption>
+    </label>
+  </StyledLabel>
+</RadioButton>
+`;

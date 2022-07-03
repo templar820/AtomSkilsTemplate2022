@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should match snapshot 1`] = `
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding-right: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.25;
+  cursor: not-allowed;
+  font-size: 18px;
+}
+
+.emotion-0 {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  margin: 6px;
+  margin-right: 14px;
+  border-radius: 2px;
+  background-color: #D8D8D8;
+  color: #00B956;
+  border: 2px solid #D8D8D8;
+  width: 18px;
+}
+
+.hover .emotion-0 {
+  border-color: #10E272;
+  color: #10E272;
+}
+
+.emotion-0 svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.emotion-0:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: #00B956;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+<Checkbox
+  checked="indeterminate"
+  className="some-class"
+  css={
+    Object {
+      "fontSize": "18px",
+    }
+  }
+  disabled={true}
+  isControlled={true}
+  name="input-name"
+  onCheckChange={[MockFunction]}
+  size={16}
+  squareStyle={
+    Object {
+      "width": "18px",
+    }
+  }
+>
+  <StyledLabel
+    _css={
+      Object {
+        "fontSize": "18px",
+      }
+    }
+    className="some-class CLR-checkbox"
+    disabled={true}
+    isChildrenExist={
+      <div>
+        Checkbox label
+      </div>
+    }
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    size={16}
+  >
+    <label
+      className="some-class CLR-checkbox emotion-4 emotion-5"
+      disabled={true}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size={16}
+    >
+      <input
+        checked={false}
+        disabled={true}
+        hidden={true}
+        name="input-name"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <CheckboxSquare
+        _checked="indeterminate"
+        colors={
+          Object {
+            "GrayScale_0": "#ffffff",
+            "GrayScale_100": "#EDEDED",
+            "GrayScale_150": "#E5E5E5",
+            "GrayScale_200": "#D8D8D8",
+            "GrayScale_50": "#fafafa",
+            "GrayScale_500": "#999999",
+            "GrayScale_55": "#f6f6f6",
+            "GrayScale_600": "#7C7C7C",
+            "GrayScale_700": "#333333",
+            "GrayScale_900": "#000000",
+            "error": "#F62434",
+            "errorAccent": "#EB5A40",
+            "info": "#34AAF2",
+            "infoAccent": "#5BD9E5",
+            "primary": "#00B956",
+            "primaryAccent": "#10E272",
+            "secondary": "#731982",
+            "secondaryAccent": "#A500BF",
+            "tertiary": "#444189",
+            "tertiaryAccent": "#404D46",
+            "warning": "#FFA717",
+            "warningAccent": "#F36F20",
+          }
+        }
+        disabled={true}
+        isChildrenExist={
+          <div>
+            Checkbox label
+          </div>
+        }
+        isHovered={false}
+        size={16}
+        squareStyle={
+          Object {
+            "width": "18px",
+          }
+        }
+      >
+        <span
+          className="emotion-0 emotion-1"
+          disabled={true}
+          size={16}
+        >
+          <CheckboxSvg
+            _checked="indeterminate"
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            disabled={true}
+          />
+        </span>
+      </CheckboxSquare>
+      <CheckboxCaption>
+        <span
+          className="emotion-2 emotion-3"
+        >
+          <div>
+            Checkbox label
+          </div>
+        </span>
+      </CheckboxCaption>
+    </label>
+  </StyledLabel>
+</Checkbox>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> should match snapshot 1`] = `
+<Notification
+  className="some-class"
+  colors={
+    Object {
+      "GrayScale_0": "#ffffff",
+      "GrayScale_100": "#EDEDED",
+      "GrayScale_150": "#E5E5E5",
+      "GrayScale_200": "#D8D8D8",
+      "GrayScale_50": "#fafafa",
+      "GrayScale_500": "#999999",
+      "GrayScale_55": "#f6f6f6",
+      "GrayScale_600": "#7C7C7C",
+      "GrayScale_700": "#333333",
+      "GrayScale_900": "#000000",
+      "error": "#F62434",
+      "errorAccent": "#EB5A40",
+      "info": "#34AAF2",
+      "infoAccent": "#5BD9E5",
+      "primary": "#00B956",
+      "primaryAccent": "#10E272",
+      "secondary": "#731982",
+      "secondaryAccent": "#A500BF",
+      "tertiary": "#444189",
+      "tertiaryAccent": "#404D46",
+      "warning": "#FFA717",
+      "warningAccent": "#F36F20",
+    }
+  }
+  css={
+    Object {
+      "fontSize": "18px",
+    }
+  }
+  icon="Archive"
+  isFilled={false}
+  notificationColor="#EB5A40"
+  onClick={[MockFunction]}
+  preset="error"
+  size={17}
+  ttl={3001}
+>
+  <div
+    id="test7"
+  >
+    Notification test7 content
+  </div>
+</Notification>
+`;

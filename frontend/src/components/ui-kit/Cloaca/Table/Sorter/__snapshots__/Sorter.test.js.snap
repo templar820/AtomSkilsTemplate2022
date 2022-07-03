@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sorter /> should match snapshot 1`] = `
+.emotion-0 {
+  cursor: pointer;
+}
+
+<Sorter
+  controlled={false}
+  disabled={false}
+  onClick={[MockFunction]}
+  sequence={
+    Array [
+      "normal",
+      "asc",
+      "desc",
+    ]
+  }
+>
+  <SorterSVG
+    controlled={false}
+    currentDirection="normal"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <StyledWrapper
+      as="svg"
+      controlled={false}
+      currentDirection="normal"
+      disabled={false}
+      fill="none"
+      height="20"
+      onClick={[Function]}
+      viewBox="0 0 20 20"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <svg
+        className="emotion-0 emotion-1"
+        disabled={false}
+        fill="none"
+        height="20"
+        onClick={[Function]}
+        viewBox="0 0 20 20"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 6L12.5981 9.75H7.40192L10 6Z"
+          fill="#D8D8D8"
+        />
+        <path
+          d="M10 15L7.40192 11.25L12.5981 11.25L10 15Z"
+          fill="#D8D8D8"
+        />
+      </svg>
+    </StyledWrapper>
+  </SorterSVG>
+</Sorter>
+`;

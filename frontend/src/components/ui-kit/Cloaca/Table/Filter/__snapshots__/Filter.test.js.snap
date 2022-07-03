@@ -1,0 +1,506 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filter /> should match snapshot 1`] = `
+.emotion-9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  outline: none;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  color: #D8D8D8;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.emotion-3:hover {
+  color: #333333;
+}
+
+.emotion-1 {
+  fill: currentColor;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  color: #D8D8D8;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.emotion-1:hover {
+  color: #333333;
+}
+
+<TableFilter
+  closeOnCancel={true}
+  closeOnOk={true}
+  filterOnOptionPick={true}
+  filterOnType={true}
+  filterType="includes"
+  iconHeight="16px"
+  iconWidth="16px"
+  revertOnCancel={true}
+  showDropdown={true}
+>
+  <ForwardRef
+    closeOnCancel={true}
+    closeOnOk={true}
+    closeOnOutsideClick={true}
+    filterOnOptionPick={true}
+    filterOnType={true}
+    filterType="includes"
+    iconHeight="16px"
+    iconWidth="16px"
+    options={
+      Array [
+        Object {
+          "label": "0",
+          "original": 0,
+          "value": "0",
+        },
+        Object {
+          "label": "0",
+          "original": 0,
+          "value": "0",
+        },
+      ]
+    }
+    revertOnCancel={true}
+    setValue={[Function]}
+    showDropdown={true}
+    stableFilter={
+      Object {
+        "current": undefined,
+      }
+    }
+    updateFilter={[Function]}
+    virtualization={true}
+  >
+    <ForwardRef
+      closeOnCancel={true}
+      closeOnOk={true}
+      closeOnOutsideClick={true}
+      filterOnOptionPick={true}
+      filterOnType={true}
+      iconHeight="16px"
+      iconWidth="16px"
+      options={
+        Array [
+          Object {
+            "label": "0",
+            "original": 0,
+            "value": "0",
+          },
+          Object {
+            "label": "0",
+            "original": 0,
+            "value": "0",
+          },
+        ]
+      }
+      revertOnCancel={true}
+      setValue={[Function]}
+      showDropdown={true}
+      stableFilter={
+        Object {
+          "current": undefined,
+        }
+      }
+      updateFilter={[Function]}
+      virtualization={true}
+    >
+      <SearchFilterDropdown
+        disabled={false}
+        dropdownProps={
+          Object {
+            "closeOnOutside": true,
+          }
+        }
+        filterWrapStyles={
+          Object {
+            "minWidth": 378,
+            "padding": "0 16px;",
+          }
+        }
+        icon="Funnel"
+        iconHeight="24px"
+        iconWidth="24px"
+        isLoading={false}
+        isSearchable={true}
+        onChange={[Function]}
+        onClearAll={[Function]}
+        onOk={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "0",
+              "original": 0,
+              "value": "0",
+            },
+            Object {
+              "label": "0",
+              "original": 0,
+              "value": "0",
+            },
+          ]
+        }
+        propsForSelect={
+          Object {
+            "create": false,
+            "marginBottom": 0,
+            "onSearchChange": [Function],
+            "virtualization": true,
+          }
+        }
+        triggerElement={
+          <ForwardRef(withColors(withProps(Icon)))
+            icon="Search"
+            iconHeight="16px"
+            iconWidth="16px"
+            isActive={false}
+          />
+        }
+      >
+        <withColors(Dropdown)
+          closeOnOutside={true}
+          closeOnTriggerClick={true}
+          disableTriggerElement={false}
+          maxNumberOfVisibleOptions={6}
+          renderPrimaryDropdownInPortal={true}
+          scrollSnapping={true}
+          tabIndex={1}
+          triggerAction="click"
+          triggerElement={
+            <ForwardRef(withColors(withProps(Icon)))
+              icon="Search"
+              iconHeight="16px"
+              iconWidth="16px"
+              isActive={false}
+            />
+          }
+          triggerPlacement="bottom-start"
+          virtualization={false}
+        >
+          <Dropdown
+            closeOnOutside={true}
+            closeOnTriggerClick={true}
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            disableTriggerElement={false}
+            maxNumberOfVisibleOptions={6}
+            renderPrimaryDropdownInPortal={true}
+            scrollSnapping={true}
+            tabIndex={1}
+            triggerAction="click"
+            triggerElement={
+              <ForwardRef(withColors(withProps(Icon)))
+                icon="Search"
+                iconHeight="16px"
+                iconWidth="16px"
+                isActive={false}
+              />
+            }
+            triggerPlacement="bottom-start"
+            virtualization={false}
+          >
+            <StyledTrigger
+              className="CLR-dropdown-trigger"
+              disableTriggerElement={false}
+              onClick={[Function]}
+              onKeyUp={[Function]}
+              onMouseEnter={[Function]}
+              tabIndex={1}
+              triggerAction="click"
+            >
+              <div
+                className="CLR-dropdown-trigger emotion-9 emotion-10"
+                onClick={[Function]}
+                onKeyUp={[Function]}
+                onMouseEnter={[Function]}
+                tabIndex={1}
+              >
+                <withColors(withProps(Icon))
+                  dropdownControls={
+                    Object {
+                      "setIsOpenMain": [Function],
+                      "updatePosition": [Function],
+                    }
+                  }
+                  icon="Search"
+                  iconHeight="16px"
+                  iconWidth="16px"
+                  isActive={false}
+                  isOpenMain={false}
+                >
+                  <withProps(Icon)
+                    colors={
+                      Object {
+                        "GrayScale_0": "#ffffff",
+                        "GrayScale_100": "#EDEDED",
+                        "GrayScale_150": "#E5E5E5",
+                        "GrayScale_200": "#D8D8D8",
+                        "GrayScale_50": "#fafafa",
+                        "GrayScale_500": "#999999",
+                        "GrayScale_55": "#f6f6f6",
+                        "GrayScale_600": "#7C7C7C",
+                        "GrayScale_700": "#333333",
+                        "GrayScale_900": "#000000",
+                        "error": "#F62434",
+                        "errorAccent": "#EB5A40",
+                        "info": "#34AAF2",
+                        "infoAccent": "#5BD9E5",
+                        "primary": "#00B956",
+                        "primaryAccent": "#10E272",
+                        "secondary": "#731982",
+                        "secondaryAccent": "#A500BF",
+                        "tertiary": "#444189",
+                        "tertiaryAccent": "#404D46",
+                        "warning": "#FFA717",
+                        "warningAccent": "#F36F20",
+                      }
+                    }
+                    dropdownControls={
+                      Object {
+                        "setIsOpenMain": [Function],
+                        "updatePosition": [Function],
+                      }
+                    }
+                    icon="Search"
+                    iconHeight="16px"
+                    iconWidth="16px"
+                    isActive={false}
+                    isOpenMain={false}
+                  >
+                    <Icon
+                      color="currentColor"
+                      colors={
+                        Object {
+                          "GrayScale_0": "#ffffff",
+                          "GrayScale_100": "#EDEDED",
+                          "GrayScale_150": "#E5E5E5",
+                          "GrayScale_200": "#D8D8D8",
+                          "GrayScale_50": "#fafafa",
+                          "GrayScale_500": "#999999",
+                          "GrayScale_55": "#f6f6f6",
+                          "GrayScale_600": "#7C7C7C",
+                          "GrayScale_700": "#333333",
+                          "GrayScale_900": "#000000",
+                          "error": "#F62434",
+                          "errorAccent": "#EB5A40",
+                          "info": "#34AAF2",
+                          "infoAccent": "#5BD9E5",
+                          "primary": "#00B956",
+                          "primaryAccent": "#10E272",
+                          "secondary": "#731982",
+                          "secondaryAccent": "#A500BF",
+                          "tertiary": "#444189",
+                          "tertiaryAccent": "#404D46",
+                          "warning": "#FFA717",
+                          "warningAccent": "#F36F20",
+                        }
+                      }
+                      disabled={false}
+                      dropdownControls={
+                        Object {
+                          "setIsOpenMain": [Function],
+                          "updatePosition": [Function],
+                        }
+                      }
+                      h="16px"
+                      height={null}
+                      icon="Search"
+                      iconHeight="16px"
+                      iconWidth="16px"
+                      isActive={false}
+                      isOpenMain={false}
+                      w="16px"
+                      width={null}
+                    >
+                      <withColors(InlineIcons)
+                        className="emotion-3 emotion-0"
+                        color="currentColor"
+                        colors={
+                          Object {
+                            "GrayScale_0": "#ffffff",
+                            "GrayScale_100": "#EDEDED",
+                            "GrayScale_150": "#E5E5E5",
+                            "GrayScale_200": "#D8D8D8",
+                            "GrayScale_50": "#fafafa",
+                            "GrayScale_500": "#999999",
+                            "GrayScale_55": "#f6f6f6",
+                            "GrayScale_600": "#7C7C7C",
+                            "GrayScale_700": "#333333",
+                            "GrayScale_900": "#000000",
+                            "error": "#F62434",
+                            "errorAccent": "#EB5A40",
+                            "info": "#34AAF2",
+                            "infoAccent": "#5BD9E5",
+                            "primary": "#00B956",
+                            "primaryAccent": "#10E272",
+                            "secondary": "#731982",
+                            "secondaryAccent": "#A500BF",
+                            "tertiary": "#444189",
+                            "tertiaryAccent": "#404D46",
+                            "warning": "#FFA717",
+                            "warningAccent": "#F36F20",
+                          }
+                        }
+                        disabled={false}
+                        dropdownControls={
+                          Object {
+                            "setIsOpenMain": [Function],
+                            "updatePosition": [Function],
+                          }
+                        }
+                        h="16px"
+                        height={null}
+                        icon="Search"
+                        iconHeight="16px"
+                        iconWidth="16px"
+                        isActive={false}
+                        isOpenMain={false}
+                        w="16px"
+                        width={null}
+                      >
+                        <InlineIcons
+                          className="emotion-3 emotion-0"
+                          color="currentColor"
+                          colors={
+                            Object {
+                              "GrayScale_0": "#ffffff",
+                              "GrayScale_100": "#EDEDED",
+                              "GrayScale_150": "#E5E5E5",
+                              "GrayScale_200": "#D8D8D8",
+                              "GrayScale_50": "#fafafa",
+                              "GrayScale_500": "#999999",
+                              "GrayScale_55": "#f6f6f6",
+                              "GrayScale_600": "#7C7C7C",
+                              "GrayScale_700": "#333333",
+                              "GrayScale_900": "#000000",
+                              "error": "#F62434",
+                              "errorAccent": "#EB5A40",
+                              "info": "#34AAF2",
+                              "infoAccent": "#5BD9E5",
+                              "primary": "#00B956",
+                              "primaryAccent": "#10E272",
+                              "secondary": "#731982",
+                              "secondaryAccent": "#A500BF",
+                              "tertiary": "#444189",
+                              "tertiaryAccent": "#404D46",
+                              "warning": "#FFA717",
+                              "warningAccent": "#F36F20",
+                            }
+                          }
+                          disabled={false}
+                          dropdownControls={
+                            Object {
+                              "setIsOpenMain": [Function],
+                              "updatePosition": [Function],
+                            }
+                          }
+                          h="16px"
+                          height={null}
+                          icon="Search"
+                          iconHeight="16px"
+                          iconWidth="16px"
+                          isActive={false}
+                          isOpenMain={false}
+                          w="16px"
+                          width={null}
+                        >
+                          <Styled(svg)
+                            className="emotion-3 emotion-0 CLR-inline-icons"
+                            color="currentColor"
+                            colors={
+                              Object {
+                                "GrayScale_0": "#ffffff",
+                                "GrayScale_100": "#EDEDED",
+                                "GrayScale_150": "#E5E5E5",
+                                "GrayScale_200": "#D8D8D8",
+                                "GrayScale_50": "#fafafa",
+                                "GrayScale_500": "#999999",
+                                "GrayScale_55": "#f6f6f6",
+                                "GrayScale_600": "#7C7C7C",
+                                "GrayScale_700": "#333333",
+                                "GrayScale_900": "#000000",
+                                "error": "#F62434",
+                                "errorAccent": "#EB5A40",
+                                "info": "#34AAF2",
+                                "infoAccent": "#5BD9E5",
+                                "primary": "#00B956",
+                                "primaryAccent": "#10E272",
+                                "secondary": "#731982",
+                                "secondaryAccent": "#A500BF",
+                                "tertiary": "#444189",
+                                "tertiaryAccent": "#404D46",
+                                "warning": "#FFA717",
+                                "warningAccent": "#F36F20",
+                              }
+                            }
+                            disabled={false}
+                            dropdownControls={
+                              Object {
+                                "setIsOpenMain": [Function],
+                                "updatePosition": [Function],
+                              }
+                            }
+                            height="16px"
+                            iconHeight="16px"
+                            iconWidth="16px"
+                            isActive={false}
+                            isOpenMain={false}
+                            width="16px"
+                          >
+                            <svg
+                              className="emotion-0 CLR-inline-icons emotion-1 emotion-2"
+                              color="currentColor"
+                              disabled={false}
+                              height="16px"
+                              width="16px"
+                            >
+                              <use
+                                xlinkHref="#Search"
+                              />
+                            </svg>
+                          </Styled(svg)>
+                        </InlineIcons>
+                      </withColors(InlineIcons)>
+                    </Icon>
+                  </withProps(Icon)>
+                </withColors(withProps(Icon))>
+              </div>
+            </StyledTrigger>
+          </Dropdown>
+        </withColors(Dropdown)>
+      </SearchFilterDropdown>
+    </ForwardRef>
+  </ForwardRef>
+</TableFilter>
+`;

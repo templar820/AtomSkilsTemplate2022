@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> should match snapshot 1`] = `
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  position: relative;
+}
+
+.emotion-4 {
+  display: inline-block;
+  width: 62px;
+  height: 32px;
+  font-size: 15px;
+  position: relative;
+  border-radius: 100px;
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  border: 1px solid #EDEDED;
+  background-color: #fafafa;
+  color: #D8D8D8;
+  cursor: pointer;
+}
+
+.emotion-4:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+  box-shadow: 0 0 4px rgba(51,51,51,0.25);
+  -webkit-transition: -webkit-transform 300ms;
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  -webkit-transform: translate(50%,-50%);
+  -ms-transform: translate(50%,-50%);
+  transform: translate(50%,-50%);
+}
+
+.emotion-2 {
+  opacity: 0;
+}
+
+<Switch
+  animationDuration={300}
+  checked={false}
+  checkedIcon={
+    <div
+      id="checkedIco"
+    >
+      Styled ico
+    </div>
+  }
+  colorSchemeExtra={Object {}}
+  disabled={false}
+  elmSize="md"
+  iconsType="iconic"
+  isControlled={true}
+  isLoading={false}
+  loaderProps={Object {}}
+  onCheckChange={[MockFunction]}
+  switchSizesExtra={Object {}}
+  uncheckedIcon={
+    <div
+      id="uncheckedIco"
+    >
+      Styled ico
+    </div>
+  }
+>
+  <StyledWrapper
+    className="CLR-switch"
+    disabled={false}
+    isLoading={false}
+  >
+    <label
+      className="CLR-switch emotion-6 emotion-7"
+      disabled={false}
+    >
+      <_default
+        animationDuration={300}
+        checked={false}
+        colorScheme={
+          Object {
+            "additional": "#ffffff",
+            "border": "#00B956",
+            "inactive": "#fafafa",
+            "inactiveAccent": "#D8D8D8",
+            "inactiveBorder": "#EDEDED",
+            "main": "rgba(0, 185, 86, 0.9)",
+            "thumbShadow": "rgba(51, 51, 51, 0.25)",
+          }
+        }
+        currentSwitchSizes={
+          Object {
+            "defaultIconSize": "20px",
+            "fontSize": "15px",
+            "loaderScale": "0.5",
+            "thumbWidth": "30px",
+            "wrapperHeight": "32px",
+            "wrapperWidth": "62px",
+          }
+        }
+        disabled={false}
+        focused={false}
+        isLoading={false}
+      >
+        <StyledBox
+          animationDuration={300}
+          checked={false}
+          colorScheme={
+            Object {
+              "additional": "#ffffff",
+              "border": "#00B956",
+              "inactive": "#fafafa",
+              "inactiveAccent": "#D8D8D8",
+              "inactiveBorder": "#EDEDED",
+              "main": "rgba(0, 185, 86, 0.9)",
+              "thumbShadow": "rgba(51, 51, 51, 0.25)",
+            }
+          }
+          currentSwitchSizes={
+            Object {
+              "defaultIconSize": "20px",
+              "fontSize": "15px",
+              "loaderScale": "0.5",
+              "thumbWidth": "30px",
+              "wrapperHeight": "32px",
+              "wrapperWidth": "62px",
+            }
+          }
+          disabled={false}
+          finalthumbStyle={
+            Object {
+              "map": undefined,
+              "name": "1ts1wle",
+              "next": undefined,
+              "styles": "content:'';width:30px;height:30px;background-color:#ffffff;border-radius:50%;position:absolute;top:0;left:0;transform:translate(0);box-shadow:0 0 4px rgba(51, 51, 51, 0.25);transition:transform 300ms;;",
+              "toString": [Function],
+            }
+          }
+          focused={false}
+          isLoading={false}
+        >
+          <span
+            checked={false}
+            className="emotion-4 emotion-5"
+            disabled={false}
+          >
+            <_default
+              checked={false}
+              checkedIcon={
+                <div
+                  id="checkedIco"
+                >
+                  Styled ico
+                </div>
+              }
+              currentSwitchSizes={
+                Object {
+                  "defaultIconSize": "20px",
+                  "fontSize": "15px",
+                  "loaderScale": "0.5",
+                  "thumbWidth": "30px",
+                  "wrapperHeight": "32px",
+                  "wrapperWidth": "62px",
+                }
+              }
+              iconsType="iconic"
+              uncheckedIcon={
+                <div
+                  id="uncheckedIco"
+                >
+                  Styled ico
+                </div>
+              }
+            >
+              <StyledIcon
+                position="right"
+              >
+                <span
+                  className="emotion-0 emotion-1"
+                >
+                  <div
+                    id="uncheckedIco"
+                  >
+                    Styled ico
+                  </div>
+                </span>
+              </StyledIcon>
+            </_default>
+            <StyledInput
+              checked={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyUp={[Function]}
+              type="checkbox"
+            >
+              <input
+                checked={false}
+                className="emotion-2 emotion-3"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyUp={[Function]}
+                type="checkbox"
+              />
+            </StyledInput>
+          </span>
+        </StyledBox>
+      </_default>
+      <_default
+        currentSwitchSizes={
+          Object {
+            "defaultIconSize": "20px",
+            "fontSize": "15px",
+            "loaderScale": "0.5",
+            "thumbWidth": "30px",
+            "wrapperHeight": "32px",
+            "wrapperWidth": "62px",
+          }
+        }
+        isLoading={false}
+        loaderProps={Object {}}
+      />
+    </label>
+  </StyledWrapper>
+</Switch>
+`;

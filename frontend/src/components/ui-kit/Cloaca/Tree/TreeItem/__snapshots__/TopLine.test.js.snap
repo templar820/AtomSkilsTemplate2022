@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopLine /> should match snapshot 1`] = `
+<StyledTopLine
+  nestingLevel={1}
+  onClick={[MockFunction]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  parentChecked={true}
+  selection={true}
+  topLineStyles={
+    Object {
+      "margin": "10px",
+    }
+  }
+>
+  <Icon
+    handleExpanding={[Function]}
+    selection={true}
+    topLineStyles={
+      Object {
+        "margin": "10px",
+      }
+    }
+  />
+  <TextAndCheckbox
+    selection={true}
+    title="title"
+    topLineStyles={
+      Object {
+        "margin": "10px",
+      }
+    }
+  />
+</StyledTopLine>
+`;

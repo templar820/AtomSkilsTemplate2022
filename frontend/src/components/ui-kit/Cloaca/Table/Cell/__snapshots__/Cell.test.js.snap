@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cell /> should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  position: absolute;
+  right: 10px;
+}
+
+.emotion-4 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  padding-right: 35px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  z-index: 3;
+  background: #fff;
+}
+
+.ezbwp530 > .e1djq8je0:nth-of-type(2) .emotion-4 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-4 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .e1djq8je0:last-of-type > .emotion-4,
+.e1loha5m0 > .e1djq8je0:last-of-type > .emotion-4 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .e1djq8je0:last-of-type > .emotion-4,
+  .e1loha5m0 > .e1djq8je0:last-of-type > .emotion-4 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .e1djq8je0:first-of-type > .emotion-4 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .e1djq8je0:first-of-type > .emotion-4 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .e1djq8je0:last-of-type > .emotion-4,
+.eoja2yp0:last-child > .e1djq8je0:last-of-type > .emotion-4 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-4 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-4:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<Cell
+  columnsCount={1}
+  coords={null}
+  css={
+    Object {
+      "background": "#fff",
+    }
+  }
+  filtersValue={0}
+  firstCol={true}
+  fixedFirstCol={false}
+  fixedFooter={false}
+  fixedHeader={true}
+  fixedLastCol={false}
+  index={0}
+  isScrolled={
+    Object {
+      "bottom": false,
+      "left": false,
+      "right": false,
+      "top": false,
+    }
+  }
+  key=".$.$.0"
+  lastCol={true}
+  leftSlot={
+    <span
+      className="left"
+    />
+  }
+  nextIndex={null}
+  resizable={false}
+  rightSlot={
+    <span
+      className="right"
+    />
+  }
+  rowOffset={0}
+  showHorizontalScrollShadows={true}
+  showInColFilter={true}
+  showNoData={true}
+  sortOnClick={false}
+  sorterProps={Object {}}
+  tableSection="thead"
+>
+  <StyledCell
+    as="th"
+    className="CLR-table__cell"
+    colSpan={1}
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    columnsCount={1}
+    coords={null}
+    css={
+      Object {
+        "background": "#fff",
+      }
+    }
+    filtersValue={0}
+    firstCol={true}
+    fixedConfig={
+      Object {
+        "top": 0,
+        "zIndex": 3,
+      }
+    }
+    isEdgeUseBgBorders={true}
+    isScrolled={
+      Object {
+        "bottom": false,
+        "left": false,
+        "right": false,
+        "top": false,
+      }
+    }
+    lastCol={true}
+    rightSlot={
+      <span
+        className="right"
+      />
+    }
+    showHorizontalScrollShadows={true}
+    showInColFilter={true}
+    showNoData={true}
+    tableSection="thead"
+  >
+    <th
+      className="CLR-table__cell emotion-4 emotion-5"
+      colSpan={1}
+      coords={null}
+    >
+      H1
+      <Slot
+        slot="left"
+      >
+        <SlotWrapper
+          slot="left"
+        >
+          <span
+            className="emotion-0 emotion-1"
+            slot="left"
+          >
+            <span
+              className="left"
+            />
+          </span>
+        </SlotWrapper>
+      </Slot>
+      <Slot
+        slot="right"
+      >
+        <SlotWrapper
+          slot="right"
+        >
+          <span
+            className="emotion-2 emotion-1"
+            slot="right"
+          >
+            <span
+              className="right"
+            />
+          </span>
+        </SlotWrapper>
+      </Slot>
+      <Resizer
+        lastCol={true}
+        nextIndex={null}
+        resizable={false}
+        resizingStates={
+          Object {
+            "isResizing": false,
+            "resizingCols": null,
+            "setIsResizing": [Function],
+            "setResizingCols": [Function],
+          }
+        }
+        rightIndexPosition={0}
+      />
+    </th>
+  </StyledCell>
+</Cell>
+`;
