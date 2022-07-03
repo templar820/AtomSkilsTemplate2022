@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should match snapshot 1`] = `
+<StyledAccordionWrapper
+  className="CLR-accordion"
+  closeAll={false}
+  isOpen={true}
+  selectedItem={1}
+>
+  <withColors(Collapse)
+    childKey={0}
+    disabled={false}
+    expanded={false}
+    isLoading={false}
+    isOpen={true}
+    key=".0"
+    onClick={[Function]}
+    onExpand={[Function]}
+    styles={Object {}}
+  />
+  <withColors(Collapse)
+    childKey={1}
+    disabled={false}
+    expanded={true}
+    isLoading={false}
+    isOpen={true}
+    key=".1"
+    onClick={[Function]}
+    onExpand={[Function]}
+    styles={Object {}}
+  />
+</StyledAccordionWrapper>
+`;

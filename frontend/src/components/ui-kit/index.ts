@@ -48,15 +48,6 @@ export {
   Snackbar,
   Switch as MuiSwitch,
   Tab,
-  TabList,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-  TableSortLabel,
   Tabs,
   TextField,
   Theme,
@@ -116,23 +107,24 @@ export { Alert } from './alert';
 export * from './popupMenu';
 export * from './autocomplete';
 export * from './chips';
+export * from './table';
 
 // REACT ICONS
-export { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from 'react-icons/di';
+// export { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from 'react-icons/di';
 
 // REACT ICONS
-export {
-  AiOutlineFile,
-  AiOutlineFileText,
-  AiOutlineFolderAdd,
-  AiOutlineFileAdd,
-  AiOutlineDelete,
-  AiOutlineEdit,
-  AiTwotoneFolder,
-  AiTwotoneFolderOpen,
-  AiFillDiff,
-  AiOutlineMore,
-} from 'react-icons/ai';
+// export {
+//   AiOutlineFile,
+//   AiOutlineFileText,
+//   AiOutlineFolderAdd,
+//   AiOutlineFileAdd,
+//   AiOutlineDelete,
+//   AiOutlineEdit,
+//   AiTwotoneFolder,
+//   AiTwotoneFolderOpen,
+//   AiFillDiff,
+//   AiOutlineMore,
+// } from 'react-icons/ai';
 
 // COLORS...
 export { green, grey } from '@mui/material/colors';

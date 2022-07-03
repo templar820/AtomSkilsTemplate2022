@@ -1,0 +1,1953 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should match snapshot 1`] = `
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  font-size: 15px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  overflow-anchor: none;
+  max-height: 100%;
+}
+
+.emotion-15 {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(51,51,51,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  font-size: 15px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  overflow-anchor: none;
+  max-height: 100%;
+}
+
+.emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<withColors(Table)
+  cellWidths={Array []}
+  colsStyles={Array []}
+  defaultCellWidth="auto"
+  defaultMaxCellWidth="none"
+  defaultMinCellWidth={0}
+  defaultResizable={true}
+  entriesOnDisplay={15}
+  filteredColumns={Array []}
+  filters={Array []}
+  fixedFirstCol={true}
+  fixedFooter={true}
+  fixedHeader={true}
+  fixedLastCol={true}
+  hoveringRows={true}
+  isCellWidthsControlled={false}
+  isEdgeUseBgBorders={true}
+  isLoading={false}
+  maxCellWidths={Array []}
+  minCellWidths={
+    Array [
+      175,
+      225,
+      225,
+      175,
+    ]
+  }
+  noDataProps={
+    Object {
+      "text": "",
+    }
+  }
+  resizableCols={Array []}
+  resizeOnSpot={true}
+  showHorizontalScrollShadows={true}
+  showNoData={true}
+  sorters={Array []}
+  sortersOrder="ltr"
+>
+  <Table
+    cellWidths={Array []}
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    colsStyles={Array []}
+    defaultCellWidth="auto"
+    defaultMaxCellWidth="none"
+    defaultMinCellWidth={0}
+    defaultResizable={true}
+    entriesOnDisplay={15}
+    filteredColumns={Array []}
+    filters={Array []}
+    fixedFirstCol={true}
+    fixedFooter={true}
+    fixedHeader={true}
+    fixedLastCol={true}
+    hoveringRows={true}
+    isCellWidthsControlled={false}
+    isEdgeUseBgBorders={true}
+    isLoading={false}
+    maxCellWidths={Array []}
+    minCellWidths={
+      Array [
+        175,
+        225,
+        225,
+        175,
+      ]
+    }
+    noDataProps={
+      Object {
+        "text": "",
+      }
+    }
+    resizableCols={Array []}
+    resizeOnSpot={true}
+    showHorizontalScrollShadows={true}
+    showNoData={true}
+    sorters={Array []}
+    sortersOrder="ltr"
+  >
+    <LoaderComponentTable
+      isLoading={false}
+      wrapperRef={
+        Object {
+          "current": .emotion-15 {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(51,51,51,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  font-size: 15px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  overflow-anchor: none;
+  max-height: 100%;
+}
+
+.emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<div
+            class="emotion-14 CLR-paper emotion-15 emotion-16"
+          >
+            <table
+              class="CLR-table emotion-12 emotion-13"
+            >
+              <colgroup>
+                <col
+                  class="emotion-0 emotion-1"
+                />
+              </colgroup>
+              <thead
+                class="CLR-table__head emotion-10 emotion-11"
+              >
+                <tr
+                  role="presentation"
+                >
+                  <th
+                    class="emotion-2 emotion-3"
+                  />
+                </tr>
+                <tr
+                  class="CLR-table__row emotion-8 emotion-9"
+                >
+                  <th
+                    class="CLR-table__cell emotion-6 emotion-7"
+                    colspan="1"
+                  >
+                    H1
+                    <span
+                      class="emotion-4 emotion-5"
+                      role="presentation"
+                    />
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>,
+        }
+      }
+    />
+    <Wrapper
+      colors={
+        Object {
+          "GrayScale_0": "#ffffff",
+          "GrayScale_100": "#EDEDED",
+          "GrayScale_150": "#E5E5E5",
+          "GrayScale_200": "#D8D8D8",
+          "GrayScale_50": "#fafafa",
+          "GrayScale_500": "#999999",
+          "GrayScale_55": "#f6f6f6",
+          "GrayScale_600": "#7C7C7C",
+          "GrayScale_700": "#333333",
+          "GrayScale_900": "#000000",
+          "error": "#F62434",
+          "errorAccent": "#EB5A40",
+          "info": "#34AAF2",
+          "infoAccent": "#5BD9E5",
+          "primary": "#00B956",
+          "primaryAccent": "#10E272",
+          "secondary": "#731982",
+          "secondaryAccent": "#A500BF",
+          "tertiary": "#444189",
+          "tertiaryAccent": "#404D46",
+          "warning": "#FFA717",
+          "warningAccent": "#F36F20",
+        }
+      }
+      entriesOnDisplay={15}
+      grandchildren={
+        Object {
+          "thead": Array [
+            <UNDEFINED>
+              <ForwardRef
+                defaultResizable={true}
+                entriesOnDisplay={15}
+                filters={Array []}
+                fixedFirstCol={true}
+                fixedFooter={true}
+                fixedHeader={true}
+                fixedLastCol={true}
+                hoveringRows={true}
+                index={0}
+                maxCellWidths={Array []}
+                minCellWidths={
+                  Array [
+                    175,
+                    225,
+                    225,
+                    175,
+                  ]
+                }
+                showHorizontalScrollShadows={true}
+                showInColFilter={true}
+                sortOnClick={false}
+                sorterProps={Object {}}
+                sorters={Array []}
+                sortersOrder="ltr"
+              >
+                H1
+              </ForwardRef>
+            </UNDEFINED>,
+          ],
+        }
+      }
+      resizerRender={[Function]}
+      resizingStates={
+        Object {
+          "isResizing": false,
+          "resizingCols": null,
+          "setIsResizing": [Function],
+          "setResizingCols": [Function],
+        }
+      }
+      setTableRef={[Function]}
+      setWrapperRef={[Function]}
+      startEntry={0}
+      wrapperRef={
+        Object {
+          "current": .emotion-15 {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(51,51,51,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  font-size: 15px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  overflow-anchor: none;
+  max-height: 100%;
+}
+
+.emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<div
+            class="emotion-14 CLR-paper emotion-15 emotion-16"
+          >
+            <table
+              class="CLR-table emotion-12 emotion-13"
+            >
+              <colgroup>
+                <col
+                  class="emotion-0 emotion-1"
+                />
+              </colgroup>
+              <thead
+                class="CLR-table__head emotion-10 emotion-11"
+              >
+                <tr
+                  role="presentation"
+                >
+                  <th
+                    class="emotion-2 emotion-3"
+                  />
+                </tr>
+                <tr
+                  class="CLR-table__row emotion-8 emotion-9"
+                >
+                  <th
+                    class="CLR-table__cell emotion-6 emotion-7"
+                    colspan="1"
+                  >
+                    H1
+                    <span
+                      class="emotion-4 emotion-5"
+                      role="presentation"
+                    />
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>,
+        }
+      }
+    >
+      <StyledWrapper
+        onScroll={[Function]}
+        size={5}
+        wrapperMaxHeight={0}
+      >
+        <Paper
+          className="emotion-17 emotion-14"
+          onScroll={[Function]}
+          size={5}
+          wrapperMaxHeight={0}
+        >
+          <StyledPaper
+            className="emotion-17 emotion-14 CLR-paper"
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            onScroll={[Function]}
+            size={5}
+            wrapperMaxHeight={0}
+          >
+            <div
+              className="emotion-14 CLR-paper emotion-15 emotion-16"
+              onScroll={[Function]}
+            >
+              <StyledTable
+                className="CLR-table"
+                colors={
+                  Object {
+                    "GrayScale_0": "#ffffff",
+                    "GrayScale_100": "#EDEDED",
+                    "GrayScale_150": "#E5E5E5",
+                    "GrayScale_200": "#D8D8D8",
+                    "GrayScale_50": "#fafafa",
+                    "GrayScale_500": "#999999",
+                    "GrayScale_55": "#f6f6f6",
+                    "GrayScale_600": "#7C7C7C",
+                    "GrayScale_700": "#333333",
+                    "GrayScale_900": "#000000",
+                    "error": "#F62434",
+                    "errorAccent": "#EB5A40",
+                    "info": "#34AAF2",
+                    "infoAccent": "#5BD9E5",
+                    "primary": "#00B956",
+                    "primaryAccent": "#10E272",
+                    "secondary": "#731982",
+                    "secondaryAccent": "#A500BF",
+                    "tertiary": "#444189",
+                    "tertiaryAccent": "#404D46",
+                    "warning": "#FFA717",
+                    "warningAccent": "#F36F20",
+                  }
+                }
+                height={null}
+                resizingStates={
+                  Object {
+                    "isResizing": false,
+                    "resizingCols": null,
+                    "setIsResizing": [Function],
+                    "setResizingCols": [Function],
+                  }
+                }
+              >
+                <table
+                  className="CLR-table emotion-12 emotion-13"
+                  height={null}
+                >
+                  <Memo()
+                    cellWidths={
+                      Array [
+                        "auto",
+                      ]
+                    }
+                    columnsCount={1}
+                    maxCellWidths={
+                      Array [
+                        "none",
+                      ]
+                    }
+                    minCellWidths={
+                      Array [
+                        175,
+                      ]
+                    }
+                  >
+                    <colgroup>
+                      <StyledCol
+                        cellWidth="auto"
+                        key="0"
+                        maxCellWidth="none"
+                        minCellWidth={175}
+                      >
+                        <col
+                          className="emotion-0 emotion-1"
+                        />
+                      </StyledCol>
+                    </colgroup>
+                  </Memo()>
+                  <Thead
+                    colsStyles={Array []}
+                    columnsCount={1}
+                    coords={null}
+                    fixedFirstCol={true}
+                    fixedFooter={true}
+                    fixedHeader={true}
+                    fixedLastCol={true}
+                    hoveringRows={true}
+                    isScrolled={
+                      Object {
+                        "bottom": false,
+                        "left": false,
+                        "right": false,
+                        "top": false,
+                      }
+                    }
+                    key=".0"
+                    resizableCols={
+                      Array [
+                        true,
+                      ]
+                    }
+                    rowsOffsets={
+                      Object {
+                        "bottoms": Array [
+                          0,
+                          0,
+                          0,
+                        ],
+                        "tops": Array [
+                          0,
+                          0,
+                          0,
+                        ],
+                      }
+                    }
+                    setCoords={[Function]}
+                    showHorizontalScrollShadows={true}
+                    showNoData={true}
+                    tableSection="thead"
+                  >
+                    <StyledThead
+                      className="CLR-table__head"
+                      colors={
+                        Object {
+                          "GrayScale_0": "#ffffff",
+                          "GrayScale_100": "#EDEDED",
+                          "GrayScale_150": "#E5E5E5",
+                          "GrayScale_200": "#D8D8D8",
+                          "GrayScale_50": "#fafafa",
+                          "GrayScale_500": "#999999",
+                          "GrayScale_55": "#f6f6f6",
+                          "GrayScale_600": "#7C7C7C",
+                          "GrayScale_700": "#333333",
+                          "GrayScale_900": "#000000",
+                          "error": "#F62434",
+                          "errorAccent": "#EB5A40",
+                          "info": "#34AAF2",
+                          "infoAccent": "#5BD9E5",
+                          "primary": "#00B956",
+                          "primaryAccent": "#10E272",
+                          "secondary": "#731982",
+                          "secondaryAccent": "#A500BF",
+                          "tertiary": "#444189",
+                          "tertiaryAccent": "#404D46",
+                          "warning": "#FFA717",
+                          "warningAccent": "#F36F20",
+                        }
+                      }
+                    >
+                      <thead
+                        className="CLR-table__head emotion-10 emotion-11"
+                      >
+                        <TechRow
+                          columnsCount={1}
+                        >
+                          <tr
+                            role="presentation"
+                          >
+                            <StyledTechCell
+                              key="0"
+                            >
+                              <th
+                                className="emotion-2 emotion-3"
+                              />
+                            </StyledTechCell>
+                          </tr>
+                        </TechRow>
+                        <ForwardRef
+                          colsStyles={Array []}
+                          columnsCount={1}
+                          coords={null}
+                          fixedFirstCol={true}
+                          fixedFooter={true}
+                          fixedHeader={true}
+                          fixedLastCol={true}
+                          hoveringRows={true}
+                          isScrolled={
+                            Object {
+                              "bottom": false,
+                              "left": false,
+                              "right": false,
+                              "top": false,
+                            }
+                          }
+                          key=".$.$.0"
+                          resizableCols={
+                            Array [
+                              true,
+                            ]
+                          }
+                          rowOffset={0}
+                          setCoords={[Function]}
+                          showHorizontalScrollShadows={true}
+                          showNoData={true}
+                          tableSection="thead"
+                        >
+                          <StyledRow
+                            className="CLR-table__row"
+                            colors={
+                              Object {
+                                "GrayScale_0": "#ffffff",
+                                "GrayScale_100": "#EDEDED",
+                                "GrayScale_150": "#E5E5E5",
+                                "GrayScale_200": "#D8D8D8",
+                                "GrayScale_50": "#fafafa",
+                                "GrayScale_500": "#999999",
+                                "GrayScale_55": "#f6f6f6",
+                                "GrayScale_600": "#7C7C7C",
+                                "GrayScale_700": "#333333",
+                                "GrayScale_900": "#000000",
+                                "error": "#F62434",
+                                "errorAccent": "#EB5A40",
+                                "info": "#34AAF2",
+                                "infoAccent": "#5BD9E5",
+                                "primary": "#00B956",
+                                "primaryAccent": "#10E272",
+                                "secondary": "#731982",
+                                "secondaryAccent": "#A500BF",
+                                "tertiary": "#444189",
+                                "tertiaryAccent": "#404D46",
+                                "warning": "#FFA717",
+                                "warningAccent": "#F36F20",
+                              }
+                            }
+                            hoveringRows={true}
+                            onContextMenu={[Function]}
+                            tableSection="thead"
+                          >
+                            <tr
+                              className="CLR-table__row emotion-8 emotion-9"
+                              onContextMenu={[Function]}
+                            >
+                              <Cell
+                                columnsCount={1}
+                                coords={null}
+                                defaultResizable={true}
+                                entriesOnDisplay={15}
+                                filters={Array []}
+                                firstCol={true}
+                                fixedFirstCol={true}
+                                fixedFooter={true}
+                                fixedHeader={true}
+                                fixedLastCol={true}
+                                hoveringRows={true}
+                                index={0}
+                                isScrolled={
+                                  Object {
+                                    "bottom": false,
+                                    "left": false,
+                                    "right": false,
+                                    "top": false,
+                                  }
+                                }
+                                key=".$.$.0"
+                                lastCol={true}
+                                maxCellWidths={Array []}
+                                minCellWidths={
+                                  Array [
+                                    175,
+                                    225,
+                                    225,
+                                    175,
+                                  ]
+                                }
+                                nextIndex={null}
+                                resizable={true}
+                                rowOffset={0}
+                                showHorizontalScrollShadows={true}
+                                showInColFilter={true}
+                                showNoData={true}
+                                sortOnClick={false}
+                                sorterProps={Object {}}
+                                sorters={Array []}
+                                sortersOrder="ltr"
+                                tableSection="thead"
+                              >
+                                <StyledCell
+                                  as="th"
+                                  className="CLR-table__cell"
+                                  colSpan={1}
+                                  colors={
+                                    Object {
+                                      "GrayScale_0": "#ffffff",
+                                      "GrayScale_100": "#EDEDED",
+                                      "GrayScale_150": "#E5E5E5",
+                                      "GrayScale_200": "#D8D8D8",
+                                      "GrayScale_50": "#fafafa",
+                                      "GrayScale_500": "#999999",
+                                      "GrayScale_55": "#f6f6f6",
+                                      "GrayScale_600": "#7C7C7C",
+                                      "GrayScale_700": "#333333",
+                                      "GrayScale_900": "#000000",
+                                      "error": "#F62434",
+                                      "errorAccent": "#EB5A40",
+                                      "info": "#34AAF2",
+                                      "infoAccent": "#5BD9E5",
+                                      "primary": "#00B956",
+                                      "primaryAccent": "#10E272",
+                                      "secondary": "#731982",
+                                      "secondaryAccent": "#A500BF",
+                                      "tertiary": "#444189",
+                                      "tertiaryAccent": "#404D46",
+                                      "warning": "#FFA717",
+                                      "warningAccent": "#F36F20",
+                                    }
+                                  }
+                                  columnsCount={1}
+                                  coords={null}
+                                  defaultResizable={true}
+                                  entriesOnDisplay={15}
+                                  filters={Array []}
+                                  firstCol={true}
+                                  fixedConfig={
+                                    Object {
+                                      "left": 0,
+                                      "right": 0,
+                                      "top": 0,
+                                      "zIndex": 5,
+                                    }
+                                  }
+                                  hoveringRows={true}
+                                  isEdgeUseBgBorders={true}
+                                  isScrolled={
+                                    Object {
+                                      "bottom": false,
+                                      "left": false,
+                                      "right": false,
+                                      "top": false,
+                                    }
+                                  }
+                                  lastCol={true}
+                                  maxCellWidths={Array []}
+                                  minCellWidths={
+                                    Array [
+                                      175,
+                                      225,
+                                      225,
+                                      175,
+                                    ]
+                                  }
+                                  showHorizontalScrollShadows={true}
+                                  showInColFilter={true}
+                                  showNoData={true}
+                                  sorters={Array []}
+                                  sortersOrder="ltr"
+                                  tableSection="thead"
+                                >
+                                  <th
+                                    className="CLR-table__cell emotion-6 emotion-7"
+                                    colSpan={1}
+                                    coords={null}
+                                  >
+                                    H1
+                                    <Slot
+                                      slot="left"
+                                    />
+                                    <Slot
+                                      slot="right"
+                                    />
+                                    <Resizer
+                                      lastCol={true}
+                                      nextIndex={null}
+                                      resizable={true}
+                                      resizingStates={
+                                        Object {
+                                          "isResizing": false,
+                                          "resizingCols": null,
+                                          "setIsResizing": [Function],
+                                          "setResizingCols": [Function],
+                                        }
+                                      }
+                                      rightIndexPosition={0}
+                                    >
+                                      <StyledResizer
+                                        lastCol={true}
+                                        onMouseDown={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        role="presentation"
+                                      >
+                                        <span
+                                          className="emotion-4 emotion-5"
+                                          onMouseDown={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          role="presentation"
+                                        />
+                                      </StyledResizer>
+                                    </Resizer>
+                                  </th>
+                                </StyledCell>
+                              </Cell>
+                            </tr>
+                          </StyledRow>
+                        </ForwardRef>
+                      </thead>
+                    </StyledThead>
+                  </Thead>
+                </table>
+              </StyledTable>
+              <withColors()
+                filteredColumnsMap={Array []}
+                maxCellWidths={
+                  Array [
+                    "none",
+                  ]
+                }
+                minCellWidths={
+                  Array [
+                    175,
+                  ]
+                }
+                resizeOnSpot={true}
+                resizingStates={
+                  Object {
+                    "isResizing": false,
+                    "resizingCols": null,
+                    "setIsResizing": [Function],
+                    "setResizingCols": [Function],
+                  }
+                }
+                setWidths={[Function]}
+                tableRef={
+                  Object {
+                    "current": .emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<table
+                      class="CLR-table emotion-12 emotion-13"
+                    >
+                      <colgroup>
+                        <col
+                          class="emotion-0 emotion-1"
+                        />
+                      </colgroup>
+                      <thead
+                        class="CLR-table__head emotion-10 emotion-11"
+                      >
+                        <tr
+                          role="presentation"
+                        >
+                          <th
+                            class="emotion-2 emotion-3"
+                          />
+                        </tr>
+                        <tr
+                          class="CLR-table__row emotion-8 emotion-9"
+                        >
+                          <th
+                            class="CLR-table__cell emotion-6 emotion-7"
+                            colspan="1"
+                          >
+                            H1
+                            <span
+                              class="emotion-4 emotion-5"
+                              role="presentation"
+                            />
+                          </th>
+                        </tr>
+                      </thead>
+                    </table>,
+                  }
+                }
+                totalColumnsCount={1}
+                wrapperRef={
+                  Object {
+                    "current": .emotion-15 {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(51,51,51,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  font-size: 15px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  overflow-anchor: none;
+  max-height: 100%;
+}
+
+.emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<div
+                      class="emotion-14 CLR-paper emotion-15 emotion-16"
+                    >
+                      <table
+                        class="CLR-table emotion-12 emotion-13"
+                      >
+                        <colgroup>
+                          <col
+                            class="emotion-0 emotion-1"
+                          />
+                        </colgroup>
+                        <thead
+                          class="CLR-table__head emotion-10 emotion-11"
+                        >
+                          <tr
+                            role="presentation"
+                          >
+                            <th
+                              class="emotion-2 emotion-3"
+                            />
+                          </tr>
+                          <tr
+                            class="CLR-table__row emotion-8 emotion-9"
+                          >
+                            <th
+                              class="CLR-table__cell emotion-6 emotion-7"
+                              colspan="1"
+                            >
+                              H1
+                              <span
+                                class="emotion-4 emotion-5"
+                                role="presentation"
+                              />
+                            </th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>,
+                  }
+                }
+              >
+                <Component
+                  colors={
+                    Object {
+                      "GrayScale_0": "#ffffff",
+                      "GrayScale_100": "#EDEDED",
+                      "GrayScale_150": "#E5E5E5",
+                      "GrayScale_200": "#D8D8D8",
+                      "GrayScale_50": "#fafafa",
+                      "GrayScale_500": "#999999",
+                      "GrayScale_55": "#f6f6f6",
+                      "GrayScale_600": "#7C7C7C",
+                      "GrayScale_700": "#333333",
+                      "GrayScale_900": "#000000",
+                      "error": "#F62434",
+                      "errorAccent": "#EB5A40",
+                      "info": "#34AAF2",
+                      "infoAccent": "#5BD9E5",
+                      "primary": "#00B956",
+                      "primaryAccent": "#10E272",
+                      "secondary": "#731982",
+                      "secondaryAccent": "#A500BF",
+                      "tertiary": "#444189",
+                      "tertiaryAccent": "#404D46",
+                      "warning": "#FFA717",
+                      "warningAccent": "#F36F20",
+                    }
+                  }
+                  filteredColumnsMap={Array []}
+                  maxCellWidths={
+                    Array [
+                      "none",
+                    ]
+                  }
+                  minCellWidths={
+                    Array [
+                      175,
+                    ]
+                  }
+                  resizeOnSpot={true}
+                  resizingStates={
+                    Object {
+                      "isResizing": false,
+                      "resizingCols": null,
+                      "setIsResizing": [Function],
+                      "setResizingCols": [Function],
+                    }
+                  }
+                  setWidths={[Function]}
+                  tableRef={
+                    Object {
+                      "current": .emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<table
+                        class="CLR-table emotion-12 emotion-13"
+                      >
+                        <colgroup>
+                          <col
+                            class="emotion-0 emotion-1"
+                          />
+                        </colgroup>
+                        <thead
+                          class="CLR-table__head emotion-10 emotion-11"
+                        >
+                          <tr
+                            role="presentation"
+                          >
+                            <th
+                              class="emotion-2 emotion-3"
+                            />
+                          </tr>
+                          <tr
+                            class="CLR-table__row emotion-8 emotion-9"
+                          >
+                            <th
+                              class="CLR-table__cell emotion-6 emotion-7"
+                              colspan="1"
+                            >
+                              H1
+                              <span
+                                class="emotion-4 emotion-5"
+                                role="presentation"
+                              />
+                            </th>
+                          </tr>
+                        </thead>
+                      </table>,
+                    }
+                  }
+                  totalColumnsCount={1}
+                  wrapperRef={
+                    Object {
+                      "current": .emotion-15 {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(51,51,51,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+  font-size: 15px;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  overflow-anchor: none;
+  max-height: 100%;
+}
+
+.emotion-12 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  max-height: 100%;
+  color: #333333;
+  table-layout: fixed;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.emotion-0 {
+  width: auto;
+  min-width: 175px;
+  max-width: none;
+}
+
+.emotion-10 {
+  background: #fafafa;
+  font-weight: 500;
+}
+
+.emotion-2 {
+  padding: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  font-weight: inherit;
+}
+
+.emotion-8 {
+  background-color: #fafafa;
+}
+
+.emotion-4 {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+
+.emotion-6 {
+  background-color: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  position: relative;
+  padding: 19px 28px 12px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #EDEDED;
+  border-top-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-11 > .emotion-9:nth-of-type(2) .emotion-6 {
+  padding-top: 26px;
+  padding-bottom: 17px;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .emotion-6 {
+    border: none;
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px);
+  }
+}
+
+.eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+.e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+  border-bottom-color: transparent;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .eoja2yp0 > .emotion-9:last-of-type > .emotion-6,
+  .e1loha5m0 > .emotion-9:last-of-type > .emotion-6 {
+    background-image: linear-gradient( to left,#EDEDED,#EDEDED 1px,transparent 1px );
+  }
+}
+
+.e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+  border-top-color: #EDEDED;
+}
+
+@supports (position:sticky) and (-ms-ime-align:auto) {
+  .e1loha5m0 > .emotion-9:first-of-type > .emotion-6 {
+    background-image: linear-gradient( to bottom,#EDEDED,#EDEDED 1px,transparent 1px ),linear-gradient(to top,#EDEDED,#EDEDED 1px,transparent 1px),linear-gradient(to left,#EDEDED,#EDEDED 1px,transparent 1px);
+    border-top: none;
+  }
+}
+
+.e1loha5m0:last-child > .emotion-9:last-of-type > .emotion-6,
+.eoja2yp0:last-child > .emotion-9:last-of-type > .emotion-6 {
+  padding: 17px 28px 26px;
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6 {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports (position:-webkit-sticky) or (position:sticky) {
+  .emotion-6:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background: linear-gradient( to right,rgba(51,51,51,0.1),transparent );
+  }
+}
+
+<div
+                        class="emotion-14 CLR-paper emotion-15 emotion-16"
+                      >
+                        <table
+                          class="CLR-table emotion-12 emotion-13"
+                        >
+                          <colgroup>
+                            <col
+                              class="emotion-0 emotion-1"
+                            />
+                          </colgroup>
+                          <thead
+                            class="CLR-table__head emotion-10 emotion-11"
+                          >
+                            <tr
+                              role="presentation"
+                            >
+                              <th
+                                class="emotion-2 emotion-3"
+                              />
+                            </tr>
+                            <tr
+                              class="CLR-table__row emotion-8 emotion-9"
+                            >
+                              <th
+                                class="CLR-table__cell emotion-6 emotion-7"
+                                colspan="1"
+                              >
+                                H1
+                                <span
+                                  class="emotion-4 emotion-5"
+                                  role="presentation"
+                                />
+                              </th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>,
+                    }
+                  }
+                />
+              </withColors()>
+            </div>
+          </StyledPaper>
+        </Paper>
+      </StyledWrapper>
+    </Wrapper>
+  </Table>
+</withColors(Table)>
+`;

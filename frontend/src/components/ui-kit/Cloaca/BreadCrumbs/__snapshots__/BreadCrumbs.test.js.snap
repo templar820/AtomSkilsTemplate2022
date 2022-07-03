@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreadCrumbs /> should match snapshot 1`] = `
+<BreadCrumbs
+  height="90px"
+  iconStyle={
+    Object {
+      "background": "#eee",
+    }
+  }
+  itemStyle={
+    Object {
+      "background": "#000",
+    }
+  }
+  items={
+    Array [
+      Object {
+        "link": "#",
+        "title": "1",
+      },
+      Object {
+        "title": "2",
+      },
+      Object {
+        "link": "#",
+        "title": "2",
+      },
+    ]
+  }
+  lastItemColor="#000"
+  onLinkClick={[MockFunction]}
+  size="sm"
+  width="100px"
+  wrapStyle={
+    Object {
+      "background": "#fff",
+    }
+  }
+>
+  <Wrapper
+    className="CLR-bread-crumbs"
+    height="90px"
+    size="sm"
+    width="100px"
+    wrapStyle={
+      Object {
+        "background": "#fff",
+      }
+    }
+  >
+    <div
+      className="CLR-bread-crumbs css-1egxnzo-Wrapper e65b6qy0"
+      height="90px"
+      size="sm"
+      width="100px"
+    >
+      <StyledItem
+        className="CLR-bread-crumbs__item"
+        color="#000"
+        fontSize="0.8571428571428571rem"
+        itemStyle={
+          Object {
+            "background": "#000",
+          }
+        }
+        key="breadC_0"
+      >
+        <span
+          className="CLR-bread-crumbs__item css-9tv2zt-StyledItem e65b6qy3"
+          color="#000"
+          fontSize="0.8571428571428571rem"
+        >
+          <StyledLink
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            disabled={false}
+            onClick={[Function]}
+          >
+            <a
+              className="css-1lpupas-StyledLink e65b6qy1"
+              disabled={false}
+              onClick={[Function]}
+            >
+              1
+            </a>
+          </StyledLink>
+          <StyledIcon
+            color="#333333"
+            disabled={false}
+            h="24px"
+            height={null}
+            icon="Arrow_type_1"
+            iconStyle={
+              Object {
+                "background": "#eee",
+              }
+            }
+            w="24px"
+            width={null}
+          >
+            <withColors(InlineIcons)
+              className="css-og27j6-StyledIcon e65b6qy4"
+              color="#333333"
+              disabled={false}
+              h="24px"
+              height={null}
+              icon="Arrow_type_1"
+              iconStyle={
+                Object {
+                  "background": "#eee",
+                }
+              }
+              w="24px"
+              width={null}
+            >
+              <InlineIcons
+                className="css-og27j6-StyledIcon e65b6qy4"
+                color="#333333"
+                colors={
+                  Object {
+                    "GrayScale_0": "#ffffff",
+                    "GrayScale_100": "#EDEDED",
+                    "GrayScale_150": "#E5E5E5",
+                    "GrayScale_200": "#D8D8D8",
+                    "GrayScale_50": "#fafafa",
+                    "GrayScale_500": "#999999",
+                    "GrayScale_55": "#f6f6f6",
+                    "GrayScale_600": "#7C7C7C",
+                    "GrayScale_700": "#333333",
+                    "GrayScale_900": "#000000",
+                    "error": "#F62434",
+                    "errorAccent": "#EB5A40",
+                    "info": "#34AAF2",
+                    "infoAccent": "#5BD9E5",
+                    "primary": "#00B956",
+                    "primaryAccent": "#10E272",
+                    "secondary": "#731982",
+                    "secondaryAccent": "#A500BF",
+                    "tertiary": "#444189",
+                    "tertiaryAccent": "#404D46",
+                    "warning": "#FFA717",
+                    "warningAccent": "#F36F20",
+                  }
+                }
+                disabled={false}
+                h="24px"
+                height={null}
+                icon="Arrow_type_1"
+                iconStyle={
+                  Object {
+                    "background": "#eee",
+                  }
+                }
+                w="24px"
+                width={null}
+              >
+                <Styled(svg)
+                  className="css-og27j6-StyledIcon e65b6qy4 CLR-inline-icons"
+                  color="#333333"
+                  colors={
+                    Object {
+                      "GrayScale_0": "#ffffff",
+                      "GrayScale_100": "#EDEDED",
+                      "GrayScale_150": "#E5E5E5",
+                      "GrayScale_200": "#D8D8D8",
+                      "GrayScale_50": "#fafafa",
+                      "GrayScale_500": "#999999",
+                      "GrayScale_55": "#f6f6f6",
+                      "GrayScale_600": "#7C7C7C",
+                      "GrayScale_700": "#333333",
+                      "GrayScale_900": "#000000",
+                      "error": "#F62434",
+                      "errorAccent": "#EB5A40",
+                      "info": "#34AAF2",
+                      "infoAccent": "#5BD9E5",
+                      "primary": "#00B956",
+                      "primaryAccent": "#10E272",
+                      "secondary": "#731982",
+                      "secondaryAccent": "#A500BF",
+                      "tertiary": "#444189",
+                      "tertiaryAccent": "#404D46",
+                      "warning": "#FFA717",
+                      "warningAccent": "#F36F20",
+                    }
+                  }
+                  disabled={false}
+                  height="24px"
+                  iconStyle={
+                    Object {
+                      "background": "#eee",
+                    }
+                  }
+                  width="24px"
+                >
+                  <svg
+                    className="e65b6qy4 CLR-inline-icons css-szh3dn-StyledIcon e1a7dme70"
+                    color="#333333"
+                    disabled={false}
+                    height="24px"
+                    width="24px"
+                  >
+                    <use
+                      xlinkHref="#Arrow_type_1"
+                    />
+                  </svg>
+                </Styled(svg)>
+              </InlineIcons>
+            </withColors(InlineIcons)>
+          </StyledIcon>
+        </span>
+      </StyledItem>
+      <StyledItem
+        className="CLR-bread-crumbs__item"
+        color="#333333"
+        fontSize="0.8571428571428571rem"
+        itemStyle={
+          Object {
+            "background": "#000",
+          }
+        }
+        key="breadC_1"
+      >
+        <span
+          className="CLR-bread-crumbs__item css-9tv2zt-StyledItem e65b6qy3"
+          color="#333333"
+          fontSize="0.8571428571428571rem"
+        >
+          <StyledLink
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            disabled={true}
+            onClick={[Function]}
+          >
+            <a
+              className="css-1jv009j-StyledLink e65b6qy1"
+              disabled={true}
+              onClick={[Function]}
+            >
+              2
+            </a>
+          </StyledLink>
+          <StyledIcon
+            color="#000"
+            disabled={true}
+            h="24px"
+            height={null}
+            icon="Arrow_type_1"
+            iconStyle={
+              Object {
+                "background": "#eee",
+              }
+            }
+            w="24px"
+            width={null}
+          >
+            <withColors(InlineIcons)
+              className="css-og27j6-StyledIcon e65b6qy4"
+              color="#000"
+              disabled={true}
+              h="24px"
+              height={null}
+              icon="Arrow_type_1"
+              iconStyle={
+                Object {
+                  "background": "#eee",
+                }
+              }
+              w="24px"
+              width={null}
+            >
+              <InlineIcons
+                className="css-og27j6-StyledIcon e65b6qy4"
+                color="#000"
+                colors={
+                  Object {
+                    "GrayScale_0": "#ffffff",
+                    "GrayScale_100": "#EDEDED",
+                    "GrayScale_150": "#E5E5E5",
+                    "GrayScale_200": "#D8D8D8",
+                    "GrayScale_50": "#fafafa",
+                    "GrayScale_500": "#999999",
+                    "GrayScale_55": "#f6f6f6",
+                    "GrayScale_600": "#7C7C7C",
+                    "GrayScale_700": "#333333",
+                    "GrayScale_900": "#000000",
+                    "error": "#F62434",
+                    "errorAccent": "#EB5A40",
+                    "info": "#34AAF2",
+                    "infoAccent": "#5BD9E5",
+                    "primary": "#00B956",
+                    "primaryAccent": "#10E272",
+                    "secondary": "#731982",
+                    "secondaryAccent": "#A500BF",
+                    "tertiary": "#444189",
+                    "tertiaryAccent": "#404D46",
+                    "warning": "#FFA717",
+                    "warningAccent": "#F36F20",
+                  }
+                }
+                disabled={true}
+                h="24px"
+                height={null}
+                icon="Arrow_type_1"
+                iconStyle={
+                  Object {
+                    "background": "#eee",
+                  }
+                }
+                w="24px"
+                width={null}
+              >
+                <Styled(svg)
+                  className="css-og27j6-StyledIcon e65b6qy4 CLR-inline-icons"
+                  color="#000"
+                  colors={
+                    Object {
+                      "GrayScale_0": "#ffffff",
+                      "GrayScale_100": "#EDEDED",
+                      "GrayScale_150": "#E5E5E5",
+                      "GrayScale_200": "#D8D8D8",
+                      "GrayScale_50": "#fafafa",
+                      "GrayScale_500": "#999999",
+                      "GrayScale_55": "#f6f6f6",
+                      "GrayScale_600": "#7C7C7C",
+                      "GrayScale_700": "#333333",
+                      "GrayScale_900": "#000000",
+                      "error": "#F62434",
+                      "errorAccent": "#EB5A40",
+                      "info": "#34AAF2",
+                      "infoAccent": "#5BD9E5",
+                      "primary": "#00B956",
+                      "primaryAccent": "#10E272",
+                      "secondary": "#731982",
+                      "secondaryAccent": "#A500BF",
+                      "tertiary": "#444189",
+                      "tertiaryAccent": "#404D46",
+                      "warning": "#FFA717",
+                      "warningAccent": "#F36F20",
+                    }
+                  }
+                  disabled={true}
+                  height="24px"
+                  iconStyle={
+                    Object {
+                      "background": "#eee",
+                    }
+                  }
+                  width="24px"
+                >
+                  <svg
+                    className="e65b6qy4 CLR-inline-icons css-1yecxrn-StyledIcon e1a7dme70"
+                    color="#000"
+                    disabled={true}
+                    height="24px"
+                    width="24px"
+                  >
+                    <use
+                      xlinkHref="#Arrow_type_1"
+                    />
+                  </svg>
+                </Styled(svg)>
+              </InlineIcons>
+            </withColors(InlineIcons)>
+          </StyledIcon>
+        </span>
+      </StyledItem>
+      <StyledItem
+        className="CLR-bread-crumbs__item"
+        color="#333333"
+        fontSize="0.8571428571428571rem"
+        itemStyle={
+          Object {
+            "background": "#000",
+          }
+        }
+        key="breadC_2"
+      >
+        <span
+          className="CLR-bread-crumbs__item css-9tv2zt-StyledItem e65b6qy3"
+          color="#333333"
+          fontSize="0.8571428571428571rem"
+        >
+          <StyledText
+            fontSize="0.8571428571428571rem"
+            lastItemColor="#000"
+          >
+            <span
+              className="css-1hladgy-StyledText e65b6qy2"
+              fontSize="0.8571428571428571rem"
+            >
+              2
+            </span>
+          </StyledText>
+        </span>
+      </StyledItem>
+    </div>
+  </Wrapper>
+</BreadCrumbs>
+`;

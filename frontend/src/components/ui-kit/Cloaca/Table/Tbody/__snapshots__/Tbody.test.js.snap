@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tbody /> should match snapshot 1`] = `
+.emotion-2 {
+  color: #fff;
+}
+
+.emotion-2:after {
+  content: '';
+  display: table-row;
+  height: 100%;
+}
+
+.emotion-0 {
+  background-color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0.selected {
+  background-color: #f6f6f6;
+}
+
+<ForwardRef
+  colsStyles={Array []}
+  columnsCount={0}
+  coords={null}
+  css={
+    Object {
+      "color": "#fff",
+    }
+  }
+  fixedFirstCol={false}
+  fixedFooter={false}
+  fixedHeader={true}
+  fixedLastCol={false}
+  hoveringRows={true}
+  isScrolled={
+    Object {
+      "bottom": false,
+      "left": false,
+      "right": false,
+      "top": false,
+    }
+  }
+  key=".0"
+  noDataProps={
+    Object {
+      "text": "",
+    }
+  }
+  resizableCols={Array []}
+  rowsOffsets={
+    Object {
+      "bottoms": Array [
+        0,
+        0,
+        0,
+      ],
+      "tops": Array [
+        0,
+        0,
+        0,
+      ],
+    }
+  }
+  setCoords={[Function]}
+  showHorizontalScrollShadows={true}
+  showNoData={true}
+  tableSection="tbody"
+>
+  <StyledTbody
+    _css={
+      Object {
+        "color": "#fff",
+      }
+    }
+    className="CLR-table__body"
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+  >
+    <tbody
+      className="CLR-table__body emotion-2 emotion-3"
+    >
+      <ForwardRef
+        colsStyles={Array []}
+        columnsCount={0}
+        coords={null}
+        fixedFirstCol={false}
+        fixedFooter={false}
+        fixedHeader={true}
+        fixedLastCol={false}
+        hoveringRows={true}
+        isScrolled={
+          Object {
+            "bottom": false,
+            "left": false,
+            "right": false,
+            "top": false,
+          }
+        }
+        key=".$.0"
+        resizableCols={Array []}
+        rowsOffsets={
+          Object {
+            "bottoms": Array [
+              0,
+              0,
+              0,
+            ],
+            "tops": Array [
+              0,
+              0,
+              0,
+            ],
+          }
+        }
+        setCoords={[Function]}
+        showHorizontalScrollShadows={true}
+        tableSection="tbody"
+      >
+        <StyledRow
+          className="CLR-table__row"
+          colors={
+            Object {
+              "GrayScale_0": "#ffffff",
+              "GrayScale_100": "#EDEDED",
+              "GrayScale_150": "#E5E5E5",
+              "GrayScale_200": "#D8D8D8",
+              "GrayScale_50": "#fafafa",
+              "GrayScale_500": "#999999",
+              "GrayScale_55": "#f6f6f6",
+              "GrayScale_600": "#7C7C7C",
+              "GrayScale_700": "#333333",
+              "GrayScale_900": "#000000",
+              "error": "#F62434",
+              "errorAccent": "#EB5A40",
+              "info": "#34AAF2",
+              "infoAccent": "#5BD9E5",
+              "primary": "#00B956",
+              "primaryAccent": "#10E272",
+              "secondary": "#731982",
+              "secondaryAccent": "#A500BF",
+              "tertiary": "#444189",
+              "tertiaryAccent": "#404D46",
+              "warning": "#FFA717",
+              "warningAccent": "#F36F20",
+            }
+          }
+          hoveringRows={true}
+          onContextMenu={[Function]}
+          tableSection="tbody"
+        >
+          <tr
+            className="CLR-table__row emotion-0 emotion-1"
+            onContextMenu={[Function]}
+          />
+        </StyledRow>
+      </ForwardRef>
+    </tbody>
+  </StyledTbody>
+</ForwardRef>
+`;

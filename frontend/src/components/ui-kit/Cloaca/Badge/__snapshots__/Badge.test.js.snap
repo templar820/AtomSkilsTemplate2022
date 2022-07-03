@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> should match snapshot 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: right;
+  -webkit-box-align: right;
+  -ms-flex-align: right;
+  align-items: right;
+}
+
+.emotion-2 {
+  position: absolute;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  border-radius: 16px;
+  padding: 3px;
+  color: textCollor;
+  background: badgeColor;
+  right: 0;
+  margin-left: 6px;
+  position: relative;
+  left: initial;
+  max-height: 16px;
+  padding: 0px;
+  max-height: 16px;
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid #333333;
+  margin-left: 50px;
+}
+
+.emotion-2 {
+  position: absolute;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  border-radius: 16px;
+  padding: 3px;
+  color: textCollor;
+  background: badgeColor;
+  right: 0;
+  margin-left: 6px;
+  position: relative;
+  left: initial;
+  max-height: 16px;
+  padding: 0px;
+  max-height: 16px;
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid #333333;
+  margin-left: 50px;
+}
+
+.emotion-0 {
+  fill: textCollor;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+}
+
+.emotion-0 {
+  fill: textCollor;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+}
+
+<Badge
+  alignItems="right"
+  badgePositionX="left"
+  badgePositionY="middle"
+  bgColor="badgeColor"
+  color="textCollor"
+  extendStyle={
+    Object {
+      "marginLeft": "50px",
+    }
+  }
+  icon="Information"
+  isOutlined={true}
+  outerStyle={
+    Object {
+      "marginLeft": "50px",
+    }
+  }
+  text="99+"
+  x="right"
+  y="middle"
+>
+  <StyledOuter
+    className="CLR-badge"
+    outerStyle={
+      Object {
+        "marginLeft": "50px",
+      }
+    }
+  >
+    <div
+      className="CLR-badge emotion-6 emotion-7"
+    >
+      <StyledInner
+        alignItems="right"
+        badgePositionX="left"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <div
+            id="child"
+          >
+            children
+          </div>
+          <StyledBadgeLabel
+            badgePositionX="left"
+            badgePositionY="middle"
+            bgColor="badgeColor"
+            childrenCount={1}
+            color="textCollor"
+            colors={
+              Object {
+                "GrayScale_0": "#ffffff",
+                "GrayScale_100": "#EDEDED",
+                "GrayScale_150": "#E5E5E5",
+                "GrayScale_200": "#D8D8D8",
+                "GrayScale_50": "#fafafa",
+                "GrayScale_500": "#999999",
+                "GrayScale_55": "#f6f6f6",
+                "GrayScale_600": "#7C7C7C",
+                "GrayScale_700": "#333333",
+                "GrayScale_900": "#000000",
+                "error": "#F62434",
+                "errorAccent": "#EB5A40",
+                "info": "#34AAF2",
+                "infoAccent": "#5BD9E5",
+                "primary": "#00B956",
+                "primaryAccent": "#10E272",
+                "secondary": "#731982",
+                "secondaryAccent": "#A500BF",
+                "tertiary": "#444189",
+                "tertiaryAccent": "#404D46",
+                "warning": "#FFA717",
+                "warningAccent": "#F36F20",
+              }
+            }
+            extendStyle={
+              Object {
+                "marginLeft": "50px",
+              }
+            }
+            icon="Information"
+            isOutlined={true}
+            text="99+"
+            x="right"
+            y="middle"
+          >
+            <div
+              className="emotion-2 emotion-3"
+              color="textCollor"
+              x="right"
+              y="middle"
+            >
+              <withColors(InlineIcons)
+                color="textCollor"
+                disabled={false}
+                h={null}
+                height="16px"
+                icon="Information"
+                w={null}
+                width="16px"
+              >
+                <InlineIcons
+                  color="textCollor"
+                  colors={
+                    Object {
+                      "GrayScale_0": "#ffffff",
+                      "GrayScale_100": "#EDEDED",
+                      "GrayScale_150": "#E5E5E5",
+                      "GrayScale_200": "#D8D8D8",
+                      "GrayScale_50": "#fafafa",
+                      "GrayScale_500": "#999999",
+                      "GrayScale_55": "#f6f6f6",
+                      "GrayScale_600": "#7C7C7C",
+                      "GrayScale_700": "#333333",
+                      "GrayScale_900": "#000000",
+                      "error": "#F62434",
+                      "errorAccent": "#EB5A40",
+                      "info": "#34AAF2",
+                      "infoAccent": "#5BD9E5",
+                      "primary": "#00B956",
+                      "primaryAccent": "#10E272",
+                      "secondary": "#731982",
+                      "secondaryAccent": "#A500BF",
+                      "tertiary": "#444189",
+                      "tertiaryAccent": "#404D46",
+                      "warning": "#FFA717",
+                      "warningAccent": "#F36F20",
+                    }
+                  }
+                  disabled={false}
+                  h={null}
+                  height="16px"
+                  icon="Information"
+                  w={null}
+                  width="16px"
+                >
+                  <Styled(svg)
+                    className="CLR-inline-icons"
+                    color="textCollor"
+                    colors={
+                      Object {
+                        "GrayScale_0": "#ffffff",
+                        "GrayScale_100": "#EDEDED",
+                        "GrayScale_150": "#E5E5E5",
+                        "GrayScale_200": "#D8D8D8",
+                        "GrayScale_50": "#fafafa",
+                        "GrayScale_500": "#999999",
+                        "GrayScale_55": "#f6f6f6",
+                        "GrayScale_600": "#7C7C7C",
+                        "GrayScale_700": "#333333",
+                        "GrayScale_900": "#000000",
+                        "error": "#F62434",
+                        "errorAccent": "#EB5A40",
+                        "info": "#34AAF2",
+                        "infoAccent": "#5BD9E5",
+                        "primary": "#00B956",
+                        "primaryAccent": "#10E272",
+                        "secondary": "#731982",
+                        "secondaryAccent": "#A500BF",
+                        "tertiary": "#444189",
+                        "tertiaryAccent": "#404D46",
+                        "warning": "#FFA717",
+                        "warningAccent": "#F36F20",
+                      }
+                    }
+                    disabled={false}
+                    height="16px"
+                    width="16px"
+                  >
+                    <svg
+                      className="CLR-inline-icons emotion-0 emotion-1"
+                      color="textCollor"
+                      disabled={false}
+                      height="16px"
+                      width="16px"
+                    >
+                      <use
+                        xlinkHref="#Information"
+                      />
+                    </svg>
+                  </Styled(svg)>
+                </InlineIcons>
+              </withColors(InlineIcons)>
+              99+
+            </div>
+          </StyledBadgeLabel>
+        </div>
+      </StyledInner>
+    </div>
+  </StyledOuter>
+</Badge>
+`;

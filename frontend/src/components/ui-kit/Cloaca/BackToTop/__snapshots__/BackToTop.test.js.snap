@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackToTop /> should match snapshot 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  fill: currentColor;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 24px;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid;
+  border-radius: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  color: #ffffff;
+  white-space: nowrap;
+  background-color: #00B956;
+  border-color: #00B956;
+  opacity: 1;
+  visibility: visible;
+}
+
+.emotion-4.hover,
+.emotion-4:hover {
+  background-color: #10E272;
+  border-color: #10E272;
+  color: #ffffff;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
+.emotion-4:active,
+.emotion-4.active {
+  border-color: transparent;
+  background-color: #404D46;
+  box-shadow: inset 0 1px 3px #333333;
+  color: #ffffff;
+}
+
+.emotion-4:disabled {
+  background-color: #D8D8D8;
+  border-color: #D8D8D8;
+  cursor: not-allowed;
+  color: #ffffff;
+}
+
+.emotion-4:after {
+  content: '';
+  min-height: inherit;
+  font-size: 0;
+}
+
+<BackToTop
+  animationDuration={2000}
+  cancelAnimation={false}
+  direction="toBottom"
+  easing="easeOutSine"
+  onClick={[Function]}
+  scrollTo={0}
+  showAt={0}
+  showOnScroll={false}
+  style={
+    Object {
+      "left": 10,
+      "position": "fixed",
+      "top": 100,
+    }
+  }
+>
+  <Button
+    animationDuration={2000}
+    cancelAnimation={false}
+    className="CLR-back-to-top"
+    colorScheme="primary"
+    css={
+      Object {
+        "map": undefined,
+        "name": "1hk0kxi-BackToTop",
+        "next": undefined,
+        "styles": "opacity:1;visibility:visible;;label:BackToTop;",
+        "toString": [Function],
+      }
+    }
+    disabled={false}
+    easing="easeOutSine"
+    icon="Triangle"
+    iconStyle={
+      Object {
+        "map": undefined,
+        "name": "1cak18s-BackToTop",
+        "next": undefined,
+        "styles": "transform:rotate(0deg);width:40px;min-width:40px;height:40px;;label:BackToTop;",
+        "toString": [Function],
+      }
+    }
+    isLoading={false}
+    onClick={[Function]}
+    scrollTo={0}
+    showAt={0}
+    showOnScroll={false}
+    size="lg"
+    style={
+      Object {
+        "left": 10,
+        "position": "fixed",
+        "top": 100,
+      }
+    }
+    type="button"
+  >
+    <StyledButton
+      animationDuration={2000}
+      cancelAnimation={false}
+      className="CLR-back-to-top CLR-button"
+      colorScheme="primary"
+      colors={
+        Object {
+          "GrayScale_0": "#ffffff",
+          "GrayScale_100": "#EDEDED",
+          "GrayScale_150": "#E5E5E5",
+          "GrayScale_200": "#D8D8D8",
+          "GrayScale_50": "#fafafa",
+          "GrayScale_500": "#999999",
+          "GrayScale_55": "#f6f6f6",
+          "GrayScale_600": "#7C7C7C",
+          "GrayScale_700": "#333333",
+          "GrayScale_900": "#000000",
+          "error": "#F62434",
+          "errorAccent": "#EB5A40",
+          "info": "#34AAF2",
+          "infoAccent": "#5BD9E5",
+          "primary": "#00B956",
+          "primaryAccent": "#10E272",
+          "secondary": "#731982",
+          "secondaryAccent": "#A500BF",
+          "tertiary": "#444189",
+          "tertiaryAccent": "#404D46",
+          "warning": "#FFA717",
+          "warningAccent": "#F36F20",
+        }
+      }
+      css={
+        Object {
+          "map": undefined,
+          "name": "1hk0kxi-BackToTop",
+          "next": undefined,
+          "styles": "opacity:1;visibility:visible;;label:BackToTop;",
+          "toString": [Function],
+        }
+      }
+      disabled={false}
+      easing="easeOutSine"
+      icon="Triangle"
+      iconStyle={
+        Object {
+          "map": undefined,
+          "name": "1cak18s-BackToTop",
+          "next": undefined,
+          "styles": "transform:rotate(0deg);width:40px;min-width:40px;height:40px;;label:BackToTop;",
+          "toString": [Function],
+        }
+      }
+      isLoading={false}
+      onClick={[Function]}
+      scrollTo={0}
+      showAt={0}
+      showOnScroll={false}
+      size="lg"
+      style={
+        Object {
+          "left": 10,
+          "position": "fixed",
+          "top": 100,
+        }
+      }
+      type="button"
+    >
+      <button
+        className="CLR-back-to-top CLR-button emotion-4 emotion-5"
+        disabled={false}
+        onClick={[Function]}
+        size="lg"
+        style={
+          Object {
+            "left": 10,
+            "position": "fixed",
+            "top": 100,
+          }
+        }
+        type="button"
+      >
+        <StyledButtonInner>
+          <div
+            className="emotion-2 emotion-3"
+          >
+            <withColors(InlineIcons)
+              color="currentColor"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "1cak18s-BackToTop",
+                  "next": undefined,
+                  "styles": "transform:rotate(0deg);width:40px;min-width:40px;height:40px;;label:BackToTop;",
+                  "toString": [Function],
+                }
+              }
+              disabled={false}
+              h="32px"
+              height={null}
+              icon="Triangle"
+              w="32px"
+              width={null}
+            >
+              <InlineIcons
+                color="currentColor"
+                colors={
+                  Object {
+                    "GrayScale_0": "#ffffff",
+                    "GrayScale_100": "#EDEDED",
+                    "GrayScale_150": "#E5E5E5",
+                    "GrayScale_200": "#D8D8D8",
+                    "GrayScale_50": "#fafafa",
+                    "GrayScale_500": "#999999",
+                    "GrayScale_55": "#f6f6f6",
+                    "GrayScale_600": "#7C7C7C",
+                    "GrayScale_700": "#333333",
+                    "GrayScale_900": "#000000",
+                    "error": "#F62434",
+                    "errorAccent": "#EB5A40",
+                    "info": "#34AAF2",
+                    "infoAccent": "#5BD9E5",
+                    "primary": "#00B956",
+                    "primaryAccent": "#10E272",
+                    "secondary": "#731982",
+                    "secondaryAccent": "#A500BF",
+                    "tertiary": "#444189",
+                    "tertiaryAccent": "#404D46",
+                    "warning": "#FFA717",
+                    "warningAccent": "#F36F20",
+                  }
+                }
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "1cak18s-BackToTop",
+                    "next": undefined,
+                    "styles": "transform:rotate(0deg);width:40px;min-width:40px;height:40px;;label:BackToTop;",
+                    "toString": [Function],
+                  }
+                }
+                disabled={false}
+                h="32px"
+                height={null}
+                icon="Triangle"
+                w="32px"
+                width={null}
+              >
+                <Styled(svg)
+                  className="CLR-inline-icons"
+                  color="currentColor"
+                  colors={
+                    Object {
+                      "GrayScale_0": "#ffffff",
+                      "GrayScale_100": "#EDEDED",
+                      "GrayScale_150": "#E5E5E5",
+                      "GrayScale_200": "#D8D8D8",
+                      "GrayScale_50": "#fafafa",
+                      "GrayScale_500": "#999999",
+                      "GrayScale_55": "#f6f6f6",
+                      "GrayScale_600": "#7C7C7C",
+                      "GrayScale_700": "#333333",
+                      "GrayScale_900": "#000000",
+                      "error": "#F62434",
+                      "errorAccent": "#EB5A40",
+                      "info": "#34AAF2",
+                      "infoAccent": "#5BD9E5",
+                      "primary": "#00B956",
+                      "primaryAccent": "#10E272",
+                      "secondary": "#731982",
+                      "secondaryAccent": "#A500BF",
+                      "tertiary": "#444189",
+                      "tertiaryAccent": "#404D46",
+                      "warning": "#FFA717",
+                      "warningAccent": "#F36F20",
+                    }
+                  }
+                  css={
+                    Object {
+                      "map": undefined,
+                      "name": "1cak18s-BackToTop",
+                      "next": undefined,
+                      "styles": "transform:rotate(0deg);width:40px;min-width:40px;height:40px;;label:BackToTop;",
+                      "toString": [Function],
+                    }
+                  }
+                  disabled={false}
+                  height="32px"
+                  width="32px"
+                >
+                  <svg
+                    className="CLR-inline-icons emotion-0 emotion-1"
+                    color="currentColor"
+                    disabled={false}
+                    height="32px"
+                    width="32px"
+                  >
+                    <use
+                      xlinkHref="#Triangle"
+                    />
+                  </svg>
+                </Styled(svg)>
+              </InlineIcons>
+            </withColors(InlineIcons)>
+          </div>
+        </StyledButtonInner>
+      </button>
+    </StyledButton>
+  </Button>
+</BackToTop>
+`;

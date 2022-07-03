@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ColFilter /> should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+<ColFilter
+  closeOnOutside={true}
+  columnsCount={2}
+  coords={null}
+  firstCol={false}
+  fixedFirstCol={false}
+  fixedFooter={false}
+  fixedHeader={true}
+  fixedLastCol={false}
+  index={1}
+  isScrolled={
+    Object {
+      "bottom": false,
+      "left": false,
+      "right": false,
+      "top": false,
+    }
+  }
+  key=".$.$.1"
+  lastCol={true}
+  nextIndex={null}
+  resizable={false}
+  rowOffset={0}
+  showHorizontalScrollShadows={true}
+  showNoData={true}
+  tableSection="thead"
+  triggerElement={
+    <div
+      className="newTrigger"
+    />
+  }
+>
+  <withColors(Dropdown)
+    closeOnOutside={true}
+    closeOnTriggerClick={true}
+    columnsCount={2}
+    coords={null}
+    disableTriggerElement={false}
+    firstCol={false}
+    fixedFirstCol={false}
+    fixedFooter={false}
+    fixedHeader={true}
+    fixedLastCol={false}
+    index={1}
+    isScrolled={
+      Object {
+        "bottom": false,
+        "left": false,
+        "right": false,
+        "top": false,
+      }
+    }
+    lastCol={true}
+    maxNumberOfVisibleOptions={6}
+    nextIndex={null}
+    renderPrimaryDropdownInPortal={true}
+    resizable={false}
+    rowOffset={0}
+    scrollSnapping={true}
+    showHorizontalScrollShadows={true}
+    showNoData={true}
+    tabIndex={1}
+    tableSection="thead"
+    triggerAction="click"
+    triggerElement={
+      <div
+        className="newTrigger"
+      />
+    }
+    triggerPlacement="bottom-start"
+    triggerStyle={
+      Object {
+        "name": "8hlmds-triggerStyle",
+        "styles": "display:flex;justify-content:center;position:relative;;label:triggerStyle;",
+      }
+    }
+    virtualization={false}
+  >
+    <Dropdown
+      closeOnOutside={true}
+      closeOnTriggerClick={true}
+      colors={
+        Object {
+          "GrayScale_0": "#ffffff",
+          "GrayScale_100": "#EDEDED",
+          "GrayScale_150": "#E5E5E5",
+          "GrayScale_200": "#D8D8D8",
+          "GrayScale_50": "#fafafa",
+          "GrayScale_500": "#999999",
+          "GrayScale_55": "#f6f6f6",
+          "GrayScale_600": "#7C7C7C",
+          "GrayScale_700": "#333333",
+          "GrayScale_900": "#000000",
+          "error": "#F62434",
+          "errorAccent": "#EB5A40",
+          "info": "#34AAF2",
+          "infoAccent": "#5BD9E5",
+          "primary": "#00B956",
+          "primaryAccent": "#10E272",
+          "secondary": "#731982",
+          "secondaryAccent": "#A500BF",
+          "tertiary": "#444189",
+          "tertiaryAccent": "#404D46",
+          "warning": "#FFA717",
+          "warningAccent": "#F36F20",
+        }
+      }
+      columnsCount={2}
+      coords={null}
+      disableTriggerElement={false}
+      firstCol={false}
+      fixedFirstCol={false}
+      fixedFooter={false}
+      fixedHeader={true}
+      fixedLastCol={false}
+      index={1}
+      isScrolled={
+        Object {
+          "bottom": false,
+          "left": false,
+          "right": false,
+          "top": false,
+        }
+      }
+      lastCol={true}
+      maxNumberOfVisibleOptions={6}
+      nextIndex={null}
+      renderPrimaryDropdownInPortal={true}
+      resizable={false}
+      rowOffset={0}
+      scrollSnapping={true}
+      showHorizontalScrollShadows={true}
+      showNoData={true}
+      tabIndex={1}
+      tableSection="thead"
+      triggerAction="click"
+      triggerElement={
+        <div
+          className="newTrigger"
+        />
+      }
+      triggerPlacement="bottom-start"
+      triggerStyle={
+        Object {
+          "name": "8hlmds-triggerStyle",
+          "styles": "display:flex;justify-content:center;position:relative;;label:triggerStyle;",
+        }
+      }
+      virtualization={false}
+    >
+      <StyledTrigger
+        className="CLR-dropdown-trigger"
+        disableTriggerElement={false}
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        onMouseEnter={[Function]}
+        tabIndex={1}
+        triggerAction="click"
+        triggerStyle={
+          Object {
+            "name": "8hlmds-triggerStyle",
+            "styles": "display:flex;justify-content:center;position:relative;;label:triggerStyle;",
+          }
+        }
+      >
+        <div
+          className="CLR-dropdown-trigger emotion-0 emotion-1"
+          onClick={[Function]}
+          onKeyUp={[Function]}
+          onMouseEnter={[Function]}
+          tabIndex={1}
+        >
+          <div
+            className="newTrigger"
+            dropdownControls={
+              Object {
+                "setIsOpenMain": [Function],
+                "updatePosition": [Function],
+              }
+            }
+            isOpenMain={false}
+          />
+        </div>
+      </StyledTrigger>
+    </Dropdown>
+  </withColors(Dropdown)>
+</ColFilter>
+`;

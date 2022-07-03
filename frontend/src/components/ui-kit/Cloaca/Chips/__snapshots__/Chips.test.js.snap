@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Chips /> should match snapshot 1`] = `
+.emotion-11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 20px;
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid;
+  border-radius: 1px;
+  font-size: 15px;
+  line-height: 1.6;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  background-color: rgba(237,237,237,0.5);
+  color: #ffffff;
+  white-space: nowrap;
+  background-color: rgba(0,0,0,0.5);
+  border-color: rgba(0,0,0,0.5);
+  color: #333333;
+  margin: 18px;
+}
+
+.emotion-11.hover,
+.emotion-11:hover {
+  background-color: rgba(255,255,255,0.2);
+  color: #333333;
+}
+
+.emotion-11:focus {
+  outline: 0;
+}
+
+.emotion-11:disabled {
+  background-color: #D8D8D8;
+  border-color: #D8D8D8;
+  cursor: not-allowed;
+  color: #ffffff;
+}
+
+.emotion-11.hover,
+.emotion-11:hover {
+  background-color: rgba(0,0,0,0.5);
+  border-color: #000;
+  box-shadow: 0 0 4px rgba(51,51,51,0.25);
+  color: #333333;
+}
+
+.emotion-9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 40px;
+}
+
+.emotion-3 {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-left: 12px;
+}
+
+.emotion-3.hover,
+.emotion-3:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.emotion-1 {
+  fill: currentColor;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-left: 12px;
+}
+
+.emotion-1.hover,
+.emotion-1:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+<Chips
+  checked={false}
+  color="#000"
+  colorScheme="gray"
+  css={
+    Object {
+      "margin": "18px",
+    }
+  }
+  disabled={false}
+  fontSize="15px"
+  isCheckable={false}
+  onCheckChange={[Function]}
+  onClick={[Function]}
+  onClose={[Function]}
+  radius="15px"
+  round={false}
+  style={
+    Object {
+      "background": "#fff",
+      "padding": 10,
+    }
+  }
+>
+  <StyledChips
+    checked={false}
+    className="CLR-chips"
+    color="#000"
+    colorScheme="gray"
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    css={
+      Object {
+        "margin": "18px",
+      }
+    }
+    disabled={false}
+    fontSize="15px"
+    isCheckable={false}
+    onClick={[Function]}
+    onClose={[Function]}
+    radius="15px"
+    round={false}
+    style={
+      Object {
+        "background": "#fff",
+        "padding": 10,
+      }
+    }
+  >
+    <div
+      checked={false}
+      className="CLR-chips emotion-11 emotion-12"
+      color="#000"
+      disabled={false}
+      fontSize="15px"
+      onClick={[Function]}
+      onClose={[Function]}
+      radius="15px"
+      style={
+        Object {
+          "background": "#fff",
+          "padding": 10,
+        }
+      }
+    >
+      <StyledContentWrapper>
+        <div
+          className="emotion-9 emotion-10"
+        >
+          <div
+            id="children"
+          >
+            Chips children
+          </div>
+          <StyledCloseBtn
+            color="currentColor"
+            disabled={false}
+            h={null}
+            height={null}
+            icon="Cross_exit"
+            onClick={[Function]}
+            w={null}
+            width={null}
+          >
+            <withColors(InlineIcons)
+              className="emotion-3 emotion-0"
+              color="currentColor"
+              disabled={false}
+              h={null}
+              height={null}
+              icon="Cross_exit"
+              onClick={[Function]}
+              w={null}
+              width={null}
+            >
+              <InlineIcons
+                className="emotion-3 emotion-0"
+                color="currentColor"
+                colors={
+                  Object {
+                    "GrayScale_0": "#ffffff",
+                    "GrayScale_100": "#EDEDED",
+                    "GrayScale_150": "#E5E5E5",
+                    "GrayScale_200": "#D8D8D8",
+                    "GrayScale_50": "#fafafa",
+                    "GrayScale_500": "#999999",
+                    "GrayScale_55": "#f6f6f6",
+                    "GrayScale_600": "#7C7C7C",
+                    "GrayScale_700": "#333333",
+                    "GrayScale_900": "#000000",
+                    "error": "#F62434",
+                    "errorAccent": "#EB5A40",
+                    "info": "#34AAF2",
+                    "infoAccent": "#5BD9E5",
+                    "primary": "#00B956",
+                    "primaryAccent": "#10E272",
+                    "secondary": "#731982",
+                    "secondaryAccent": "#A500BF",
+                    "tertiary": "#444189",
+                    "tertiaryAccent": "#404D46",
+                    "warning": "#FFA717",
+                    "warningAccent": "#F36F20",
+                  }
+                }
+                disabled={false}
+                h={null}
+                height={null}
+                icon="Cross_exit"
+                onClick={[Function]}
+                w={null}
+                width={null}
+              >
+                <Styled(svg)
+                  className="emotion-3 emotion-0 CLR-inline-icons"
+                  color="currentColor"
+                  colors={
+                    Object {
+                      "GrayScale_0": "#ffffff",
+                      "GrayScale_100": "#EDEDED",
+                      "GrayScale_150": "#E5E5E5",
+                      "GrayScale_200": "#D8D8D8",
+                      "GrayScale_50": "#fafafa",
+                      "GrayScale_500": "#999999",
+                      "GrayScale_55": "#f6f6f6",
+                      "GrayScale_600": "#7C7C7C",
+                      "GrayScale_700": "#333333",
+                      "GrayScale_900": "#000000",
+                      "error": "#F62434",
+                      "errorAccent": "#EB5A40",
+                      "info": "#34AAF2",
+                      "infoAccent": "#5BD9E5",
+                      "primary": "#00B956",
+                      "primaryAccent": "#10E272",
+                      "secondary": "#731982",
+                      "secondaryAccent": "#A500BF",
+                      "tertiary": "#444189",
+                      "tertiaryAccent": "#404D46",
+                      "warning": "#FFA717",
+                      "warningAccent": "#F36F20",
+                    }
+                  }
+                  disabled={false}
+                  height="32px"
+                  onClick={[Function]}
+                  width="32px"
+                >
+                  <svg
+                    className="emotion-0 CLR-inline-icons emotion-1 emotion-2"
+                    color="currentColor"
+                    disabled={false}
+                    height="32px"
+                    onClick={[Function]}
+                    width="32px"
+                  >
+                    <use
+                      xlinkHref="#Cross_exit"
+                    />
+                  </svg>
+                </Styled(svg)>
+              </InlineIcons>
+            </withColors(InlineIcons)>
+          </StyledCloseBtn>
+        </div>
+      </StyledContentWrapper>
+    </div>
+  </StyledChips>
+</Chips>
+`;

@@ -1,0 +1,926 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBar /> should match snapshot 1`] = `
+<StyledTopBar
+  className="CLR-top-bar"
+  colors={
+    Object {
+      "GrayScale_0": "#ffffff",
+      "GrayScale_100": "#EDEDED",
+      "GrayScale_150": "#E5E5E5",
+      "GrayScale_200": "#D8D8D8",
+      "GrayScale_50": "#fafafa",
+      "GrayScale_500": "#999999",
+      "GrayScale_55": "#f6f6f6",
+      "GrayScale_600": "#7C7C7C",
+      "GrayScale_700": "#333333",
+      "GrayScale_900": "#000000",
+      "error": "#F62434",
+      "errorAccent": "#EB5A40",
+      "info": "#34AAF2",
+      "infoAccent": "#5BD9E5",
+      "primary": "#00B956",
+      "primaryAccent": "#10E272",
+      "secondary": "#731982",
+      "secondaryAccent": "#A500BF",
+      "tertiary": "#444189",
+      "tertiaryAccent": "#404D46",
+      "warning": "#FFA717",
+      "warningAccent": "#F36F20",
+    }
+  }
+  css={
+    Object {
+      "fontSize": "18px",
+    }
+  }
+  leftItems={
+    Array [
+      Object {
+        "childDropdown": Array [
+          Object {
+            "text": "Abaza and some long text",
+          },
+          Object {
+            "text": "Abakan",
+          },
+        ],
+        "text": "Simple item",
+      },
+      Object {
+        "disabled": true,
+        "text": "Disabled item",
+      },
+      Object {
+        "text": "Item with text that lasts too long",
+      },
+      Object {
+        "childDropdown": Array [
+          Object {
+            "text": "Abaza",
+          },
+          Object {
+            "text": "Abakan",
+          },
+          Object {
+            "childDropdown": Array [
+              Object {
+                "text": "Abaza",
+              },
+              Object {
+                "text": "Abakan",
+              },
+              Object {
+                "text": "Abinsk",
+              },
+              Object {
+                "text": "Zagrabovo",
+              },
+            ],
+            "text": "Nested dropdown",
+          },
+          Object {
+            "text": "Abinsk",
+          },
+        ],
+        "text": "Item with the child dropdown",
+      },
+      Object {
+        "leftIcon": <ForwardRef(withColors(InlineIcons))
+          color="currentColor"
+          disabled={false}
+          h="25.607999999999997px"
+          height={null}
+          icon="Autopay"
+          w="25.607999999999997px"
+          width={null}
+        />,
+        "rightIcon": <ForwardRef(withColors(InlineIcons))
+          color="currentColor"
+          disabled={false}
+          h="25.607999999999997px"
+          height={null}
+          icon="Delete"
+          w="25.607999999999997px"
+          width={null}
+        />,
+        "text": "Item with two icons",
+      },
+      Object {
+        "childDropdown": Array [
+          Object {
+            "text": "Abaza",
+          },
+          Object {
+            "text": "Abakan",
+          },
+        ],
+        "rightIcon": <ForwardRef(withColors(InlineIcons))
+          color="currentColor"
+          disabled={false}
+          h="25.607999999999997px"
+          height={null}
+          icon="Archive"
+          w="25.607999999999997px"
+          width={null}
+        />,
+        "text": "Item with the child dropdown and custom right icon",
+      },
+    ]
+  }
+  leftMenuOverTitle="See more..."
+  occurrence="It"
+  rightItems={
+    Array [
+      Object {
+        "childDropdown": Array [
+          Object {
+            "text": "First child",
+          },
+          Object {
+            "text": "Second child",
+          },
+        ],
+        "text": "Right item",
+      },
+    ]
+  }
+  style={
+    Object {
+      "background": "#EB5A40",
+    }
+  }
+>
+  <StyledLeftMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    isHidden={false}
+    key="0"
+  >
+    <withColors(DropdownItem)
+      childDropdown={
+        <ForwardRef(withColors(Dropdown))
+          closeOnOutside={false}
+          closeOnTriggerClick={true}
+          disableTriggerElement={false}
+          maxNumberOfVisibleOptions={6}
+          renderPrimaryDropdownInPortal={true}
+          scrollSnapping={true}
+          tabIndex={1}
+          triggerAction="click"
+          triggerElement={null}
+          triggerPlacement="bottom-start"
+          virtualization={false}
+        >
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abaza and some long text
+          </ForwardRef(withColors(DropdownItem))>
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abakan
+          </ForwardRef(withColors(DropdownItem))>
+        </ForwardRef(withColors(Dropdown))>
+      }
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="Simple item"
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      Simple item
+    </withColors(DropdownItem)>
+  </StyledLeftMenuItem>
+  <StyledLeftMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    isHidden={false}
+    key="2"
+  >
+    <withColors(DropdownItem)
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="Item with text that lasts too long"
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      Item with text that lasts too long
+    </withColors(DropdownItem)>
+  </StyledLeftMenuItem>
+  <StyledLeftMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    isHidden={false}
+    key="3"
+  >
+    <withColors(DropdownItem)
+      childDropdown={
+        <ForwardRef(withColors(Dropdown))
+          closeOnOutside={false}
+          closeOnTriggerClick={true}
+          disableTriggerElement={false}
+          maxNumberOfVisibleOptions={6}
+          renderPrimaryDropdownInPortal={true}
+          scrollSnapping={true}
+          tabIndex={1}
+          triggerAction="click"
+          triggerElement={null}
+          triggerPlacement="bottom-start"
+          virtualization={false}
+        >
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abaza
+          </ForwardRef(withColors(DropdownItem))>
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abakan
+          </ForwardRef(withColors(DropdownItem))>
+          <ForwardRef(withColors(DropdownItem))
+            childDropdown={
+              <ForwardRef(withColors(Dropdown))
+                closeOnOutside={false}
+                closeOnTriggerClick={true}
+                disableTriggerElement={false}
+                maxNumberOfVisibleOptions={6}
+                renderPrimaryDropdownInPortal={true}
+                scrollSnapping={true}
+                tabIndex={1}
+                triggerAction="click"
+                triggerElement={null}
+                triggerPlacement="bottom-start"
+                virtualization={false}
+              >
+                <ForwardRef(withColors(DropdownItem))
+                  childDropdownPlacement="right-start"
+                  disabled={false}
+                  isOpen={true}
+                  occurrence=""
+                  onClick={[Function]}
+                  popperProps={Object {}}
+                  scrollIntoViewOptions={
+                    Object {
+                      "behavior": "smooth",
+                      "block": "nearest",
+                      "inline": "start",
+                    }
+                  }
+                  size="16px"
+                >
+                  Abaza
+                </ForwardRef(withColors(DropdownItem))>
+                <ForwardRef(withColors(DropdownItem))
+                  childDropdownPlacement="right-start"
+                  disabled={false}
+                  isOpen={true}
+                  occurrence=""
+                  onClick={[Function]}
+                  popperProps={Object {}}
+                  scrollIntoViewOptions={
+                    Object {
+                      "behavior": "smooth",
+                      "block": "nearest",
+                      "inline": "start",
+                    }
+                  }
+                  size="16px"
+                >
+                  Abakan
+                </ForwardRef(withColors(DropdownItem))>
+                <ForwardRef(withColors(DropdownItem))
+                  childDropdownPlacement="right-start"
+                  disabled={false}
+                  isOpen={true}
+                  occurrence=""
+                  onClick={[Function]}
+                  popperProps={Object {}}
+                  scrollIntoViewOptions={
+                    Object {
+                      "behavior": "smooth",
+                      "block": "nearest",
+                      "inline": "start",
+                    }
+                  }
+                  size="16px"
+                >
+                  Abinsk
+                </ForwardRef(withColors(DropdownItem))>
+                <ForwardRef(withColors(DropdownItem))
+                  childDropdownPlacement="right-start"
+                  disabled={false}
+                  isOpen={true}
+                  occurrence=""
+                  onClick={[Function]}
+                  popperProps={Object {}}
+                  scrollIntoViewOptions={
+                    Object {
+                      "behavior": "smooth",
+                      "block": "nearest",
+                      "inline": "start",
+                    }
+                  }
+                  size="16px"
+                >
+                  Zagrabovo
+                </ForwardRef(withColors(DropdownItem))>
+              </ForwardRef(withColors(Dropdown))>
+            }
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Nested dropdown
+          </ForwardRef(withColors(DropdownItem))>
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abinsk
+          </ForwardRef(withColors(DropdownItem))>
+        </ForwardRef(withColors(Dropdown))>
+      }
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="Item with the child dropdown"
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      Item with the child dropdown
+    </withColors(DropdownItem)>
+  </StyledLeftMenuItem>
+  <StyledLeftMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    isHidden={false}
+    key="4"
+  >
+    <withColors(DropdownItem)
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="Item with two icons"
+      leftIcon={
+        <ForwardRef(withColors(InlineIcons))
+          color="currentColor"
+          disabled={false}
+          h="25.607999999999997px"
+          height={null}
+          icon="Autopay"
+          w="25.607999999999997px"
+          width={null}
+        />
+      }
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      rightIcon={
+        <ForwardRef(withColors(InlineIcons))
+          color="currentColor"
+          disabled={false}
+          h="25.607999999999997px"
+          height={null}
+          icon="Delete"
+          w="25.607999999999997px"
+          width={null}
+        />
+      }
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      Item with two icons
+    </withColors(DropdownItem)>
+  </StyledLeftMenuItem>
+  <StyledLeftMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    isHidden={false}
+    key="5"
+  >
+    <withColors(DropdownItem)
+      childDropdown={
+        <ForwardRef(withColors(Dropdown))
+          closeOnOutside={false}
+          closeOnTriggerClick={true}
+          disableTriggerElement={false}
+          maxNumberOfVisibleOptions={6}
+          renderPrimaryDropdownInPortal={true}
+          scrollSnapping={true}
+          tabIndex={1}
+          triggerAction="click"
+          triggerElement={null}
+          triggerPlacement="bottom-start"
+          virtualization={false}
+        >
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abaza
+          </ForwardRef(withColors(DropdownItem))>
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Abakan
+          </ForwardRef(withColors(DropdownItem))>
+        </ForwardRef(withColors(Dropdown))>
+      }
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="Item with the child dropdown and custom right icon"
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      rightIcon={
+        <ForwardRef(withColors(InlineIcons))
+          color="currentColor"
+          disabled={false}
+          h="25.607999999999997px"
+          height={null}
+          icon="Archive"
+          w="25.607999999999997px"
+          width={null}
+        />
+      }
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      Item with the child dropdown and custom right icon
+    </withColors(DropdownItem)>
+  </StyledLeftMenuItem>
+  <StyledShowMoreMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    isHidden={true}
+    key="0"
+  >
+    <withColors(DropdownItem)
+      childDropdown={
+        <ForwardRef(withColors(Dropdown))
+          closeOnOutside={false}
+          closeOnTriggerClick={true}
+          disableTriggerElement={false}
+          maxNumberOfVisibleOptions={6}
+          renderPrimaryDropdownInPortal={true}
+          scrollSnapping={true}
+          tabIndex={1}
+          triggerAction="click"
+          triggerElement={null}
+          triggerPlacement="bottom-start"
+          virtualization={false}
+        />
+      }
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="See more..."
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      See more...
+    </withColors(DropdownItem)>
+  </StyledShowMoreMenuItem>
+  <StyledRightMenuItem
+    colors={
+      Object {
+        "GrayScale_0": "#ffffff",
+        "GrayScale_100": "#EDEDED",
+        "GrayScale_150": "#E5E5E5",
+        "GrayScale_200": "#D8D8D8",
+        "GrayScale_50": "#fafafa",
+        "GrayScale_500": "#999999",
+        "GrayScale_55": "#f6f6f6",
+        "GrayScale_600": "#7C7C7C",
+        "GrayScale_700": "#333333",
+        "GrayScale_900": "#000000",
+        "error": "#F62434",
+        "errorAccent": "#EB5A40",
+        "info": "#34AAF2",
+        "infoAccent": "#5BD9E5",
+        "primary": "#00B956",
+        "primaryAccent": "#10E272",
+        "secondary": "#731982",
+        "secondaryAccent": "#A500BF",
+        "tertiary": "#444189",
+        "tertiaryAccent": "#404D46",
+        "warning": "#FFA717",
+        "warningAccent": "#F36F20",
+      }
+    }
+    key="0"
+  >
+    <withColors(DropdownItem)
+      childDropdown={
+        <ForwardRef(withColors(Dropdown))
+          closeOnOutside={false}
+          closeOnTriggerClick={true}
+          disableTriggerElement={false}
+          maxNumberOfVisibleOptions={6}
+          renderPrimaryDropdownInPortal={true}
+          scrollSnapping={true}
+          tabIndex={1}
+          triggerAction="click"
+          triggerElement={null}
+          triggerPlacement="bottom-start"
+          virtualization={false}
+        >
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            First child
+          </ForwardRef(withColors(DropdownItem))>
+          <ForwardRef(withColors(DropdownItem))
+            childDropdownPlacement="right-start"
+            disabled={false}
+            isOpen={true}
+            occurrence=""
+            onClick={[Function]}
+            popperProps={Object {}}
+            scrollIntoViewOptions={
+              Object {
+                "behavior": "smooth",
+                "block": "nearest",
+                "inline": "start",
+              }
+            }
+            size="16px"
+          >
+            Second child
+          </ForwardRef(withColors(DropdownItem))>
+        </ForwardRef(withColors(Dropdown))>
+      }
+      childDropdownPlacement="bottom"
+      childWrapperStyle={
+        Object {
+          "name": "1hok3eg-mapItems",
+          "styles": "padding-top:5px;;label:mapItems;",
+        }
+      }
+      disabled={false}
+      isOpen={true}
+      key="Right item"
+      occurrence="It"
+      onClick={[Function]}
+      popperProps={Object {}}
+      scrollIntoViewOptions={
+        Object {
+          "behavior": "smooth",
+          "block": "nearest",
+          "inline": "start",
+        }
+      }
+      size="16px"
+    >
+      Right item
+    </withColors(DropdownItem)>
+  </StyledRightMenuItem>
+</StyledTopBar>
+`;

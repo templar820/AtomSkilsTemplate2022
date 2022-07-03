@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Paper /> should match snapshot 1`] = `
+<StyledPaper
+  className="toilet-paper CLR-paper"
+  colors={
+    Object {
+      "GrayScale_0": "#ffffff",
+      "GrayScale_100": "#EDEDED",
+      "GrayScale_150": "#E5E5E5",
+      "GrayScale_200": "#D8D8D8",
+      "GrayScale_50": "#fafafa",
+      "GrayScale_500": "#999999",
+      "GrayScale_55": "#f6f6f6",
+      "GrayScale_600": "#7C7C7C",
+      "GrayScale_700": "#333333",
+      "GrayScale_900": "#000000",
+      "error": "#F62434",
+      "errorAccent": "#EB5A40",
+      "info": "#34AAF2",
+      "infoAccent": "#5BD9E5",
+      "primary": "#00B956",
+      "primaryAccent": "#10E272",
+      "secondary": "#731982",
+      "secondaryAccent": "#A500BF",
+      "tertiary": "#444189",
+      "tertiaryAccent": "#404D46",
+      "warning": "#FFA717",
+      "warningAccent": "#F36F20",
+    }
+  }
+  css={
+    Object {
+      "background": "brown",
+    }
+  }
+  size={10}
+>
+  <legend>
+    child
+    <li>
+      child
+    </li>
+  </legend>
+</StyledPaper>
+`;
