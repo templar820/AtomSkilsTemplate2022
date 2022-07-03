@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import { MOBXDefaultProps } from '@globalTypes';
-import Header from '@components/system/Header';
-import Menu from '@components/system/Menu';
+import Header from '@components/system/Header/Header';
+import Menu from '@components/system/Menu/Menu';
+import './styles.scss'
 
 interface PageProps extends MOBXDefaultProps{
   children : React.ReactNode
@@ -10,11 +11,11 @@ interface PageProps extends MOBXDefaultProps{
 
 function Page(props: PageProps) {
   return (
-    <div className="maxSize d-flex flex-row">
+    <div className="page">
       <Menu />
-      <div className="d-flex flex-column w-100">
+      <div className="page__wrapper">
         <Header />
-        <div className="d-flex flex-column w-100 h-100 mh-100">
+        <div className="page__content">
           {props.children}
         </div>
       </div>

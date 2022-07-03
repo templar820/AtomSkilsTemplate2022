@@ -4,6 +4,7 @@ import {
   Divider, ListItem, ListItemIcon, ListItemText,
   Tooltip
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import MuiDrawer from '@mui/material/Drawer';
 import { styled } from '@mui/material/styles';
 import { useLocation } from 'react-router-dom';
@@ -11,16 +12,13 @@ import { TreeItem, TreeView } from '@mui/lab';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Colors from '@colors';
-
-// @ts-ignore
-import logo from '@icons/favicon.png';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
+import './styles.scss';
 
-const drawerWidth = 240;
+// const drawerWidth = 190;
 
 const openedMixin = theme => ({
-  width: drawerWidth,
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
@@ -50,11 +48,14 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: prop => prop !== 'open' })(
   ({ theme, open }) => ({
-    width: drawerWidth,
     flexShrink: 0,
     whiteSpace: 'nowrap',
-    overflow: 'hidden',
+    overflow: 'auto',
     boxSizing: 'border-box',
+    '& .MuiPaper-root': {
+      borderRight: 'none',
+      position: 'static',
+    },
     ...(open && {
       ...openedMixin(theme),
       '& .MuiDrawer-paper': openedMixin(theme),
@@ -74,6 +75,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'transparent !important'
   },
   MuiTreeItemRoot: {
+    border: 'none',
     "&[aria-selected='true']": {
       borderLeft: `4px solid ${Colors.success}`,
       backgroundColor: Colors.menuBackgroundColor,
@@ -85,7 +87,8 @@ const useStyles = makeStyles(theme => ({
     '& *': {
       backgroundColor: 'transparent !important',
     },
-    padding: 8,
+    padding: 6,
+    paddingRight: 16,
     '&:hover': {
       '& .MuiListItemText-primary': {
         color: Colors.white
@@ -100,7 +103,7 @@ const useStyles = makeStyles(theme => ({
 function Menu(props: MOBXDefaultProps) {
   const classes = useStyles();
   const appStore = props.AppStore;
-  const open = appStore.openMenu;
+  const open = true;
   const currentPath = useLocation().pathname;
   const [openNodes, setOpenNodes] = useState<string[]>([]);
   
@@ -150,24 +153,12 @@ function Menu(props: MOBXDefaultProps) {
           label={
             (
               <div className="d-flex flex-row align-items-center">
-                {open ? (
-                  <>
-                    <ListItemIcon>{item.icon}</ListItemIcon>
-                    <ListItemText primary={item.name} />
-                  </>
-                ) : (
-                  <Tooltip title={item.name} arrow placement="right">
-                    <ListItemIcon>{item.icon}</ListItemIcon>
-                  </Tooltip>
-                )}
-              
+                <ListItemText primary={item.name} />
               </div>
             )
           }
           onClick={() => {
-            if (item.children) {
-              if (!open) appStore.changeMenu();
-            } else {
+            if (!item.children) {
               props.history.push(item.path);
             }
             let arr = [...new Set(openNodes)] as string[];
@@ -189,17 +180,13 @@ function Menu(props: MOBXDefaultProps) {
   
   return (
     <Drawer variant="permanent" open={open}>
-      {/*<DrawerHeader className="d-flex justify-content-center">*/}
-      {/*  {open ? <UserProfileCard user={props.UserStore.currentUser!} />*/}
-      {/*    : <img src={logo} alt="logo" width={64} height={64} />}*/}
-      {/*</DrawerHeader>*/}
-      <Divider className="d-block mt-2" />
-      <div className="h-auto" style={{ overflowY: 'auto', overflowX: 'hidden' }}>
+      <DrawerHeader className="d-flex justify-content-center">
+        <Link to="/"><div className="menu-logo"/></Link>
+      </DrawerHeader>
+      <div className="h-auto">
         {getMenu(appStore.mainMenu)}
       </div>
-      <Divider />
       <div className="mt-auto mb-4">
-        <Divider />
         {getMenu(appStore.botMenu)}
       </div>
     </Drawer>

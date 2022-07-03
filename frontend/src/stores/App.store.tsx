@@ -10,9 +10,6 @@ export default class AppStore {
   @observable
   notifications = [];
 
-  @observable
-  openMenu = JSON.parse(localStorage.AS_2022 || 'false');
-
   @action
   setNotifications(notifications: BaseNotification[]) {
     this.notifications = notifications;
@@ -21,12 +18,6 @@ export default class AppStore {
   @action
   addNotification(notify) {
     this.setNotifications([...this.notifications, notify]);
-  }
-
-  @action
-  changeMenu() {
-    this.openMenu = !this.openMenu;
-    localStorage.AS_2022 = this.openMenu;
   }
 
   @computed
@@ -43,28 +34,19 @@ export default class AppStore {
     {
       id: 'home',
       name: 'Главная',
-      icon: <Home />,
-      path: '/home',
+      path: '/',
     },
     {
-      id: 'signals',
-      name: 'Платформы',
-      icon: <Work />,
-      path: '/platforms'
+      id: 'examples',
+      name: 'Примеры',
+      children: [
+        {
+          id: 'table',
+          name: 'Таблицы sdf sdf',
+          path: '/examples/table'
+        },
+      ]
     },
-    {
-      id: 'bots',
-      name: 'Боты',
-      icon: <Android />,
-      path: '/bots'
-    },
-    {
-      id: 'docs',
-      name: 'Документация',
-      icon: <InsertDriveFile />,
-      path: '/docs',
-      children: [],
-    }
   ];
 
   @observable
@@ -72,13 +54,11 @@ export default class AppStore {
     {
       id: 'settings',
       name: 'Настройки',
-      icon: <Settings />,
       path: '/settings#account-general'
     },
     {
       id: 'support',
       name: 'Поддержка',
-      icon: <ContactSupport />,
       path: '/support',
     }
   ];

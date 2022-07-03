@@ -2,7 +2,7 @@ import React from 'react';
 
 import clsx from 'clsx';
 import { makeStyles } from '@mui/styles';
-import Checkbox, { CheckboxProps } from '@mui/material';
+import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 
 import Colors from '@colors';
 

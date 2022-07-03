@@ -3,7 +3,7 @@ import PlaceCard from '@pages/Place';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
 import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
-import Page from '@components/system/Page';
+import Page from '@components/system/Page/Page';
 import ErrorBoundary from '@components/system/ErrorBoundary';
 import FavoritePlaceList from '@pages/FavoritePlaceList';
 import { MOBXDefaultProps } from '@globalTypes';
