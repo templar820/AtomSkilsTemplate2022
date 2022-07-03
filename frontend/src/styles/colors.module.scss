@@ -51,8 +51,13 @@ $backgroundColor: $gray-1;
 
 $primaryChipsColor: $red-6;
 
+$menuBackgroundColor: #2F4050;
+$menuTextColor: #a7b1c2;
+
 :export {
   primary: $primary;
+  menuBackgroundColor: $menuBackgroundColor;
+  menuTextColor: $menuTextColor;
   secondary: $secondary;
   primaryText: $primaryText;
   primaryChipsColor: $primaryChipsColor;

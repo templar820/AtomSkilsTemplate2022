@@ -104,6 +104,22 @@ const theme = createTheme({
         }
       }
     },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          fill: Colors.menuTextColor,
+          color: Colors.menuTextColor
+        }
+      }
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: Colors.menuBackgroundColor,
+          color: Colors.menuTextColor,
+        },
+      }
+    },
     MuiBadge: {
       variants: [
         {

@@ -1,5 +1,7 @@
 declare const styles: {
   readonly "primary": string;
+  readonly "menuBackgroundColor": string;
+  readonly "menuTextColor": string;
   readonly "secondary": string;
   readonly "primaryText": string;
   readonly "primaryChipsColor": string;

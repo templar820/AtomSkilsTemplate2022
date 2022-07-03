@@ -75,8 +75,8 @@ const useStyles = makeStyles(theme => ({
   },
   MuiTreeItemRoot: {
     "&[aria-selected='true']": {
-      borderLeft: `4px solid ${Colors.primary}`,
-      backgroundColor: Colors.menuBackgroundColor
+      borderLeft: `4px solid ${Colors.success}`,
+      backgroundColor: Colors.menuBackgroundColor,
     },
   },
   MuiTreeItemLabelRoot: {
