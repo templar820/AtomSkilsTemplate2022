@@ -42,7 +42,7 @@ export default class AppStore {
       children: [
         {
           id: 'table',
-          name: 'Таблицы sdf sdf',
+          name: 'Таблицы',
           path: '/examples/table'
         },
       ]
