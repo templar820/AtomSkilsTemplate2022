@@ -25,14 +25,87 @@ import {
 
 
 import {fuzzyFilter} from "@components/ui-kit/table/utils";
+import {Person} from "@components/ui-kit/table/makeData";
 
-export function TableAs({columns, data}) {
+function useSkipper() {
+    const shouldSkipRef = React.useRef(true)
+    const shouldSkip = shouldSkipRef.current
+
+    // Wrap a function with this to skip a pagination reset temporarily
+    const skip = React.useCallback(() => {
+        shouldSkipRef.current = false
+    }, [])
+
+    React.useEffect(() => {
+        shouldSkipRef.current = true
+    })
+
+    return [shouldSkip, skip] as const
+}
+
+type TableMeta = {
+    updateData: (rowIndex: number, columnId: string, value: unknown) => void
+}
+
+const defaultColumn: Partial<ColumnDef<Person>> = {
+    cell: ({ getValue, row: { index }, column: { id }, table }) => {
+        const initialValue = getValue()
+        // We need to keep and update the state of the cell normally
+        const [value, setValue] = React.useState(initialValue)
+
+        // When the input is blurred, we'll call our table meta's updateData function
+        const onBlur = () => {
+            ;(table.options.meta as TableMeta).updateData(index, id, value)
+        }
+
+        // If the initialValue is changed external, sync it up with our state
+        React.useEffect(() => {
+            setValue(initialValue)
+        }, [initialValue])
+
+        return (
+            <input
+                value={value as string}
+                onChange={e => setValue(e.target.value)}
+                onBlur={onBlur}
+            />
+        )
+    },
+}
+
+export function TableAs({columns, data, setData, handleChange}) {
     const rerender = React.useReducer(() => ({}), {})[1]
 
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
     )
     const [globalFilter, setGlobalFilter] = React.useState('')
+    const [autoResetPageIndex, skipAutoResetPageIndex] = useSkipper()
+    const meta = handleChange || setData ? {
+        meta: {
+            updateData: (rowIndex, columnId, value) => {
+                // Skip age index reset until after next rerender
+                if (handleChange) {
+                    handleChange(rowIndex, columnId, value)
+                }
+                skipAutoResetPageIndex();
+                if (setData) {
+                    setData(old =>
+                        old.map((row, index) => {
+                            if (index === rowIndex) {
+                                return {
+                                    ...old[rowIndex]!,
+                                    [columnId]: value,
+                                }
+                            }
+                            return row
+                        })
+                    )
+                }
+            },
+        } as TableMeta ,
+        defaultColumn
+    }: {};
 
     const table = useReactTable({
         data,
@@ -52,8 +125,11 @@ export function TableAs({columns, data}) {
         getFacetedUniqueValues: getFacetedUniqueValues(),
         getFacetedMinMaxValues: getFacetedMinMaxValues(),
         debugTable: true,
+        enableRowSelection: true,
         debugHeaders: true,
         debugColumns: false,
+        autoResetPageIndex,
+        ...meta
     })
 
     React.useEffect(() => {
@@ -196,13 +272,6 @@ export function TableAs({columns, data}) {
                 </select>
             </div>
             <div>{table.getPrePaginationRowModel().rows.length} Rows</div>
-            <div>
-                <button onClick={() => rerender()}>Force Rerender</button>
-            </div>
-            <div>
-                <button>Refresh Data</button>
-            </div>
-            <pre>{JSON.stringify(table.getState(), null, 2)}</pre>
         </div>
     )
 }
