@@ -4,10 +4,9 @@ import {
   Divider, ListItem, ListItemIcon, ListItemText,
   Tooltip
 } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MuiDrawer from '@mui/material/Drawer';
 import { styled } from '@mui/material/styles';
-import { useLocation } from 'react-router-dom';
 import { TreeItem, TreeView } from '@mui/lab';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -106,15 +105,14 @@ function Menu(props: MOBXDefaultProps) {
   const open = true;
   const currentPath = useLocation().pathname;
   const [openNodes, setOpenNodes] = useState<string[]>([]);
-  
-  
+
   const getChildren = array => {
     if (!(array && array.length)) return null;
-    
+
     return array.map((item, index) => (
       <TreeItem
-        key={item.key}
-        nodeId={item.key}
+        key={item.id}
+        nodeId={item.id}
         classes={{
           label: classes.MuiTreeItemLabelRoot,
           root: classes.MuiTreeItemRoot,
@@ -134,7 +132,7 @@ function Menu(props: MOBXDefaultProps) {
       </TreeItem>
     ));
   };
-  
+
   const getMenu = menuList => (
     <TreeView
       defaultCollapseIcon={<ExpandMoreIcon />}
@@ -177,11 +175,11 @@ function Menu(props: MOBXDefaultProps) {
       ))}
     </TreeView>
   );
-  
+
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader className="d-flex justify-content-center">
-        <Link to="/"><div className="menu-logo"/></Link>
+        <Link to="/"><div className="menu-logo" /></Link>
       </DrawerHeader>
       <div className="h-auto">
         {getMenu(appStore.mainMenu)}
@@ -190,7 +188,7 @@ function Menu(props: MOBXDefaultProps) {
         {getMenu(appStore.botMenu)}
       </div>
     </Drawer>
-  
+
   );
 }
 

@@ -8,10 +8,10 @@ import ErrorBoundary from '@components/system/ErrorBoundary';
 import FavoritePlaceList from '@pages/FavoritePlaceList';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
+import HomePage from '@pages/HomePage';
+import TablePage from '@pages/Table';
 import NotificationWindow from './NotificationWindow';
 import NotificationManager from './helpers/NotificationManager';
-import HomePage from '@pages/HomePage';
-import TablePage from "@pages/Table";
 
 function Router(props: MOBXDefaultProps) {
   const getPage = (routerProps, Component, type?:any) => {
@@ -32,11 +32,11 @@ function Router(props: MOBXDefaultProps) {
             path="/"
             render={p => getPage(p, HomePage)}
           />
-            <Route
-                exact
-                path="/examples/table"
-                render={p => getPage(p, TablePage)}
-            />
+          <Route
+            exact
+            path="/examples/table"
+            render={p => getPage(p, TablePage)}
+          />
         </Switch>
       </ErrorBoundary>
     </BrowserRouter>
