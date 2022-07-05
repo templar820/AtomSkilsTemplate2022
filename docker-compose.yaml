@@ -5,6 +5,7 @@ volumes:
   db-es:
     driver: local
 
+
 #x-backend: &backend
 #  build:
 #    context: .
@@ -63,16 +64,25 @@ services:
 #    env_file:
 #      - .env
 
-  postgres:
-    image: postgres:latest
-    container_name: "postgres"
+  mongo:
+    image: mongo:latest
+    container_name: mongo-dev
     restart: unless-stopped
     volumes:
-      - db-volume:/var/lib/postgresql/data
+      - db-volume:/data/db
     ports:
-      - 5432:5432
+      - 27017:27017
     env_file:
       - .env
+
+  mongo-express:
+    image: mongo-express
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    ports:
+      - "8081:8081"
 #  elasticsearch:
 #    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
 #    container_name: "elastic"

@@ -11,6 +11,5 @@ node_modules/
 /verdaccio/storage
 
 
-.env
 *.idea
 *package-lock.json
