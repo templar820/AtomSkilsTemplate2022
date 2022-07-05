@@ -65,17 +65,21 @@ services:
 #      - .env
 
   mongo:
-    image: mongo:latest
+    image: mongo
     container_name: mongo-dev
     restart: unless-stopped
     volumes:
       - db-volume:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_DATABASE: as_2022
+      MONGO_INITDB_ROOT_PASSWORD: admin
     ports:
       - 27017:27017
-    env_file:
-      - .env
 
   mongo-express:
+    container_name: me-dev
+    restart: always
     image: mongo-express
     depends_on:
       - mongo
