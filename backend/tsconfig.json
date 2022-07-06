@@ -1,29 +1,21 @@
 {
   "compilerOptions": {
-    "strictPropertyInitialization": false,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "pretty": false,
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
     "module": "commonjs",
-    "target": "esnext",
-    "allowJs": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
-
-  },
-  "ts-node": {
-    "files": true,
-    "transpileOnly": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  }
 }
