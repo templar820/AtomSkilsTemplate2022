@@ -9,6 +9,7 @@ import { Role } from './roles/roles.model';
 import { UserRoles } from './roles/user-roles.model';
 import { AuthModule } from './auth/auth.module';
 import { LoggerMiddleware } from './middlewares/logger.middleware';
+import CONSTANT from './config/CONSTANT';
 
 @Module({
   imports: [
@@ -17,11 +18,11 @@ import { LoggerMiddleware } from './middlewares/logger.middleware';
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
-      host: process.env.POSTGRES_HOST,
-      port: Number(process.env.POSTGRES_PORT),
-      database: process.env.POSTGRES_DB,
-      username: process.env.POSTGRES_USER,
-      password: process.env.POSTGRES_PASSWORD,
+      host: CONSTANT.POSTGRES_HOST,
+      port: Number(CONSTANT.POSTGRES_PORT),
+      database: CONSTANT.POSTGRES_DB,
+      username: CONSTANT.POSTGRES_USER,
+      password: CONSTANT.POSTGRES_PASSWORD,
       autoLoadModels: true,
       models: [User, Role, UserRoles],
     }),

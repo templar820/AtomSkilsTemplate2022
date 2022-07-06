@@ -1,0 +1,26 @@
+image: ubuntu:latest
+variables:
+  WORK_DIR: ${CI_PROJECT_NAME}
+  BRANCH: ${CI_COMMIT_REF_NAME}
+  REPO: https://gitlab.com/trade-s/portal.git
+  SERVER_URL: ${SERVER_URL}
+  SSH_PRIVATE_KEY: ${SSH_PRIVATE_KEY}
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    - master
+  environment:
+    name: Production
+    url: "$SERVER_URL"
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - ssh root@"$SERVER_URL" 'cd portal; git pull; make stop; make build; make start;'
