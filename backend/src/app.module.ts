@@ -10,6 +10,7 @@ import { UserRoles } from './roles/user-roles.model';
 import { AuthModule } from './auth/auth.module';
 import { LoggerMiddleware } from './middlewares/logger.middleware';
 import CONSTANT from './config/CONSTANT';
+import { AdminModule } from '@adminjs/nestjs';
 
 @Module({
   imports: [
@@ -26,9 +27,16 @@ import CONSTANT from './config/CONSTANT';
       autoLoadModels: true,
       models: [User, Role, UserRoles],
     }),
+    AdminModule.createAdmin({
+      adminJsOptions: {
+        rootPath: '/admin',
+        resources: [],
+      },
+    }),
     UsersModule,
     RolesModule,
     AuthModule,
+
   ],
   controllers: [],
   providers: [],

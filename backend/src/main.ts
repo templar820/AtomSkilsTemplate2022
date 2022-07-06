@@ -4,9 +4,10 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ValidationPipe } from './pipes/validation.pipe';
 import { ResponseInterceptor } from './interceptors/response.interceptor';
 import { HttpExceptionFilter } from './filters/http-exception.filter';
+import CONSTANT from "./config/CONSTANT";
 
 async function start() {
-  const PORT = process.env.BACKEND_PORT || 5000;
+  const PORT = CONSTANT.PORT;
 
   const doc = new DocumentBuilder()
     .setTitle('HackTemplate')

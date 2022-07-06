@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import { MOBXDefaultProps } from '@globalTypes';
 import Header from '@components/system/Header/Header';
 import Menu from '@components/system/Menu/Menu';
-import './styles.scss'
+import './styles.scss';
 
 interface PageProps extends MOBXDefaultProps{
   children : React.ReactNode
@@ -15,7 +14,7 @@ function Page(props: PageProps) {
       <Menu />
       <div className="page__wrapper">
         <Header />
-        <div className="page__content">
+        <div className="page__content p-4">
           {props.children}
         </div>
       </div>
