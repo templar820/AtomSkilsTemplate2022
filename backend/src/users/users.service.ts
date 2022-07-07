@@ -1,9 +1,12 @@
-import { Injectable } from '@nestjs/common';
+import {Inject, Injectable, UseInterceptors} from '@nestjs/common';
 import { User } from './user.model';
 import { InjectModel } from '@nestjs/sequelize';
 import { CreateUserDto } from './dto/create-user.dto';
 import { RolesService } from '../roles/roles.service';
 import { Role } from '../roles/roles.model';
+import {Sequelize, Transaction} from "sequelize";
+import { TransactionInterceptor} from "../interceptors/transaction.interceptor";
+import { TransactionParam} from "../decorators/transaction.decorator";
 
 @Injectable()
 export class UsersService {
@@ -11,6 +14,8 @@ export class UsersService {
     @InjectModel(User) private userRepository: typeof User,
     private roleService: RolesService,
   ) {}
+
+
 
   async createUser(dto: CreateUserDto) {
     const user = await this.userRepository.create(dto);

@@ -18,7 +18,6 @@ export class User extends Model<User, UserCreationAttrs> {
   @ApiProperty({ example: 1, description: 'Уникальный идентификатор' })
   @Column({
     type: DataType.INTEGER,
-    unique: true,
     autoIncrement: true,
     primaryKey: true,
   })
@@ -45,7 +44,7 @@ export class User extends Model<User, UserCreationAttrs> {
   @ApiProperty({ example: true, description: 'Забанен или нет' })
   @Column({
     type: DataType.BOOLEAN,
-    defaultValue: false,
+    allowNull: true,
   })
   banned: boolean;
 

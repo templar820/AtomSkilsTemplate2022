@@ -1,4 +1,4 @@
-import { Body, Get, Post, UnauthorizedException } from '@nestjs/common';
+import {Body, Get, Post, UnauthorizedException, UseInterceptors} from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';

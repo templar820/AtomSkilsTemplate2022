@@ -23,6 +23,7 @@
   "dependencies": {
     "@adminjs/express": "^4.0.0",
     "@adminjs/nestjs": "^4.0.1",
+    "@adminjs/passwords": "^2.0.2",
     "@adminjs/sequelize": "^2.1.5",
     "@nestjs/common": "^8.2.6",
     "@nestjs/config": "^1.1.6",
