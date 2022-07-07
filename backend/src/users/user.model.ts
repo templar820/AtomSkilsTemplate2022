@@ -32,7 +32,6 @@ export class User extends Model<User, UserCreationAttrs> {
     type: DataType.STRING,
     unique: true,
     allowNull: false,
-    primaryKey: true,
   })
   email: string;
 
@@ -40,7 +39,6 @@ export class User extends Model<User, UserCreationAttrs> {
   @Column({
     type: DataType.STRING,
     allowNull: false,
-    primaryKey: true,
   })
   password: string;
 

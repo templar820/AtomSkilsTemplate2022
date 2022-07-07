@@ -34,7 +34,7 @@ AdminJS.registerAdapter({ Database, Resource });
     AdminModule.createAdmin({
       adminJsOptions: {
         rootPath: '/admin',
-        resources: [User],
+        resources: [User, Role, UserRoles],
       },
     }),
     UsersModule,
