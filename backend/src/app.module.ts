@@ -11,6 +11,10 @@ import { AuthModule } from './auth/auth.module';
 import { LoggerMiddleware } from './middlewares/logger.middleware';
 import CONSTANT from './config/CONSTANT';
 import { AdminModule } from '@adminjs/nestjs';
+import { Database, Resource } from '@adminjs/sequelize';
+import AdminJS from 'adminjs';
+
+AdminJS.registerAdapter({ Database, Resource });
 
 @Module({
   imports: [
@@ -30,13 +34,12 @@ import { AdminModule } from '@adminjs/nestjs';
     AdminModule.createAdmin({
       adminJsOptions: {
         rootPath: '/admin',
-        resources: [],
+        resources: [User],
       },
     }),
     UsersModule,
     RolesModule,
     AuthModule,
-
   ],
   controllers: [],
   providers: [],

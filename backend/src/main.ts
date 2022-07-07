@@ -4,7 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ValidationPipe } from './pipes/validation.pipe';
 import { ResponseInterceptor } from './interceptors/response.interceptor';
 import { HttpExceptionFilter } from './filters/http-exception.filter';
-import CONSTANT from "./config/CONSTANT";
+import CONSTANT from './config/CONSTANT';
 
 async function start() {
   const PORT = CONSTANT.PORT;
@@ -32,6 +32,7 @@ async function start() {
   app.useGlobalInterceptors(new ResponseInterceptor());
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new HttpExceptionFilter());
+
 
   const document = SwaggerModule.createDocument(app, doc);
   SwaggerModule.setup('/api/docs', app, document);
