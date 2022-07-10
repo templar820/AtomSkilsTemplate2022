@@ -23,12 +23,14 @@ export class UsersService {
 
   async createUser(dto: CreateUserDto) {
     try {
-      return await this.db.transaction(async (t) => {
-        const user = await this.userRepository.create(dto, { transaction: t });
-        await this.userRepository.create({email: dto.email + "1", password: dto.password}, { transaction: t });
-        await t.commit();
-        return user;
-      });
+      const t = await this.db.transaction();
+      const user = await this.userRepository.create(dto, { transaction: t });
+      await this.userRepository.create(
+        { email: dto.email + '1', password: dto.password },
+        { transaction: t },
+      );
+      await t.commit();
+      return user;
     } catch (e) {}
   }
 
