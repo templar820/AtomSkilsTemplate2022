@@ -43,7 +43,7 @@ AdminJS.registerAdapter({ Database, Resource });
   ],
   controllers: [],
   providers: [],
-  exports: [],
+  exports: [SequelizeModule],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

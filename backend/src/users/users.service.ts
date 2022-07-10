@@ -1,27 +1,35 @@
-import {Inject, Injectable, UseInterceptors} from '@nestjs/common';
+import { Inject, Injectable, UseInterceptors } from '@nestjs/common';
 import { User } from './user.model';
-import { InjectModel } from '@nestjs/sequelize';
+import {
+  InjectConnection,
+  InjectModel,
+  SequelizeModule,
+} from '@nestjs/sequelize';
 import { CreateUserDto } from './dto/create-user.dto';
 import { RolesService } from '../roles/roles.service';
 import { Role } from '../roles/roles.model';
-import {Sequelize, Transaction} from "sequelize";
-import { TransactionInterceptor} from "../interceptors/transaction.interceptor";
-import { TransactionParam} from "../decorators/transaction.decorator";
+import { Sequelize, Transaction } from 'sequelize';
+import { TransactionInterceptor } from '../interceptors/transaction.interceptor';
+import { TransactionParam } from '../decorators/transaction.decorator';
+import CONSTANT from '../config/CONSTANT';
 
 @Injectable()
 export class UsersService {
   constructor(
     @InjectModel(User) private userRepository: typeof User,
     private roleService: RolesService,
+    @InjectConnection() private db: Sequelize,
   ) {}
 
-
-
   async createUser(dto: CreateUserDto) {
-    const user = await this.userRepository.create(dto);
-    const role = await this.roleService.getRoleByValue('USER');
-    await user.$set('roles', [role.id]);
-    return user;
+    try {
+      return await this.db.transaction(async (t) => {
+        const user = await this.userRepository.create(dto, { transaction: t });
+        await this.userRepository.create({email: dto.email + "1", password: dto.password}, { transaction: t });
+        await t.commit();
+        return user;
+      });
+    } catch (e) {}
   }
 
   async getAllUsers() {
