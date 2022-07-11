@@ -5,13 +5,11 @@ import { Route, Switch } from 'react-router';
 import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
 import Page from '@components/system/Page/Page';
 import ErrorBoundary from '@components/system/ErrorBoundary';
-import FavoritePlaceList from '@pages/FavoritePlaceList';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import HomePage from '@pages/HomePage';
 import TablePage from '@pages/Table';
 import NotificationWindow from './NotificationWindow';
-import NotificationManager from './helpers/NotificationManager';
 
 function Router(props: MOBXDefaultProps) {
   const getPage = (routerProps, Component, type?:any) => {

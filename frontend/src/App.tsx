@@ -6,8 +6,8 @@ import { ThemeProvider } from '@mui/material';
 import { IServices, IStores, StoresNames } from '@globalTypes';
 import Loader from '@components/system/Loader';
 import { SnackbarProvider } from 'notistack';
+import { useRootStore } from '@hooks/useRootStore';
 import Router from './Router';
-import AppStore from './stores/App.store';
 import theme from './styles/muiTheme';
 import { Api, HttpClient } from './api/api';
 
@@ -31,14 +31,9 @@ function App() {
   });
   const apiService = new Api(httpClient);
 
-  const appStore = new AppStore();
+  const stores = useRootStore();
 
-  const appService = new AppService(appStore);
-
-
-  const stores = {
-    [StoresNames.AppStore]: appStore,
-  } as IStores;
+  const appService = new AppService(stores.AppStore);
 
   const services = {
     appService,

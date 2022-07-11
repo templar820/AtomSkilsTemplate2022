@@ -13,6 +13,9 @@ import CONSTANT from './config/CONSTANT';
 import { AdminModule } from '@adminjs/nestjs';
 import { Database, Resource } from '@adminjs/sequelize';
 import AdminJS from 'adminjs';
+import * as bcrypt from 'bcrypt';
+import passwordsFeature from '@adminjs/passwords';
+import * as argon2 from 'argon2';
 
 AdminJS.registerAdapter({ Database, Resource });
 
@@ -29,12 +32,31 @@ AdminJS.registerAdapter({ Database, Resource });
       username: CONSTANT.POSTGRES_USER,
       password: CONSTANT.POSTGRES_PASSWORD,
       autoLoadModels: true,
-      models: [User, Role, UserRoles],
     }),
     AdminModule.createAdmin({
       adminJsOptions: {
         rootPath: '/admin',
-        resources: [User, Role, UserRoles],
+        resources: [
+          {
+            resource: User,
+            options: {
+              properties: { encrypted: { isVisible: false } },
+            },
+            features: [
+              passwordsFeature({
+                // PasswordsOptions
+                properties: {
+                  // to this field will save the hashed password
+                  encryptedPassword: 'encrypted',
+                },
+                hash: argon2.hash,
+              }),
+            ],
+          },
+
+          Role,
+          UserRoles,
+        ],
       },
     }),
     UsersModule,

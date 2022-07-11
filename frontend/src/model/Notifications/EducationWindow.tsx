@@ -40,6 +40,7 @@ export default class EducationWindow extends BaseNotification implements BaseNot
     if (this.onClose) {
       this.onClose();
     }
+    console.log(true);
     this.close();
   }
 
@@ -48,7 +49,7 @@ export default class EducationWindow extends BaseNotification implements BaseNot
       <Backdrop
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open
-        onClose={() => this.closeNotification()}
+        onClick={() => this.closeNotification()}
       >
         <div className="">
           <Typography variant="h2" color={Colors.gray7}>{'Пропустить'.toLocaleUpperCase()}</Typography>

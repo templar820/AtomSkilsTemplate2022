@@ -1,5 +1,5 @@
 import {
-  action, computed, makeAutoObservable, observable,
+  action, computed, makeAutoObservable, observable, toJS,
 } from 'mobx';
 import {
   Home, Android, Work, InsertDriveFile, ContactSupport, Settings
@@ -9,6 +9,9 @@ import BaseNotification from '../model/Notifications/BaseNotification';
 export default class AppStore {
   @observable
   notifications = [];
+
+  @observable
+  isLoader = false;
 
   @action
   setNotifications(notifications: BaseNotification[]) {
@@ -23,6 +26,28 @@ export default class AppStore {
   @computed
   get currentNotification() {
     return this.notifications[0];
+  }
+
+  isTimer = false;
+
+  @action
+  setLoader(value, fromTimer = false) {
+    if (fromTimer) {
+      if (this.isTimer) this.isLoader = value;
+      this.isTimer = false;
+    } else {
+      this.isLoader = value;
+      this.isTimer = false;
+    }
+  }
+
+  getLoader = () => toJS(this.isLoader);
+
+  startLoader() {
+    this.isTimer = true;
+    setTimeout(() => {
+      this.setLoader(true, true);
+    }, 200);
   }
 
   constructor() {

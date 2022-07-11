@@ -3,7 +3,6 @@ import {
   Get,
   Post,
   UnauthorizedException,
-  UseInterceptors,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -18,10 +17,9 @@ export class UsersController {
 
   @ApiOperation({ summary: 'Создание пользователя' })
   @ApiResponse({ status: 200, type: User })
-  @Post('')
+  @Post()
   async create(@Body() userDto: CreateUserDto) {
     const data = await this.userService.createUser(userDto);
-    console.log("RESPONSE", data);
     return data;
   }
 
