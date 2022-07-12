@@ -1,11 +1,14 @@
-import React, { useMemo, useState } from 'react';
+import React, {
+  useCallback, useEffect, useMemo, useState
+} from 'react';
 import parse from 'html-react-parser';
+import { svgNamesType } from './svgNames';
 
 export interface SvgIconProps {
   /**
    * Имя иконки. По данному имени ищется совпадение иконки в папке src/ui/svg/icons
    */
-  name: string;
+  name: svgNamesType;
   /**
    * Возможность прокидывать классы в SvgIcon. Пример className: 'first-class second-class'
    */
@@ -17,15 +20,20 @@ export interface SvgIconProps {
   color?: string;
 }
 
-const iconString = (name) => {
-  return require(`!raw-loader!../../../assets/icons/${name}.svg`).default;
-};
-
 export default (props: SvgIconProps) => {
   const { color } = props;
   const [isHovered, setHovered] = useState(false);
+  const [icon, setIcon] = useState(null);
 
-  const icon: string = useMemo(() => iconString(props.name), [props.name]);
+  const iconString = useCallback(async (name) => {
+    const url = await import(`../../../assets/icons/${name}.svg`);
+    const data = await (await fetch(url.default)).text();
+    setIcon(data);
+  }, [icon]);
+
+  useEffect(() => {
+    iconString(props.name);
+  }, []);
 
   let width = props.width || props.height;
   let height = props.height || props.width;
@@ -38,26 +46,23 @@ export default (props: SvgIconProps) => {
     height = `${height}px`;
   }
 
-  const size =
-    width && height
-      ? {
-          width,
-          height,
-        }
-      : {};
+  const size = width && height
+    ? {
+      width,
+      height,
+    }
+    : {};
 
   const parsedIcon = useMemo(() => {
+    if (!icon) return null;
     return React.cloneElement(parse(icon.trim()), {
       className: `svg-icon ${props.className ? props.className : ''}`,
       ...size,
       fill: (isHovered && props.hoveredColor) || color || 'none',
       onMouseOver: () => setHovered(true),
       onMouseLeave: () => setHovered(false),
-      onClick: props.onClick,
     });
   }, [icon, props.className, props.color, isHovered]);
 
   return parsedIcon;
 };
-
-export { iconString };

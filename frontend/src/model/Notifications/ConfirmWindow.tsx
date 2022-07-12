@@ -7,7 +7,7 @@ import BaseNotificationWindow from './BaseNotificationWindow';
 
 interface IConfirmConfig {
   message: string;
-  onSubmit: () => void;
+  onSubmit?: () => void;
   onClose?: () => void;
 }
 
@@ -45,7 +45,7 @@ export default class ConfirmWindow extends BaseNotification implements BaseNotif
         </DialogContent>
         <DialogActions>
           <Button onClick={() => { this.close(); this.onSubmit(); }} variant="contained" color="primary">Подтвердить</Button>
-          <Button onClick={() => { this.close(); }} variant="contained" color="primary">Закрыть</Button>
+          <Button onClick={() => { this.close(); }} variant="outlined" color="error">Закрыть</Button>
         </DialogActions>
       </Dialog>
     );
