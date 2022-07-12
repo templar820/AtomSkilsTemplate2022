@@ -8,6 +8,7 @@ function HomePage(props) {
       <button onClick={() => {
         NotificationManager.Confirm.open({
           message: 'CONFIRM_WINDOW',
+          title: 'CONFIRM_WINDOW',
           onClose: () => {
             console.log('CLOSE');
           },

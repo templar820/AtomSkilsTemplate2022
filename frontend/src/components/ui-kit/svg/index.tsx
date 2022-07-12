@@ -2,7 +2,7 @@ import React, {
   useCallback, useEffect, useMemo, useState
 } from 'react';
 import parse from 'html-react-parser';
-import { svgNamesType } from './svgNames';
+import { svgNamesType } from '../../../assets/icons/svgNames';
 
 export interface SvgIconProps {
   /**
