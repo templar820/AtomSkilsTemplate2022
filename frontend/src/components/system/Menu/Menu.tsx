@@ -75,6 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
   MuiTreeItemRoot: {
     border: 'none',
+    backgroundColor: `${Colors.menuBackgroundColor} !important`,
     "&[aria-selected='true']": {
       borderLeft: `4px solid ${Colors.success}`,
       backgroundColor: Colors.menuBackgroundColor,
@@ -86,6 +87,7 @@ const useStyles = makeStyles(theme => ({
     '& *': {
       backgroundColor: 'transparent !important',
     },
+    color: Colors.menuTextColor,
     padding: 6,
     paddingRight: 16,
     '&:hover': {
@@ -193,17 +195,3 @@ function Menu(props: MOBXDefaultProps) {
 }
 
 export default MobXRouterDecorator(Menu);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
