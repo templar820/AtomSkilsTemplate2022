@@ -80,9 +80,7 @@ const useStyles = makeStyles(theme => ({
   MuiTreeItemRoot: {
     border: 'none',
     minHeight: '40px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+
     backgroundColor: `${Colors.menuBackgroundColor} !important`,
     "&[aria-selected='true']": {
       borderLeft: `4px solid ${Colors.primary}`,
@@ -91,6 +89,10 @@ const useStyles = makeStyles(theme => ({
   },
   MuiTreeItemLabelRoot: {
     margin: 0,
+    display: 'flex',
+    justifyContent: 'start',
+    alignItems: 'center',
+    minHeight: '28px',
     backgroundColor: 'transparent !important',
     '& *': {
       backgroundColor: 'transparent !important',
@@ -243,8 +245,10 @@ function Menu(props: MOBXDefaultProps) {
                     <ListItemText className="ms-4" primary={<Typography variant="subtitle2" component="span">Свернуть меню</Typography>} />
                   </>
                 ) : (
-                  <Tooltip title="Свернуть меню" arrow placement="right">
-                    <SvgIcons name="logout" />
+                  <Tooltip title="Развернуть меню" arrow placement="right">
+                    <div>
+                      <SvgIcons name="logout" />
+                    </div>
                   </Tooltip>
                 )}
               </div>
@@ -252,6 +256,7 @@ function Menu(props: MOBXDefaultProps) {
             onClick={() => {
               appStore.changeMenu();
             }}
+            aria-selected={false}
           />
         </TreeView>
       </div>
