@@ -105,8 +105,9 @@ const useStyles = makeStyles(theme => ({
       '& .MuiListItemText-primary': {
         color: `${Colors.white} !important`
       },
-      '& span': {
-        color: `${Colors.white} !important`
+      '& *': {
+        color: `${Colors.white} !important`,
+        fill: `${Colors.white} !important`
       },
       '& .MuiListItemIcon-root': {
         color: `${Colors.white} !important`
