@@ -38,6 +38,7 @@ function Router(props: MOBXDefaultProps) {
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          <Route exact path="*" render={p => <WindowFactory type={WindowType.NotFoundPage} />} />
         </Switch>
       </ErrorBoundary>
     </BrowserRouter>

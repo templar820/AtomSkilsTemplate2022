@@ -474,6 +474,15 @@ const theme = createTheme({
         },
       },
     },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          minWidth: 0,
+          fill: Colors.menuTextColor,
+          color: Colors.menuTextColor
+        }
+      }
+    },
     MuiTextField: {
       styleOverrides: {
         root: {

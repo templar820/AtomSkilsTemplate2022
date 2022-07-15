@@ -28,6 +28,9 @@ export default class AppStore {
     return this.notifications[0];
   }
 
+  @observable
+  openMenu = JSON.parse(localStorage.as_menu || 'false');
+
   isTimer = false;
 
   @action
@@ -39,6 +42,12 @@ export default class AppStore {
       this.isLoader = value;
       this.isTimer = false;
     }
+  }
+
+  @action
+  changeMenu() {
+    this.openMenu = !this.openMenu;
+    localStorage.as_menu = this.openMenu;
   }
 
   getLoader = () => toJS(this.isLoader);
@@ -60,10 +69,12 @@ export default class AppStore {
       id: 'home',
       name: 'Главная',
       path: '/home',
+      icon: <Home />
     },
     {
       id: 'examples',
       name: 'Примеры',
+      icon: <Settings />,
       children: [
         {
           id: 'table',
@@ -76,15 +87,15 @@ export default class AppStore {
 
   @observable
   botMenu = [
-    {
-      id: 'settings',
-      name: 'Настройки',
-      path: '/settings#account-general'
-    },
-    {
-      id: 'support',
-      name: 'Поддержка',
-      path: '/support',
-    }
+    // {
+    //   id: 'settings',
+    //   name: 'Настройки',
+    //   path: '/settings#account-general'
+    // },
+    // {
+    //   id: 'support',
+    //   name: 'Поддержка',
+    //   path: '/support',
+    // }
   ];
 }

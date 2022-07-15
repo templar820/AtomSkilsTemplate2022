@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import {
-  ListItem, ListItemText,
+  ListItem, ListItemIcon, ListItemText, SvgIcon,
   Typography,
 } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
@@ -14,6 +14,9 @@ import Colors from '@colors';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import './styles.scss';
+import { SvgIcons, Tooltip } from 'ui-kit';
+import logo_full from '@images/logo2.png';
+import logo from '@images/logo3.png';
 
 // const drawerWidth = 190;
 
@@ -70,12 +73,16 @@ const useStyles = makeStyles(theme => ({
   clearPadding: {
     paddingLeft: '0px !important',
     paddingRight: '0px !important',
-    padding: "0px !important",
+    padding: '0px !important',
     marginLeft: 0,
     backgroundColor: 'transparent !important'
   },
   MuiTreeItemRoot: {
     border: 'none',
+    minHeight: '40px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: `${Colors.menuBackgroundColor} !important`,
     "&[aria-selected='true']": {
       borderLeft: `4px solid ${Colors.primary}`,
@@ -94,10 +101,13 @@ const useStyles = makeStyles(theme => ({
     paddingRight: 16,
     '&:hover': {
       '& .MuiListItemText-primary': {
-        color: Colors.white
+        color: `${Colors.white} !important`
+      },
+      '& span': {
+        color: `${Colors.white} !important`
       },
       '& .MuiListItemIcon-root': {
-        color: Colors.white
+        color: `${Colors.white} !important`
       }
     },
   },
@@ -106,7 +116,7 @@ const useStyles = makeStyles(theme => ({
 function Menu(props: MOBXDefaultProps) {
   const classes = useStyles();
   const appStore = props.AppStore;
-  const open = true;
+  const open = appStore.openMenu;
   const currentPath = useLocation().pathname;
   const [openNodes, setOpenNodes] = useState<string[]>([]);
 
@@ -139,8 +149,8 @@ function Menu(props: MOBXDefaultProps) {
 
   const getMenu = menuList => (
     <TreeView
-      defaultCollapseIcon={<ExpandMoreIcon />}
-      defaultExpandIcon={<ChevronRightIcon />}
+      defaultCollapseIcon={<ExpandMoreIcon className="me-1" />}
+      defaultExpandIcon={<ChevronRightIcon className="me-1" />}
       expanded={open ? openNodes : []}
     >
       {menuList.map((item, index) => (
@@ -154,13 +164,26 @@ function Menu(props: MOBXDefaultProps) {
           }}
           label={
             (
-              <div className="d-flex flex-row align-items-center">
-                <ListItemText primary={<Typography variant="subtitle2">{item.name}</Typography>} />
+              <div className="d-flex flex-row align-items-center justify-content-start">
+                {open ? (
+                  <>
+                    <ListItemIcon>
+                      {item.icon}
+                    </ListItemIcon>
+                    <ListItemText className="ms-4" primary={<Typography variant="subtitle2" component="span">{item.name}</Typography>} />
+                  </>
+                ) : (
+                  <Tooltip title={item.name} arrow placement="right">
+                    <ListItemIcon>{item.icon}</ListItemIcon>
+                  </Tooltip>
+                )}
               </div>
             )
           }
           onClick={() => {
-            if (!item.children) {
+            if (item.children) {
+              if (!open) appStore.changeMenu();
+            } else {
               props.history.push(item.path);
             }
             let arr = [...new Set(openNodes)] as string[];
@@ -182,14 +205,55 @@ function Menu(props: MOBXDefaultProps) {
 
   return (
     <Drawer variant="permanent" open={open}>
-      <DrawerHeader className="d-flex justify-content-center">
-        <Link to="/"><div className="menu-logo" /></Link>
+      <DrawerHeader className="d-flex justify-content-start">
+        <div className="ms-2 d-flex justify-content-center align-items-center">
+          <img src={logo} alt="logo" width={64} />
+          {open ? (
+            <Typography variant="h2">
+              <b>ROS</b>
+              АТОМ
+            </Typography>
+          ) : null}
+        </div>
       </DrawerHeader>
       <div className="h-auto">
         {getMenu(appStore.mainMenu)}
       </div>
       <div className="mt-auto mb-4">
-        {getMenu(appStore.botMenu)}
+        <TreeView
+          defaultCollapseIcon={<ExpandMoreIcon className="me-1" />}
+          defaultExpandIcon={<ChevronRightIcon className="me-1" />}
+          expanded={open ? openNodes : []}
+        >
+          <TreeItem
+            key="menu_change"
+            nodeId="menu_change"
+            classes={{
+              label: classes.MuiTreeItemLabelRoot,
+              root: classes.MuiTreeItemRoot,
+              content: classes.clearPadding,
+            }}
+            label={(
+              <div className="d-flex flex-row align-items-center justify-content-start">
+                {open ? (
+                  <>
+                    <ListItemIcon>
+                      <SvgIcons name="logout" />
+                    </ListItemIcon>
+                    <ListItemText className="ms-4" primary={<Typography variant="subtitle2" component="span">Свернуть меню</Typography>} />
+                  </>
+                ) : (
+                  <Tooltip title="Свернуть меню" arrow placement="right">
+                    <SvgIcons name="logout" />
+                  </Tooltip>
+                )}
+              </div>
+            )}
+            onClick={() => {
+              appStore.changeMenu();
+            }}
+          />
+        </TreeView>
       </div>
     </Drawer>
 
