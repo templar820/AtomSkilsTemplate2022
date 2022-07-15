@@ -49,7 +49,7 @@ export default class ConfirmWindow extends BaseNotification implements BaseNotif
     return (
       <Dialog open minWidth={376} maxWidth="lg" aria-labelledby="confirmDialog">
         <DialogContent className="dialogContent">
-          <CardHeader avatar={<SvgIcons name="warn" />} subheader={this.title} />
+          <CardHeader avatar={<SvgIcons name="warn" width={60} />} subheader={this.title} />
           <p className="contentBody">{this.message}</p>
         </DialogContent>
         <DialogActions>

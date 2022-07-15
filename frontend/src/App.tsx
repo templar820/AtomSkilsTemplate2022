@@ -19,10 +19,10 @@ const useStyles = makeStyles({
   wrappedRoot: {
 
   },
-  success: { backgroundColor: 'white', color: 'black' },
-  error: { backgroundColor: 'white', color: 'black' },
-  warning: { backgroundColor: 'white', color: 'black' },
-  info: { backgroundColor: 'white', color: 'black' },
+  success: { backgroundColor: 'white !important', color: 'black !important' },
+  error: { backgroundColor: 'white !important', color: 'black !important' },
+  warning: { backgroundColor: 'white !important', color: 'black !important' },
+  info: { backgroundColor: 'white !important', color: 'black !important' },
 });
 
 function App() {
