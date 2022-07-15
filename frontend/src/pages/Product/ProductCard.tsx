@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
-  MoreVertIcon, PopupMenuGroup, SvgIcons, Tooltip
+  MoreVertIcon, PopupMenuGroup, SvgIcons
 } from 'ui-kit';
 import { useTranslation } from 'react-i18next';
 import {
-  CardContent, CardHeader, Menu, MenuItem, Paper, Typography,
+  CardContent, CardHeader, Menu, MenuItem, Typography,
 } from '@mui/material';
 import './index.scss';
 import { makeStyles } from '@mui/styles';
 import ProductModel from '../../model/Product.model';
-import { StyledCard } from '@pages/Product/StyledCard';
 
 const useStyles = makeStyles({
   headerCardPadding: {
@@ -51,7 +50,7 @@ function ProductCard(props: ProductCardProps) {
   };
 
   return (
-    <StyledCard key={product.id} className="productCard cursor-pointer my-2" tabIndex={product.id} component={Paper}>
+    <div key={product.id} className="productCard cursor-pointer my-2" tabIndex={product.id}>
       <div
         className="h-100 d-flex justify-content-between flex-column"
         onMouseEnter={() => {
@@ -134,7 +133,7 @@ function ProductCard(props: ProductCardProps) {
           </Menu>
         </CardContent>
       </div>
-    </StyledCard>
+    </div>
   );
 }
 

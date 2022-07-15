@@ -15,8 +15,14 @@
   }
 
   .productCard {
+    border: 1px solid #dbdbe5;
+    overflow: hidden;
+    box-shadow: none;
+    box-sizing: border-box;
+    border-radius: 6px;
     &:hover {
       border-color: $violet-3;
+      background-color: $violet-1;
     }
   }
 
