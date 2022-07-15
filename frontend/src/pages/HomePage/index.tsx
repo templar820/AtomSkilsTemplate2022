@@ -44,6 +44,7 @@ function HomePage(props) {
         NotificationManager.Snack.open({
           message: 'Привет мир',
           snacktype: SnackType.Success,
+          persist: true,
         });
       }}
       >

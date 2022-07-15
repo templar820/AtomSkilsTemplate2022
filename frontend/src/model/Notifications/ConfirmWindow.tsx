@@ -59,12 +59,12 @@ export default class ConfirmWindow extends BaseNotification implements BaseNotif
               this.onSubmit();
             }}
             variant="contained"
-            color="secondary"
+            color="primary"
           >
             {this.buttonSubmitText || this.title}
           </Button>
           <Button
-            color="secondary"
+            color="primary"
             onClick={() => {
               this.close();
             }}

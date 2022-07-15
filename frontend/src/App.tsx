@@ -10,6 +10,20 @@ import { useRootStore } from '@hooks/useRootStore';
 import Router from './Router';
 import theme from './styles/muiTheme';
 import { Api, HttpClient } from './api/api';
+import { SvgIcons } from 'ui-kit';
+import { makeStyles } from '@mui/styles';
+
+
+
+const useStyles = makeStyles({
+  wrappedRoot: {
+
+  },
+  success: { backgroundColor: 'white', color: 'black' },
+  error: { backgroundColor: 'white', color: 'black' },
+  warning: { backgroundColor: 'white', color: 'black' },
+  info: { backgroundColor: 'white', color: 'black' },
+});
 
 function App() {
   const endpoint = process.env.REACT_APP_ENDPOINT;
@@ -38,6 +52,7 @@ function App() {
   const services = {
     appService,
   } as IServices;
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider
@@ -45,6 +60,18 @@ function App() {
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'right',
+        }}
+        classes={{
+          variantSuccess: classes.success,
+          variantError: classes.error,
+          variantWarning: classes.warning,
+          variantInfo: classes.info,
+        }}
+        iconVariant={{
+          error: <SvgIcons name="error" width="24" height="24" className="logotype" />,
+          info: <SvgIcons name="info" width="24" height="24" className="logotype" />,
+          success: <SvgIcons name="success" width="24" height="24" className="logotype" />,
+          warning: <SvgIcons name="warning" width="24" height="24" className="logotype" />,
         }}
       >
         <Provider {...stores} services={services}>

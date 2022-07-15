@@ -379,6 +379,20 @@ const theme = createTheme({
         },
       },
     },
+    MuiSnackbar:{},
+    MuiCollapse: {
+      styleOverrides: {
+        root: {
+          padding: '4px 15px 4px 15px',
+          minWidth: 'auto',
+          '& svg': {
+            marginRight: 7,
+          },
+          backgroundColor: 'white !important',
+          color: "black",
+        },
+      },
+    },
     MuiDialog: {
       styleOverrides: {
         paper: {
