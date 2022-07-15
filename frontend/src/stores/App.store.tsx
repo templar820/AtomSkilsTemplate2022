@@ -59,7 +59,7 @@ export default class AppStore {
     {
       id: 'home',
       name: 'Главная',
-      path: '/',
+      path: '/home',
     },
     {
       id: 'examples',

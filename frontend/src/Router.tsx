@@ -1,7 +1,7 @@
 import React from 'react';
 import PlaceCard from '@pages/Place';
 import { BrowserRouter } from 'react-router-dom';
-import { Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
 import Page from '@components/system/Page/Page';
 import ErrorBoundary from '@components/system/ErrorBoundary';
@@ -27,7 +27,7 @@ function Router(props: MOBXDefaultProps) {
         <Switch>
           <Route
             exact
-            path="/"
+            path="/home"
             render={p => getPage(p, HomePage)}
           />
           <Route
@@ -35,6 +35,9 @@ function Router(props: MOBXDefaultProps) {
             path="/examples/table"
             render={p => getPage(p, TablePage)}
           />
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
         </Switch>
       </ErrorBoundary>
     </BrowserRouter>

@@ -44,7 +44,6 @@ function NotificationManagerTest(props) {
         NotificationManager.Snack.open({
           message: 'Привет мир',
           snacktype: SnackType.Success,
-          persist: true,
         });
       }}
       >
@@ -54,7 +53,6 @@ function NotificationManagerTest(props) {
         NotificationManager.Snack.open({
           message: 'Привет мир',
           snacktype: SnackType.Error,
-          persist: true,
         });
       }}
       >
@@ -64,7 +62,6 @@ function NotificationManagerTest(props) {
         NotificationManager.Snack.open({
           message: 'Привет мир',
           snacktype: SnackType.Info,
-          persist: true,
         });
       }}
       >
@@ -74,7 +71,6 @@ function NotificationManagerTest(props) {
         NotificationManager.Snack.open({
           message: 'Привет мир',
           snacktype: SnackType.Warning,
-          persist: true,
         });
       }}
       >

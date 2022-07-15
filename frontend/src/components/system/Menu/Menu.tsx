@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import {
-  Divider, ListItem, ListItemIcon, ListItemText,
-  Tooltip
+  ListItem, ListItemText,
+  Typography,
 } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import MuiDrawer from '@mui/material/Drawer';
@@ -70,6 +70,7 @@ const useStyles = makeStyles(theme => ({
   clearPadding: {
     paddingLeft: '0px !important',
     paddingRight: '0px !important',
+    padding: "0px !important",
     marginLeft: 0,
     backgroundColor: 'transparent !important'
   },
@@ -77,18 +78,19 @@ const useStyles = makeStyles(theme => ({
     border: 'none',
     backgroundColor: `${Colors.menuBackgroundColor} !important`,
     "&[aria-selected='true']": {
-      borderLeft: `4px solid ${Colors.success}`,
+      borderLeft: `4px solid ${Colors.primary}`,
       backgroundColor: Colors.menuBackgroundColor,
     },
   },
   MuiTreeItemLabelRoot: {
-    marginLeft: 0,
+    margin: 0,
     backgroundColor: 'transparent !important',
     '& *': {
       backgroundColor: 'transparent !important',
     },
     color: Colors.menuTextColor,
-    padding: 6,
+    marginTop: 6,
+    marginBottom: 6,
     paddingRight: 16,
     '&:hover': {
       '& .MuiListItemText-primary': {
@@ -153,7 +155,7 @@ function Menu(props: MOBXDefaultProps) {
           label={
             (
               <div className="d-flex flex-row align-items-center">
-                <ListItemText primary={item.name} />
+                <ListItemText primary={<Typography variant="subtitle2">{item.name}</Typography>} />
               </div>
             )
           }
