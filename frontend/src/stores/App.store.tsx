@@ -81,6 +81,11 @@ export default class AppStore {
           name: 'Таблицы',
           path: '/examples/table'
         },
+        {
+          id: 'products',
+          name: 'Сущности в списке',
+          path: '/examples/products'
+        },
       ]
     },
   ];

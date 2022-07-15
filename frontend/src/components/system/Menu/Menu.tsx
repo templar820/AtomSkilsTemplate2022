@@ -13,9 +13,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Colors from '@colors';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
-import './styles.scss';
 import { SvgIcons, Tooltip } from 'ui-kit';
-import logo_full from '@images/logo2.png';
 import logo from '@images/logo3.png';
 
 // const drawerWidth = 190;

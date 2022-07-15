@@ -1,10 +1,14 @@
 export default class ProductModel {
   id: number;
+
   name: string;
+
   substanceId: number;
+
   substanceName: string;
+
   substanceCode: string;
-  
+
   constructor(obj: any) {
     this.id = obj.id;
     this.name = obj.name;

@@ -1,7 +1,7 @@
-import MobXRouterDecorator from '@common/MobXRouterDecorator';
 import React from 'react';
 import SortIcon from '@mui/icons-material/Sort';
 import { MOBXDefaultProps } from '@globalTypes';
+import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 
 interface FilterRowProps extends MOBXDefaultProps{
   filterNames: any[];
@@ -49,4 +49,5 @@ class FilterRow extends React.Component<FilterRowProps> {
     );
   }
 }
+
 export default MobXRouterDecorator(FilterRow);
