@@ -1,5 +1,5 @@
 import {
-  action, makeAutoObservable, observable, toJS
+  action, computed, makeAutoObservable, observable, toJS,
 } from 'mobx';
 import ProductModel from '../model/Product.model';
 import UTILS from '../utils';
@@ -248,6 +248,7 @@ const data = [
 ];
 
 export default class ProductStore {
+  @computed
   get productList(): ProductModel[] {
     const criteria = this.filterNames.find(el => el.active);
     return UTILS.getSortableList(toJS(this._productList), criteria, `${criteria?.value}`);
@@ -273,14 +274,14 @@ export default class ProductStore {
     {
       ascending: 'top',
       active: false,
-      name: 'по названию',
+      name: 'По названию',
       value: 'name'
     },
     {
       ascending: 'top',
       active: false,
-      name: 'по количеству чатов',
-      value: 'chats.length'
+      name: 'По названию вещества',
+      value: 'substance.name'
     }
   ];
 

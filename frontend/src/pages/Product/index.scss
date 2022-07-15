@@ -1,0 +1,31 @@
+@import "src/styles/colors.module";
+
+.productList {
+  .topPanel {
+    padding-top: 20px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  svg.cardPattern {
+    transform: translateY(15px);
+  }
+
+  .productCard {
+    &:hover {
+      border-color: $violet-3;
+    }
+  }
+
+  .subMenuIco {
+    transform: translate(-2px, 11px);
+    fill: $gray-7;
+
+    &:hover {
+      fill: $gray-10;
+    }
+  }
+}

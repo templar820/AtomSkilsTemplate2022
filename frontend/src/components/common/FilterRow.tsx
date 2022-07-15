@@ -2,6 +2,7 @@ import React from 'react';
 import SortIcon from '@mui/icons-material/Sort';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
+import { Typography } from '@mui/material';
 
 interface FilterRowProps extends MOBXDefaultProps{
   filterNames: any[];
@@ -28,11 +29,12 @@ class FilterRow extends React.Component<FilterRowProps> {
   render() {
     return (
       <div className="filterRow d-flex flex-row">
-        <span className="n-filter-sorter__label">Сортировать:</span>
+        <span className="n-filter-sorter__label user-select-none">Сортировать:</span>
         {this.props.filterNames.map((el, index) => (
-          <div key={index}>
-            <a
-              className={`filters mr-2 ${el.active && 'activeFilters'}`}
+          <div key={index} className="mx-2">
+            <Typography
+              variant="button"
+              className={`filters me-2 user-select-none cursor-pointer ${el.active && 'activeFilters'}`}
               onClick={e => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -40,7 +42,7 @@ class FilterRow extends React.Component<FilterRowProps> {
               }}
             >
               {el.name}
-            </a>
+            </Typography>
             {el.active && el.ascending === 'top' && <SortIcon fontSize="small" />}
             {el.active && el.ascending === 'bottom' && <SortIcon fontSize="small" style={{ transform: 'scale(1, -1)' }} />}
           </div>

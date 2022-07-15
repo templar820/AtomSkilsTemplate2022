@@ -1,5 +1,4 @@
 import React from 'react';
-import PlaceCard from '@pages/Place';
 import { BrowserRouter } from 'react-router-dom';
 import { Redirect, Route, Switch } from 'react-router';
 import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
