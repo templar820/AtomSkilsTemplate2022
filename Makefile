@@ -1,9 +1,16 @@
 start-backend:
 	docker-compose -f docker-compose.develop_backend.yaml up -d
+
+build-frontend:
+	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml build
 start-frontend:
-	docker-compose up -d
+	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml up -d
+
+
+
 stop:
-	docker-compose down
+	docker-compose -f docker-compose.production.yaml down
+
 production:
 	type .\_docker\nginx-conf\nginx.conf > .\nginx\nginx.conf
 	docker-compose up -d --sc ale db_init=0 --scale db_clean=0

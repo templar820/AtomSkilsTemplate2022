@@ -5,18 +5,17 @@ volumes:
   db-es:
     driver: local
 
-
-#x-backend: &backend
-#  build:
-#    context: .
-#    dockerfile: _docker/backend/Dockerfile
-#  image: backend
-#  container_name: "backend"
-#  volumes:
-#    - ./backend:/backend
-#    - /backend/node_modules
-#  restart: unless-stopped
-#  env_file: .env
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: _docker/backend/Dockerfile
+  image: backend
+  container_name: "backend"
+  volumes:
+    - ./backend:/backend
+    - /backend/node_modules
+  restart: unless-stopped
+  env_file: .env
 #
 #x-db_transactions: &db_transactions
 #  build:
@@ -72,11 +71,11 @@ services:
     env_file:
       - .env
 
-#  backend:
-#    <<: *backend
-#    command: npm run start
-#    ports:
-#      - ${BACKEND_PORT}:${BACKEND_PORT}
+  backend:
+    <<: *backend
+    command: npm run start
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
 #  db_init:
 #    <<: *db_transactions
 #    container_name: "db_init"
