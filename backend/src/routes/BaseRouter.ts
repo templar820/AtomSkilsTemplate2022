@@ -80,7 +80,6 @@ export default class BaseRouter {
   createHandleWithParams(request: requestType, path: string, handler: (params: any) => any, options?: RequestOptions) {
     this.router[request](path, asyncMiddleware(async (req: MyRequest, res: MyResponse, next: any) => {
       if (this.checkRole(req.user.role, options?.access)) {
-        console.log(req.params, options?.params);
         const answer = await handler(req.params[options?.params]);
         this.sendAnswer(answer, req, res, next, options);
       }
