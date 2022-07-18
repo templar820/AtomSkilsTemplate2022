@@ -1,0 +1,4 @@
+src/modules/log/libs/signalr.min.js
+node_modules
+server/node_modules
+src/core/

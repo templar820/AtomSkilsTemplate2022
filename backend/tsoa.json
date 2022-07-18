@@ -1,0 +1,38 @@
+{
+  "swagger": {
+    "noImplicitAdditionalProperties": "throw-on-extras",
+    "info": {
+      "description": "A Login authorization and registration using jwt",
+      "version": "1.0.0",
+      "title": "User Login Auth and Registration"
+    },
+    "tags":[
+      {
+        "name":"Products",
+        "description":"Операции доступные с продуктами"
+      },
+      {
+        "name":"User",
+        "description":"Операции с пользователем"
+      }
+    ],
+    "outputDirectory": "./",
+    "entryFile": "./src/index.ts",
+    "securityDefinitions": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "token",
+        "description": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluIiwiaWQiOjgsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNzI5MjAyOX0.smA9a5v47rs-oG2loD1jR5Zd5RlGqmb0XN0KWjniyKo",
+        "in": "header"
+      }
+    },
+    "basePath": "/api"
+  },
+  "routes": {
+    "entryFile": "./src/index.ts",
+    "basePath": "/api",
+    "middleware": "express",
+    "authenticationModule": "./src/middleware/authMiddleware",
+    "routesDir": "./src/routes"
+  }
+}
