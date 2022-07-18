@@ -16,7 +16,8 @@ module.exports = {
       '@api': resolvePath('./src/api/Api.service.ts'),
       '@hooks': resolvePath('./src/hooks'),
       'ui-kit': resolvePath('./src/components/ui-kit'),
-      '@services': resolvePath('./src/services')
+      '@services': resolvePath('./src/services'),
+      '@images': resolvePath('./src/assets/img')
     }
   },
 };

@@ -6,10 +6,24 @@ import { ThemeProvider } from '@mui/material';
 import { IServices, IStores, StoresNames } from '@globalTypes';
 import Loader from '@components/system/Loader';
 import { SnackbarProvider } from 'notistack';
+import { useRootStore } from '@hooks/useRootStore';
 import Router from './Router';
-import AppStore from './stores/App.store';
 import theme from './styles/muiTheme';
 import { Api, HttpClient } from './api/api';
+import { SvgIcons } from 'ui-kit';
+import { makeStyles } from '@mui/styles';
+
+
+
+const useStyles = makeStyles({
+  wrappedRoot: {
+
+  },
+  success: { backgroundColor: 'white !important', color: 'black !important' },
+  error: { backgroundColor: 'white !important', color: 'black !important' },
+  warning: { backgroundColor: 'white !important', color: 'black !important' },
+  info: { backgroundColor: 'white !important', color: 'black !important' },
+});
 
 function App() {
   const endpoint = process.env.REACT_APP_ENDPOINT;
@@ -31,18 +45,14 @@ function App() {
   });
   const apiService = new Api(httpClient);
 
-  const appStore = new AppStore();
+  const stores = useRootStore();
 
-  const appService = new AppService(appStore);
-
-
-  const stores = {
-    [StoresNames.AppStore]: appStore,
-  } as IStores;
+  const appService = new AppService(stores.AppStore);
 
   const services = {
     appService,
   } as IServices;
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider
@@ -50,6 +60,18 @@ function App() {
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'right',
+        }}
+        classes={{
+          variantSuccess: classes.success,
+          variantError: classes.error,
+          variantWarning: classes.warning,
+          variantInfo: classes.info,
+        }}
+        iconVariant={{
+          error: <SvgIcons name="error" width="24" height="24" className="logotype" />,
+          info: <SvgIcons name="info" width="24" height="24" className="logotype" />,
+          success: <SvgIcons name="success" width="24" height="24" className="logotype" />,
+          warning: <SvgIcons name="warning" width="24" height="24" className="logotype" />,
         }}
       >
         <Provider {...stores} services={services}>

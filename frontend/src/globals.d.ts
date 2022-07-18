@@ -1,6 +1,6 @@
 import AppService from '@services/App.service';
 import { RouteComponentProps } from 'react-router';
-import AppStore from './stores/App.store';
+import { RootStore } from './stores/Root.store';
 
 declare namespace NodeJS {
   export interface ProcessEnv {
@@ -10,15 +10,10 @@ declare namespace NodeJS {
 }
 declare module '*.scss';
 
-export enum StoresNames {
-  AppStore='AppStore',
-}
-
 export interface IServices {
   appService: AppService;
 }
-export interface IStores {
-  AppStore: AppStore;
+export interface IStores extends RootStore{
 }
 
 export interface MOBXDefaultProps extends IStores, RouteComponentProps{
