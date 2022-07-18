@@ -1,8 +1,20 @@
 const path = require('path');
+const CracoEnvPlugin = require('craco-plugin-env');
 
 const resolvePath = p => path.resolve(__dirname, p);
+require('dotenv').config({
+    path: path.resolve(__dirname, '../.env'),
+});
 
 module.exports = {
+  plugins: [
+    {
+      plugin: CracoEnvPlugin,
+      options: {
+        variables: process.env
+      }
+    }
+  ],
   webpack: {
     alias: {
       '@components': resolvePath('./src/components'),

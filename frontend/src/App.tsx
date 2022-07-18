@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppService from '@services/App.service';
 import { Provider } from 'mobx-react';
 import { v4 as uuidv4 } from 'uuid';
@@ -7,13 +7,11 @@ import { IServices, IStores, StoresNames } from '@globalTypes';
 import Loader from '@components/system/Loader';
 import { SnackbarProvider } from 'notistack';
 import { useRootStore } from '@hooks/useRootStore';
+import { SvgIcons } from 'ui-kit';
+import { makeStyles } from '@mui/styles';
 import Router from './Router';
 import theme from './styles/muiTheme';
 import { Api, HttpClient } from './api/api';
-import { SvgIcons } from 'ui-kit';
-import { makeStyles } from '@mui/styles';
-
-
 
 const useStyles = makeStyles({
   wrappedRoot: {
@@ -27,7 +25,9 @@ const useStyles = makeStyles({
 
 function App() {
   const endpoint = process.env.REACT_APP_ENDPOINT;
-  const localStorageKeyId = 'pick_spot_user_id';
+
+  console.log(endpoint);
+  const localStorageKeyId = 'as_user_id';
   let user_id = localStorage.getItem(localStorageKeyId);
   if (!user_id) {
     user_id = uuidv4();
@@ -53,6 +53,12 @@ function App() {
     appService,
   } as IServices;
   const classes = useStyles();
+
+  useEffect(() => {
+    apiService.order.getOne(6).then(data => {
+      console.log(data);
+    });
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider
