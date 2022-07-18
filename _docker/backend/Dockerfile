@@ -1,14 +1,19 @@
 FROM node:14.19.3
 
-
-ADD /backend /backend
-
+# Папка приложения
+RUN mkdir -p /backend
 WORKDIR /backend
 
-#RUN npm set registry http://host.docker.internal:4873
-#RUN npm set registry http://172.17.0.1:4873/
+# Установка зависимостей
+COPY ./backend/package*.json ./
 RUN npm install
-RUN npm install nodemon -g
+# Для использования в продакшне
+# RUN npm install --production
+
+# Копирование файлов проекта
+COPY ./backend .
+
+# Уведомление о порте, который будет прослушивать работающее приложение
+EXPOSE 8000
 
 
-EXPOSE 8080

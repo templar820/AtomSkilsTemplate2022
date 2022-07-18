@@ -183,7 +183,9 @@ export interface Place {
   rating: Rating;
   categories?: CategorySerializerShort[];
   contacts?: ContactSerializerShort[];
-  photos?: string[];
+
+  /** Photos */
+  photos?: string;
 
   /**
    * Created at
@@ -309,6 +311,26 @@ export interface Review {
 
   /** Author profile img url */
   author_profile_img_url?: string | null;
+}
+
+export interface Tracking {
+  /**
+   * Id
+   * @format uuid
+   */
+  id?: string;
+
+  /**
+   * User
+   * @format uuid
+   */
+  user: string;
+
+  /** Event name */
+  event_name: string;
+
+  /** Data */
+  data: object;
 }
 
 export type QueryParamsType = Record<string | number, any>;
@@ -520,7 +542,7 @@ export class HttpClient<SecurityDataType = unknown> {
 }
 
 /**
- * @title tinder_place API
+ * @title pick_spot API
  * @version v1
  * @baseUrl http://pickspot.app/api
  */
@@ -898,10 +920,7 @@ export class Api<SecurityDataType extends unknown> {
      * @secure
      * @response `200` `{ count: number, next?: string | null, previous?: string | null, results: (Place)[] }`
      */
-    placesList: (
-      query?: { region?: string; ordering?: string; limit?: number; offset?: number },
-      params: RequestParams = {},
-    ) =>
+    placesList: (query?: { ordering?: string; limit?: number; offset?: number }, params: RequestParams = {}) =>
       this.http.request<{ count: number; next?: string | null; previous?: string | null; results: Place[] }, any>({
         path: `/places/`,
         method: "GET",
@@ -939,10 +958,7 @@ export class Api<SecurityDataType extends unknown> {
      * @secure
      * @response `200` `{ count: number, next?: string | null, previous?: string | null, results: (Place)[] }`
      */
-    placesLikedRead: (
-      query?: { region?: string; ordering?: string; limit?: number; offset?: number },
-      params: RequestParams = {},
-    ) =>
+    placesLikedRead: (query?: { ordering?: string; limit?: number; offset?: number }, params: RequestParams = {}) =>
       this.http.request<{ count: number; next?: string | null; previous?: string | null; results: Place[] }, any>({
         path: `/places/liked/`,
         method: "GET",
@@ -1495,6 +1511,118 @@ export class Api<SecurityDataType extends unknown> {
     reviewsDelete: (id: string, params: RequestParams = {}) =>
       this.http.request<void, any>({
         path: `/reviews/${id}/`,
+        method: "DELETE",
+        secure: true,
+        ...params,
+      }),
+  };
+  tracking = {
+    /**
+     * No description
+     *
+     * @tags tracking
+     * @name TrackingList
+     * @request GET:/tracking/
+     * @secure
+     * @response `200` `{ count: number, next?: string | null, previous?: string | null, results: (Tracking)[] }`
+     */
+    trackingList: (query?: { limit?: number; offset?: number }, params: RequestParams = {}) =>
+      this.http.request<{ count: number; next?: string | null; previous?: string | null; results: Tracking[] }, any>({
+        path: `/tracking/`,
+        method: "GET",
+        query: query,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags tracking
+     * @name TrackingCreate
+     * @request POST:/tracking/
+     * @secure
+     * @response `201` `Tracking`
+     */
+    trackingCreate: (data: Tracking, params: RequestParams = {}) =>
+      this.http.request<Tracking, any>({
+        path: `/tracking/`,
+        method: "POST",
+        body: data,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags tracking
+     * @name TrackingRead
+     * @request GET:/tracking/{id}/
+     * @secure
+     * @response `200` `Tracking`
+     */
+    trackingRead: (id: string, params: RequestParams = {}) =>
+      this.http.request<Tracking, any>({
+        path: `/tracking/${id}/`,
+        method: "GET",
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags tracking
+     * @name TrackingUpdate
+     * @request PUT:/tracking/{id}/
+     * @secure
+     * @response `200` `Tracking`
+     */
+    trackingUpdate: (id: string, data: Tracking, params: RequestParams = {}) =>
+      this.http.request<Tracking, any>({
+        path: `/tracking/${id}/`,
+        method: "PUT",
+        body: data,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags tracking
+     * @name TrackingPartialUpdate
+     * @request PATCH:/tracking/{id}/
+     * @secure
+     * @response `200` `Tracking`
+     */
+    trackingPartialUpdate: (id: string, data: Tracking, params: RequestParams = {}) =>
+      this.http.request<Tracking, any>({
+        path: `/tracking/${id}/`,
+        method: "PATCH",
+        body: data,
+        secure: true,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags tracking
+     * @name TrackingDelete
+     * @request DELETE:/tracking/{id}/
+     * @secure
+     * @response `204` `void`
+     */
+    trackingDelete: (id: string, params: RequestParams = {}) =>
+      this.http.request<void, any>({
+        path: `/tracking/${id}/`,
         method: "DELETE",
         secure: true,
         ...params,

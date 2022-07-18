@@ -15,7 +15,10 @@ import logger from './middleware/logger';
 import IoModel from './socket/IoModel';
 import startFileManagerServer from './filemanager';
 import router from './routes';
-import * as http from 'http';
+import path from "path";
+require('dotenv').config({
+  path: path.resolve(__dirname, '../../.env'),
+});
 
 const PORT = process.env.BACKEND_PORT || 8080;
 const app = express();

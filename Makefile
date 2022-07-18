@@ -7,9 +7,15 @@ start-frontend:
 	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml up -d
 
 
+build-production:
+	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml -f docker-compose.production.yaml build
+start-production:
+	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml -f docker-compose.production.yaml up -d
+
+
 
 stop:
-	docker-compose -f docker-compose.production.yaml down
+	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml -f docker-compose.production.yaml down
 
 production:
 	type .\_docker\nginx-conf\nginx.conf > .\nginx\nginx.conf

@@ -2,12 +2,16 @@ const { generateApi } = require('swagger-typescript-api');
 const path = require('path');
 const fs = require('fs');
 
+require('dotenv').config({
+    path: path.resolve(__dirname, '../../.env'),
+});
+
 /* NOTE: all fields are optional expect one of `output`, `url`, `spec` */
 const filePath = path.resolve(process.cwd(), './src/api');
 generateApi({
   name: 'api.ts',
   output: filePath,
-  url: 'https://pickspot.app/api/swagger/?format=openapi',
+  url: process.env.REACT_APP_ENDPOINT.replace("${BACKEND_PORT}", process.env.BACKEND_PORT),
   templates: filePath,
   httpClientType: 'fetch',
   defaultResponseAsSuccess: false,

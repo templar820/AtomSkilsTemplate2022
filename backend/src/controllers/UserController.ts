@@ -4,8 +4,7 @@ import {
 } from 'tsoa';
 import { ServerError } from '../middleware/errorHandler';
 import UserService from '../services/UserService';
-import ProductService from '../services/ProductService';
-import { IProduct } from '../models/DbModel';
+import CONSTANT from "../config/CONSTANT";
 
 interface AuthCred {
  email: string;
@@ -28,7 +27,7 @@ class UserController extends Controller {
   @Post('/register')
   public async createUser(@Body() body: IUser): Promise<{ token: string }> {
     const { email, id } = await UserService.create(body);
-    const token = jwt.sign({ email, id }, process.env.SECRET_KEY || 'hacktemplate');
+    const token = jwt.sign({ email, id }, CONSTANT.SECRET_KEY);
     return { token };
   }
 

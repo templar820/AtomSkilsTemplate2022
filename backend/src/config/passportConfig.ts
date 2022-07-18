@@ -43,10 +43,12 @@ passport.use(
   }))
 );
 
+
+console.log(CONSTANT.SECRET_KEY);
 passport.use(
   new JWTStrategy(
     {
-      secretOrKey: CONSTANT.secretWord,
+      secretOrKey: CONSTANT.SECRET_KEY,
       jwtFromRequest: ExtractJWT.fromHeader('token')
     },
     async (token, done) => {
