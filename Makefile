@@ -1,5 +1,7 @@
-start:
-	docker-compose up -d  --scale db_init=0 --scale db_clean=0 --scale nginx=0 --scale frontend=0
+start-backend:
+	docker-compose -f docker-compose.develop_backend.yaml up -d
+start-frontend:
+	docker-compose up -d
 stop:
 	docker-compose down
 production:

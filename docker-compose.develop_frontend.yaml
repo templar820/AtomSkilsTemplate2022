@@ -1,0 +1,66 @@
+version: '3.8'
+
+volumes:
+  db-volume:
+  db-es:
+    driver: local
+
+
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: _docker/backend/Dockerfile
+  image: backend
+  container_name: "backend"
+  volumes:
+    - ./backend:/backend
+    - /backend/node_modules
+  restart: unless-stopped
+  env_file: .env
+
+#x-db_transactions: &db_transactions
+#  build:
+#    context: .
+#    dockerfile: _docker/db_transactions/Dockerfile
+#  depends_on:
+#    - verdaccio
+#    - postgres
+#  image: db_transactions
+#  volumes:
+#    - ./db_transactions:/db_transactions
+#    - /db_transactions/node_modules
+#    - ./backend/src:/db_transactions/backend/src
+#  env_file: .env
+
+
+
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: "postgres"
+    restart: unless-stopped
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    env_file:
+      - .env
+
+  backend:
+    <<: *backend
+    command: npm run start
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+#  db_init:
+#    <<: *db_transactions
+#    container_name: "db_init"
+#    command: npm run start
+#  db_clean:
+#    <<: *db_transactions
+#    container_name: "db_clean"
+#    command: npm run clean
+#  frontend:
+#    <<: *frontend
+#    command: npm run build
+

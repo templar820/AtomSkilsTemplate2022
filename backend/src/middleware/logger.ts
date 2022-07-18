@@ -22,11 +22,11 @@ const morganSettings = "RequestType=:method URL=:url Status=:status ResponseTime
 const date = new Date();
 const fileName = date.toISOString().split('T')[0];
 
-router.use(morgan(morganSettings, {
-  stream: fs.createWriteStream(`./log/${fileName}.log`, {flags: 'a'})
-}));
-
-router.use(morgan(morganSettings));
+// router.use(morgan(morganSettings, {
+//   stream: fs.createWriteStream(`./log/${fileName}.log`, {flags: 'a'})
+// }));
+//
+// router.use(morgan(morganSettings));
 
 
 export default router;
