@@ -23,8 +23,9 @@ class OrderController extends Controller {
 
   @Get('{id}')
   public async getOne(id: number): Promise<IOrder> {
-    const answer = this.service.getOne(body as IOrder);
-    return answer;
+    return Promise.resolve(id);
+    // const answer = this.service.getOne(body as IOrder);
+    // return answer;
   }
 
   @Get()

@@ -1,8 +1,8 @@
 import Router, { Express } from 'express';
+import { Controller } from 'tsoa';
 import { asyncMiddleware } from '../middleware/asyncMiddleware';
 import { ServerError } from '../middleware/errorHandler';
 import { JWTUser } from '../models/DbModel';
-import { Controller } from 'tsoa';
 import BaseController from '../controllers/BaseController';
 import { ASController } from '../controllers/interfaces';
 
@@ -53,7 +53,7 @@ export default class BaseRouter {
       switch (type) {
         case 'get':
           this.createHandleWithBody(requestType.GET, path, controller.getAll);
-          this.createHandleWithParams(requestType.GET, `${path}/:id`, controller.getOne);
+          this.createHandleWithParams(requestType.GET, `${path}/:id`, controller.getOne, { params: ['id'] });
           break;
         case 'post':
           this.createHandleWithBody(requestType.POST, path, controller.create);
@@ -64,7 +64,7 @@ export default class BaseRouter {
         case 'delete':
           this.createHandleWithParams(requestType.DELETE, path, controller.delete);
           break;
-        }
+      }
     });
   }
 
@@ -80,6 +80,7 @@ export default class BaseRouter {
   createHandleWithParams(request: requestType, path: string, handler: (params: any) => any, options?: RequestOptions) {
     this.router[request](path, asyncMiddleware(async (req: MyRequest, res: MyResponse, next: any) => {
       if (this.checkRole(req.user.role, options?.access)) {
+        console.log(req.params, options?.params);
         const answer = await handler(req.params[options?.params]);
         this.sendAnswer(answer, req, res, next, options);
       }
