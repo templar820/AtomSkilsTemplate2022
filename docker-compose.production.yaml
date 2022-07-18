@@ -1,90 +1,33 @@
 version: '3.8'
 
-volumes:
-  db-volume:
-  db-es:
-    driver: local
 
-x-backend: &backend
+x-frontend: &frontend
   build:
     context: .
-    dockerfile: _docker/backend/Dockerfile
-  image: backend
-  container_name: "backend"
+    dockerfile: _docker/frontend/Dockerfile
+  image: frontend
+  container_name: "frontend"
   volumes:
-    - ./backend:/backend
-    - /backend/node_modules
-  restart: unless-stopped
-  env_file: .env
-#
-#x-db_transactions: &db_transactions
-#  build:
-#    context: .
-#    dockerfile: _docker/db_transactions/Dockerfile
-#  depends_on:
-#    - verdaccio
-#    - postgres
-#  image: db_transactions
-#  volumes:
-#    - ./db_transactions:/db_transactions
-#    - /db_transactions/node_modules
-#    - ./backend/src:/db_transactions/backend/src
-#  env_file: .env
-
-
-
-
-#x-frontend: &frontend
-#  build:
-#    context: .
-#    dockerfile: _docker/frontend/Dockerfile
-#  image: frontend
-#  container_name: "frontend"
-#  volumes:
-#    - ./frontend:/frontend
-#    - /frontend/node_modules
+    - ./frontend:/frontend
+    - /frontend/node_modules
 
 services:
-#  nginx:
-#    restart: unless-stopped
-#    image: nginx:latest
-#    container_name: "nginx"
-#    ports:
-#      - "${PORT}:${PORT}"
-##    depends_on:
-##      - frontend:
-#    volumes:
-#      - ./frontend/build:/frontend/build
-#      - ./nginx:/etc/nginx/conf.d
-#    command: /etc/nginx/conf.d/run_nginx.sh
-#    env_file:
-#      - .env
-
-  postgres:
-    image: postgres:latest
-    container_name: "postgres"
+  nginx:
     restart: unless-stopped
-    volumes:
-      - db-volume:/var/lib/postgresql/data
+    image: nginx:latest
+    container_name: "nginx"
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "${PORT}:${PORT}"
+#    depends_on:
+#      - frontend:
+    volumes:
+      - ./frontend/build:/frontend/build
+      - ./nginx:/etc/nginx/conf.d
+    command: /etc/nginx/conf.d/run_nginx.sh
     env_file:
       - .env
 
-  backend:
-    <<: *backend
+  frontend:
+    <<: *frontend
     command: npm run start
-    ports:
-      - ${BACKEND_PORT}:${BACKEND_PORT}
-#  db_init:
-#    <<: *db_transactions
-#    container_name: "db_init"
-#    command: npm run start
-#  db_clean:
-#    <<: *db_transactions
-#    container_name: "db_clean"
-#    command: npm run clean
-#  frontend:
-#    <<: *frontend
-#    command: npm run build
 

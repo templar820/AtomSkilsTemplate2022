@@ -9,7 +9,7 @@ import CONSTANT from '../config/CONSTANT';
 const authMiddleware = Router();
 authMiddleware.use(
   session({
-    secret: CONSTANT.secretWord,
+    secret: CONSTANT.SECRET_KEY,
     store: SessionStore,
     cookie: {
       path: '/',

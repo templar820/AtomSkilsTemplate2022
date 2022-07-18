@@ -27,7 +27,7 @@ export default class IoModel {
     });
     console.log(true);
     this.io.use(socketioJwt.authorize({
-      secret: CONSTANT.secretWord,
+      secret: CONSTANT.SECRET_KEY,
       handshake: true
     }));
     this.io.on('connection', (socket: any) => {

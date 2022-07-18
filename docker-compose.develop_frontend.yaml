@@ -1,9 +1,5 @@
 version: '3.8'
 
-volumes:
-  db-volume:
-  db-es:
-    driver: local
 
 
 x-backend: &backend
@@ -20,22 +16,9 @@ x-backend: &backend
 
 
 
-
 services:
   backend:
     <<: *backend
     command: npm run start
     ports:
       - ${BACKEND_PORT}:${BACKEND_PORT}
-#  db_init:
-#    <<: *db_transactions
-#    container_name: "db_init"
-#    command: npm run start
-#  db_clean:
-#    <<: *db_transactions
-#    container_name: "db_clean"
-#    command: npm run clean
-#  frontend:
-#    <<: *frontend
-#    command: npm run build
-
