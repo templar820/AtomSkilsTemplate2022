@@ -1,3 +1,9 @@
+import path from 'path';
+
+require('dotenv').config({
+  path: path.resolve(__dirname, '../../../.env'),
+});
+
 export default {
   SECRET_KEY: process.env.SECRET_KEY,
   POSTGRES_USER: process.env.POSTGRES_USER,
