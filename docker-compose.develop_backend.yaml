@@ -31,4 +31,12 @@ services:
       - "${POSTGRES_PORT}:5432"
     env_file:
       - .env
+  #  db_init:
+  #    <<: *db_transactions
+  #    container_name: "db_init"
+  #    command: npm run start
+  #  db_clean:
+  #    <<: *db_transactions
+  #    container_name: "db_clean"
+  #    command: npm run clean
 
