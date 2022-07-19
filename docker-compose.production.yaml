@@ -1,36 +1,36 @@
 version: '3.8'
 
 
-x-frontend: &frontend
-  build:
-    context: .
-    dockerfile: _docker/frontend/Dockerfile
-  image: frontend
-  stdin_open: true
-  container_name: "frontend"
-  ports:
-    - ${PORT}:${PORT}
-  volumes:
-    - ./frontend:/frontend
-    - /frontend/node_modules
-  env_file:
-    - .env
+#x-frontend: &frontend
+#  build:
+#    context: .
+#    dockerfile: _docker/frontend/Dockerfile
+#  image: frontend
+#  stdin_open: true
+#  container_name: "frontend"
+#  ports:
+#    - ${PORT}:${PORT}
+#  volumes:
+#    - ./frontend:/frontend
+#    - /frontend/node_modules
+#  env_file:
+#    - .env
 
 
 services:
-#  nginx:
-#    restart: unless-stopped
-#    container_name: "nginx"
-#    build:
-#      context: .
-#      dockerfile: _docker/nginx/Dockerfile
-#    depends_on:
-#      - frontend
-#    command: /etc/nginx/conf.d/run_nginx.sh
-#    env_file:
-#      - .env
+  nginx:
+    restart: unless-stopped
+    container_name: "nginx"
+    ports:
+      - 80:80
+      - 443:443
+    build:
+      context: .
+      dockerfile: _docker/nginx/Dockerfile
+    env_file:
+      - .env
 
-  frontend:
-    <<: *frontend
-    command: npm run start
+#  frontend:
+#    <<: *frontend
+#    command: npm run start
 
