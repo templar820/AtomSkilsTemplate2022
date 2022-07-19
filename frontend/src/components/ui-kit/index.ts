@@ -50,9 +50,9 @@ export {
   Tab,
   Tabs,
   TextField,
-  Theme,
   Tooltip as MaterialTooltip,
   Typography,
+  createTheme,
 } from '@mui/material';
 
 // ICONS
@@ -94,7 +94,7 @@ export {
   Done as DoneIcon,
 } from '@mui/icons-material';
 
-export { makeStyles, withStyles, ThemeProvider, createTheme } from '@mui/styles';
+export { makeStyles, withStyles, ThemeProvider } from '@mui/styles';
 
 export { ErrorIcon } from './icons';
 
@@ -136,7 +136,7 @@ export {
   TreeItem, // Alert
   ToggleButton,
   ToggleButtonGroup,
-} from '@mui/material';
+} from '@mui/lab';
 
 export { default as SvgIcons } from './svg';
 

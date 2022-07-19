@@ -16,10 +16,9 @@ import IoModel from './socket/IoModel';
 import startFileManagerServer from './filemanager';
 import router from './routes';
 
-
 const PORT = process.env.BACKEND_PORT || 8080;
 const app = express();
-startFileManagerServer()
+startFileManagerServer();
 app.use(cors());
 app.use(cookieParser());
 app.use(logger);
@@ -33,9 +32,14 @@ app.get('/erd', (req: Request, res: Response) => {
     res.send(erd);
   });
 });
-app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+const options = {
+  swaggerOptions: {
+    url: '/api/docs/swagger.json',
+  },
+};
+app.get('/api/docs/swagger.json', (req, res) => res.json(swaggerDocument));
+app.use('/api/docs', swaggerUi.serveFiles(null, options), swaggerUi.setup(null, options));
 app.use(responseHandler);
 app.use(authMiddleware);
 const io = new IoModel(app);

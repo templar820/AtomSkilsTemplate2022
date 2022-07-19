@@ -1,13 +1,16 @@
-FROM node:14.19.3
-
-
-ADD /frontend /frontend
-ADD ./.env ./.env
+FROM node:14.19.3 as builder
 
 WORKDIR /frontend
-
-#RUN npm set registry http://host.docker.internal:4873
-#RUN npm set registry http://172.17.0.1:4873
-RUN npm install
+COPY /frontend/package.json ./
+COPY /frontend/package-lock.json ./
+RUN npm install --silent
+COPY /frontend ./
 
 EXPOSE 3000
+
+
+# production environment
+#FROM nginx:stable-alpine
+#COPY --from=builder /frontend/build /usr/share/nginx/html
+#EXPOSE 80
+#CMD ["nginx", "-g", "daemon off;"]

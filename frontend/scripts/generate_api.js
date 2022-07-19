@@ -11,7 +11,7 @@ const filePath = path.resolve(process.cwd(), './src/api');
 generateApi({
   name: 'api.ts',
   output: filePath,
-  url: process.env.REACT_APP_ENDPOINT.replace("${BACKEND_PORT}", process.env.BACKEND_PORT),
+  url: process.env.REACT_APP_SWAGGER_ENDPOINT,
   templates: filePath,
   httpClientType: 'fetch',
   defaultResponseAsSuccess: false,
