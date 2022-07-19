@@ -77,6 +77,7 @@ const useStyles = makeStyles(theme => ({
   },
   MuiTreeItemRoot: {
     border: 'none',
+    borderLeft: `4px solid transparent`,
     minHeight: '40px',
 
     backgroundColor: `${Colors.menuBackgroundColor} !important`,

@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const CracoEnvPlugin = require('craco-plugin-env');
 
@@ -16,6 +17,24 @@ module.exports = {
     }
   ],
   webpack: {
+    configure: {
+      resolve: {
+        fallback: {
+          process: require.resolve("process/browser"),
+          zlib: require.resolve("browserify-zlib"),
+          stream: require.resolve("stream-browserify"),
+          util: require.resolve("util"),
+          buffer: require.resolve("buffer"),
+          asset: require.resolve("assert"),
+        },
+      },
+      plugins: [
+        new webpack.ProvidePlugin({
+          Buffer: ["buffer", "Buffer"],
+          process: "process/browser",
+        }),
+      ],
+    },
     alias: {
       '@components': resolvePath('./src/components'),
       '@svg-icons': resolvePath('./src/assets/icons/index.ts'),
@@ -30,6 +49,6 @@ module.exports = {
       'ui-kit': resolvePath('./src/components/ui-kit'),
       '@services': resolvePath('./src/services'),
       '@images': resolvePath('./src/assets/img')
-    }
+    },
   },
 };
