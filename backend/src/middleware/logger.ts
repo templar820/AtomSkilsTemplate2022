@@ -18,15 +18,12 @@ morgan(function (tokens: any, req: any, res: any) {
 morgan.token('id',  (req: any, res: any) => { return req.headers.token })
 morgan.token('RequestBody',  (req: any, res: any) => { return JSON.stringify(req.body) })
 
-const morganSettings = "RequestType=:method URL=:url Status=:status ResponseTime=:response-time Token=:id RequestBody=:RequestBody"
-const date = new Date();
-const fileName = date.toISOString().split('T')[0];
+morgan.format('logFormat', ':date, :url, :status, :response-time ms, :id, :RequestBody')
 
-// router.use(morgan(morganSettings, {
-//   stream: fs.createWriteStream(`./log/${fileName}.log`, {flags: 'a'})
-// }));
-//
-// router.use(morgan(morganSettings));
+router.use(morgan('logFormat', {
+      stream: fs.createWriteStream(`./access.log`, {flags: 'a'})
+    }
+));
 
 
 export default router;
