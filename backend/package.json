@@ -6,7 +6,9 @@
   "scripts": {
     "start": "tsoa swagger && nodemon --legacy-watch --ignore sessions/ src/index.ts",
     "swagger": "tsoa swagger",
-    "build": "webpack"
+    "build": "webpack",
+    "db:init": "ts-node db-scripts/init.ts",
+    "db:clear": "ts-node db-scripts/clear.ts"
   },
   "author": "",
   "license": "ISC",
