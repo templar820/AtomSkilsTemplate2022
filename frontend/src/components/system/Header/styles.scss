@@ -3,4 +3,7 @@
 .header {
   background-color: $menuBackgroundColor;
   height: 70px;
+  &__right {
+    margin-left: auto;
+  }
 }

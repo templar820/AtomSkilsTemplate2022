@@ -86,6 +86,11 @@ export default class AppStore {
           name: 'Сущности в списке',
           path: '/examples/products'
         },
+        {
+          id: 'pdf',
+          name: 'Pdf',
+          path: '/examples/pdf'
+        },
       ]
     },
   ];
