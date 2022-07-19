@@ -1,27 +1,23 @@
 import { ERRORS } from '../config/errors';
 
-export class ServerError extends Error {
+export class ServerError{
   status: number;
 
   message: string;
 
   constructor(code: number) {
-    super();
     const error = ERRORS[code] || ERRORS[0];
     this.status = error.status;
     this.message = error.message;
   }
 }
 
-export const errorHandler = (err: { status: any; message: any; }, req: any, res: any) => {
-  if (err instanceof ServerError) {
+export const errorHandler = (err: { status: any; message: any; }, req: any, res: any, next: any) => {
     res.status(err.status);
-    return res.send({
-      message: err.message
+    res.send({
+      message: err.message,
+      isError: true,
+      data: [],
+      status: err.status
     });
-  } else {
-    console.log(err)
-    res.status(500);
-    res.render('error', { error: err });
-  }
 };
