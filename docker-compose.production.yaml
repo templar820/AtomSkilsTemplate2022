@@ -6,6 +6,7 @@ x-frontend: &frontend
     context: .
     dockerfile: _docker/frontend/Dockerfile
   image: frontend
+  stdin_open: true
   container_name: "frontend"
   ports:
     - ${PORT}:${PORT}
@@ -17,17 +18,17 @@ x-frontend: &frontend
 
 
 services:
-  nginx:
-    restart: unless-stopped
-    container_name: "nginx"
-    build:
-      context: .
-      dockerfile: _docker/nginx/Dockerfile
-    depends_on:
-      - frontend
-    command: /etc/nginx/conf.d/run_nginx.sh
-    env_file:
-      - .env
+#  nginx:
+#    restart: unless-stopped
+#    container_name: "nginx"
+#    build:
+#      context: .
+#      dockerfile: _docker/nginx/Dockerfile
+#    depends_on:
+#      - frontend
+#    command: /etc/nginx/conf.d/run_nginx.sh
+#    env_file:
+#      - .env
 
   frontend:
     <<: *frontend

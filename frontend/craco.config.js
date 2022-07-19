@@ -4,7 +4,7 @@ const CracoEnvPlugin = require('craco-plugin-env');
 
 const resolvePath = p => path.resolve(__dirname, p);
 require('dotenv').config({
-    path: path.resolve(__dirname, '../.env'),
+  path: path.resolve(__dirname, '../.env'),
 });
 
 module.exports = {
@@ -20,18 +20,18 @@ module.exports = {
     configure: {
       resolve: {
         fallback: {
-          process: require.resolve("process/browser"),
-          zlib: require.resolve("browserify-zlib"),
-          stream: require.resolve("stream-browserify"),
-          util: require.resolve("util"),
-          buffer: require.resolve("buffer"),
-          asset: require.resolve("assert"),
+          process: require.resolve('process/browser'),
+          zlib: require.resolve('browserify-zlib'),
+          stream: require.resolve('stream-browserify'),
+          util: require.resolve('util'),
+          buffer: require.resolve('buffer'),
+          asset: require.resolve('assert'),
         },
       },
       plugins: [
         new webpack.ProvidePlugin({
-          Buffer: ["buffer", "Buffer"],
-          process: "process/browser",
+          Buffer: ['buffer', 'Buffer'],
+          process: 'process/browser',
         }),
       ],
     },

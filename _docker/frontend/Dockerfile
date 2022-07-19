@@ -1,18 +1,16 @@
-FROM node:14.19.3
+FROM node:14.19.3 as builder
 
-# Папка приложения
-RUN mkdir -p /frontend
 WORKDIR /frontend
+COPY /frontend/package.json ./
+COPY /frontend/package-lock.json ./
+RUN npm install --silent
+COPY /frontend ./
 
-# Установка зависимостей
-COPY ./frontend/package*.json ./
-RUN npm install
-# Для использования в продакшне
-# RUN npm install --production
-
-# Копирование файлов проекта
-COPY ./frontend .
-
-# Уведомление о порте, который будет прослушивать работающее приложение
 EXPOSE 3000
 
+
+# production environment
+#FROM nginx:stable-alpine
+#COPY --from=builder /frontend/build /usr/share/nginx/html
+#EXPOSE 80
+#CMD ["nginx", "-g", "daemon off;"]
