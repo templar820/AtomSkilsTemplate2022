@@ -13,11 +13,11 @@ export class ServerError{
 }
 
 export const errorHandler = (err: { status: any; message: any; }, req: any, res: any, next: any) => {
-    res.status(err.status);
+    res.status(err.status || 500);
     res.send({
-      message: err.message,
+      message: err.message || 'Системная ошибка',
       isError: true,
       data: [],
-      status: err.status
+      status: err.status || 500
     });
 };
