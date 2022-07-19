@@ -5,7 +5,6 @@ import SequelizeErd from 'sequelize-erd';
 import swaggerUi from 'swagger-ui-express';
 import cookieParser from 'cookie-parser';
 import { createTerminus } from '@godaddy/terminus';
-import { errorHandler } from './middleware/errorHandler';
 import db from './db';
 import { auth, authMiddleware } from './middleware/authMiddleware';
 import healthCheck from './utils/healthCheck';
@@ -21,6 +20,7 @@ const app = express();
 startFileManagerServer();
 app.use(cors());
 app.use(cookieParser());
+app.use(logger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('static'));
@@ -51,8 +51,6 @@ app.use((req, res) => {
   res.status(404);
   res.json({ error: 'notFound' });
 });
-
-app.use(errorHandler);
 
 Promise.all([db.authenticate(), db.sync()]).then(() => {
   console.log('DB CONNECT');
