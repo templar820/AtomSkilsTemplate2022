@@ -1,0 +1,623 @@
+{
+	"basePath": "/api",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"ISubstance": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"id": {
+					"type": "number",
+					"format": "double"
+				},
+				"code": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"id",
+				"code"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"IProduct": {
+			"properties": {
+				"id": {
+					"type": "number",
+					"format": "double"
+				},
+				"name": {
+					"type": "string"
+				},
+				"substance": {
+					"$ref": "#/definitions/ISubstance",
+					"x-nullable": true
+				},
+				"substanceId": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"name",
+				"substanceId"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"ProductsArea": {
+			"properties": {
+				"offset": {
+					"type": "number",
+					"format": "double"
+				},
+				"limit": {
+					"type": "number",
+					"format": "double"
+				}
+			},
+			"required": [
+				"offset",
+				"limit"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"CreateProduct": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"substanceId": {
+					"type": "number",
+					"format": "double"
+				}
+			},
+			"required": [
+				"name",
+				"substanceId"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"UpdateProduct": {
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"substanceId": {
+					"type": "number",
+					"format": "double"
+				},
+				"id": {
+					"type": "number",
+					"format": "double"
+				}
+			},
+			"required": [
+				"name",
+				"substanceId",
+				"id"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"SearchArea": {
+			"properties": {
+				"offset": {
+					"type": "number",
+					"format": "double"
+				},
+				"limit": {
+					"type": "number",
+					"format": "double"
+				},
+				"query": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"offset",
+				"limit",
+				"query"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"ICars": {
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"oil": {
+					"items": {
+						"type": "number",
+						"format": "double"
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"id",
+				"name",
+				"oil"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"IUser": {
+			"properties": {
+				"email": {
+					"type": "string"
+				},
+				"role": {
+					"type": "string",
+					"enum": [
+						"ADMIN",
+						"USER"
+					],
+					"x-nullable": true
+				},
+				"language": {
+					"type": "string",
+					"x-nullable": true
+				},
+				"password": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"email",
+				"password"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"AuthCred": {
+			"properties": {
+				"email": {
+					"type": "string"
+				},
+				"password": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"email",
+				"password"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
+		"IUserExport": {
+			"properties": {
+				"email": {
+					"type": "string"
+				},
+				"role": {
+					"type": "string",
+					"enum": [
+						"ADMIN",
+						"USER"
+					],
+					"x-nullable": true
+				},
+				"language": {
+					"type": "string",
+					"x-nullable": true
+				}
+			},
+			"required": [
+				"email"
+			],
+			"type": "object",
+			"additionalProperties": false
+		}
+	},
+	"info": {
+		"title": "backend",
+		"version": "1.0.0",
+		"license": {
+			"name": "ISC"
+		}
+	},
+	"paths": {
+		"/products/part": {
+			"post": {
+				"operationId": "GetPart",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"properties": {
+								"products": {
+									"items": {
+										"$ref": "#/definitions/IProduct"
+									},
+									"type": "array"
+								},
+								"count": {
+									"type": "number",
+									"format": "double"
+								}
+							},
+							"required": [
+								"count",
+								"products"
+							],
+							"type": "object"
+						}
+					}
+				},
+				"tags": [
+					"Products"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ProductsArea"
+						}
+					}
+				]
+			}
+		},
+		"/products/{id}": {
+			"get": {
+				"operationId": "GetById",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IProduct"
+						}
+					}
+				},
+				"tags": [
+					"Products"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"format": "double",
+						"type": "number"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "Delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "boolean"
+						}
+					}
+				},
+				"tags": [
+					"Products"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		},
+		"/products": {
+			"post": {
+				"operationId": "Insert",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IProduct"
+						}
+					}
+				},
+				"tags": [
+					"Products"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/CreateProduct"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "Update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"items": {
+								"$ref": "#/definitions/IProduct"
+							},
+							"type": "array"
+						}
+					}
+				},
+				"tags": [
+					"Products"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UpdateProduct"
+						}
+					}
+				]
+			}
+		},
+		"/products/search": {
+			"post": {
+				"operationId": "Search",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"properties": {
+								"products": {
+									"items": {
+										"$ref": "#/definitions/IProduct"
+									},
+									"type": "array"
+								},
+								"count": {
+									"type": "number",
+									"format": "double"
+								}
+							},
+							"required": [
+								"count",
+								"products"
+							],
+							"type": "object"
+						}
+					}
+				},
+				"tags": [
+					"Products"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/SearchArea"
+						}
+					}
+				]
+			}
+		},
+		"/cars": {
+			"post": {
+				"operationId": "Create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/ICars"
+						}
+					}
+				},
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/ICars"
+						}
+					}
+				]
+			}
+		},
+		"/user/register": {
+			"post": {
+				"operationId": "CreateUser",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"properties": {
+								"token": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"token"
+							],
+							"type": "object"
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/IUser"
+						}
+					}
+				]
+			}
+		},
+		"/user/login": {
+			"post": {
+				"operationId": "LoginUser",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"properties": {
+								"token": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"token"
+							],
+							"type": "object"
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/AuthCred"
+						}
+					}
+				]
+			}
+		},
+		"/user/userInfo": {
+			"get": {
+				"operationId": "GetUserByToken",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IUserExport"
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "token",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {
+		"api_key": {
+			"type": "apiKey",
+			"name": "token",
+			"description": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluIiwiaWQiOjgsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNzI5MjAyOX0.smA9a5v47rs-oG2loD1jR5Zd5RlGqmb0XN0KWjniyKo",
+			"in": "header"
+		}
+	},
+	"tags": [
+		{
+			"name": "Products",
+			"description": "Операции доступные с продуктами"
+		},
+		{
+			"name": "User",
+			"description": "Операции с пользователем"
+		}
+	]
+}
