@@ -25,7 +25,6 @@ const useStyles = makeStyles({
 
 function App() {
   const endpoint = process.env.REACT_APP_ENDPOINT;
-
   const localStorageKeyId = 'as_user_id';
   let user_id = localStorage.getItem(localStorageKeyId);
   if (!user_id) {
