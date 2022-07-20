@@ -48,6 +48,7 @@ module.exports = {
       '@hooks': resolvePath('./src/hooks'),
       'ui-kit': resolvePath('./src/components/ui-kit'),
       '@services': resolvePath('./src/services'),
+      '@stores': resolvePath('./src/stores'),
       '@images': resolvePath('./src/assets/img')
     },
   },

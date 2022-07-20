@@ -6,16 +6,20 @@ import { MOBXDefaultProps } from '@globalTypes';
 import './styles.scss';
 
 function Header(props: MOBXDefaultProps) {
+  const userStore = props.UserStore;
+  const authService = props.services.authService;
   return (
     <header className="d-flex align-items-center px-2 header">
       <div className="header__right">
         <DropdownButton
           variant="outlined text-white pr-0"
           as={ButtonGroup}
-          title={'userName'}
+          title={userStore.user.email}
         >
           <Dropdown.Item
-            onClick={() => {}}
+            onClick={() => {
+              authService.logout();
+            }}
           >
             Выйти
           </Dropdown.Item>

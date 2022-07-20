@@ -19,7 +19,6 @@ class AuthRouter extends BaseRouter {
     this.router.post('/user/login', this.authenticate);
 
     this.router.get('/user/userInfo', auth, asyncMiddleware(async (req: Request, res: Response) => {
-      console.log(req.user.id);
       res.sendFormat(await UserController.getUserByToken(req.user.id));
     }));
   }

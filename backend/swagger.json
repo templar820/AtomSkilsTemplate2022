@@ -327,6 +327,28 @@
 				]
 			}
 		},
+		"/user/logout": {
+			"get": {
+				"operationId": "LogoutUser",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"properties": {},
+							"type": "object"
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
 		"/user/userInfo": {
 			"get": {
 				"operationId": "GetUserByToken",
