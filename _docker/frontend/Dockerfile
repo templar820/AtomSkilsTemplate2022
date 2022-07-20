@@ -5,5 +5,3 @@ COPY /frontend/package.json ./
 COPY /frontend/package-lock.json ./
 RUN npm install --silent
 COPY /frontend ./
-
-EXPOSE 3000
