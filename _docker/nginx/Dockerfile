@@ -14,8 +14,6 @@ ENV TSC_COMPILE_ON_ERROR true
 RUN npm run build
 
 
-
-
 FROM nginx:latest
 COPY --from=build-stage /frontend/build/ /usr/share/nginx/html
 COPY _docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
