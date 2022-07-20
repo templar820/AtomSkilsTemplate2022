@@ -17,25 +17,36 @@ version: '3.8'
 
 
 services:
+#  nginx:
+#    restart: unless-stopped
+#    container_name: "nginx"
+#    ports:
+#      - 80:80
+#      - 443:443
+#    build:
+#      context: .
+#      dockerfile: _docker/nginx/Dockerfile
+#      args:
+#        - ESLINT_NO_DEV_ERRORS=$ESLINT_NO_DEV_ERRORS
+#        - DISABLE_ESLINT_PLUGIN=$DISABLE_ESLINT_PLUGIN
+#        - CI=$CI
+#        - TSC_COMPILE_ON_ERROR=$TSC_COMPILE_ON_ERROR
+#        - REACT_APP_ENDPOINT=$REACT_APP_ENDPOINT
+#        - REACT_APP_SWAGGER_ENDPOINT=$REACT_APP_SWAGGER_ENDPOINT
+#    env_file:
+#      - .env
   nginx:
+    image: nginx:latest
     restart: unless-stopped
     container_name: "nginx"
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html
+      - ./_docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
       - 80:80
       - 443:443
-    build:
-      context: .
-      dockerfile: _docker/nginx/Dockerfile
-      args:
-        - ESLINT_NO_DEV_ERRORS=$ESLINT_NO_DEV_ERRORS
-        - DISABLE_ESLINT_PLUGIN=$DISABLE_ESLINT_PLUGIN
-        - CI=$CI
-        - TSC_COMPILE_ON_ERROR=$TSC_COMPILE_ON_ERROR
-        - REACT_APP_ENDPOINT=$REACT_APP_ENDPOINT
-        - REACT_APP_SWAGGER_ENDPOINT=$REACT_APP_SWAGGER_ENDPOINT
     env_file:
       - .env
-
 #  frontend:
 #    container_name: "frontend"
 #    <<: *frontend
