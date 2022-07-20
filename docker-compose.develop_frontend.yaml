@@ -7,7 +7,6 @@ x-backend: &backend
     context: .
     dockerfile: _docker/backend/Dockerfile
   image: backend
-  container_name: "backend"
   volumes:
     - ./backend:/backend
     - /backend/node_modules
@@ -18,6 +17,7 @@ x-backend: &backend
 
 services:
   backend:
+    container_name: "backend"
     <<: *backend
     command: npm run start
     ports:

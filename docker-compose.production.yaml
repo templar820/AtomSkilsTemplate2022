@@ -1,20 +1,19 @@
 version: '3.8'
 
 
-#x-frontend: &frontend
-#  build:
-#    context: .
-#    dockerfile: _docker/frontend/Dockerfile
-#  image: frontend
-#  stdin_open: true
-#  container_name: "frontend"
-#  ports:
-#    - ${PORT}:${PORT}
-#  volumes:
-#    - ./frontend:/frontend
-#    - /frontend/node_modules
-#  env_file:
-#    - .env
+x-frontend: &frontend
+  build:
+    context: .
+    dockerfile: _docker/frontend/Dockerfile
+  image: frontend
+  stdin_open: true
+  ports:
+    - ${PORT}:${PORT}
+  volumes:
+    - ./frontend:/frontend
+    - /frontend/node_modules
+  env_file:
+    - .env
 
 
 services:
@@ -30,7 +29,8 @@ services:
     env_file:
       - .env
 
-#  frontend:
-#    <<: *frontend
-#    command: npm run start
+  frontend:
+    container_name: "frontend"
+    <<: *frontend
+    command: npm run start
 

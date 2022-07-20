@@ -5,20 +5,6 @@ volumes:
   db-es:
     driver: local
 
-#
-#x-db_transactions: &db_transactions
-#  build:
-#    context: .
-#    dockerfile: _docker/db_transactions/Dockerfile
-#  depends_on:
-#    - postgres
-#    - backend
-#  image: db_transactions
-#  volumes:
-#    - ./db_transactions:/db_transactions
-#    - /db_transactions/node_modules
-#    - ./backend/src:/db_transactions/backend/src
-#  env_file: .env
 
 services:
   pghost:
@@ -31,12 +17,4 @@ services:
       - "${POSTGRES_PORT}:5432"
     env_file:
       - .env
-  #  db_init:
-  #    <<: *db_transactions
-  #    container_name: "db_init"
-  #    command: npm run start
-  #  db_clean:
-  #    <<: *db_transactions
-  #    container_name: "db_clean"
-  #    command: npm run clean
 
