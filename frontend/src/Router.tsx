@@ -1,17 +1,16 @@
 import React from 'react';
-import PlaceCard from '@pages/Place';
 import { BrowserRouter } from 'react-router-dom';
-import { Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
 import Page from '@components/system/Page/Page';
 import ErrorBoundary from '@components/system/ErrorBoundary';
-import FavoritePlaceList from '@pages/FavoritePlaceList';
 import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import HomePage from '@pages/HomePage';
 import TablePage from '@pages/Table';
+import ProductPage from '@pages/Product';
 import NotificationWindow from './NotificationWindow';
-import NotificationManager from './helpers/NotificationManager';
+import Pdf from "@pages/Pdf/Pdf";
 
 function Router(props: MOBXDefaultProps) {
   const getPage = (routerProps, Component, type?:any) => {
@@ -29,7 +28,7 @@ function Router(props: MOBXDefaultProps) {
         <Switch>
           <Route
             exact
-            path="/"
+            path="/home"
             render={p => getPage(p, HomePage)}
           />
           <Route
@@ -37,6 +36,20 @@ function Router(props: MOBXDefaultProps) {
             path="/examples/table"
             render={p => getPage(p, TablePage)}
           />
+          <Route
+            exact
+            path="/examples/products"
+            render={p => getPage(p, ProductPage)}
+          />
+          <Route
+            exact
+            path="/examples/pdf"
+            render={p => getPage(p, Pdf)}
+          />
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route exact path="*" render={p => <WindowFactory type={WindowType.NotFoundPage} />} />
         </Switch>
       </ErrorBoundary>
     </BrowserRouter>

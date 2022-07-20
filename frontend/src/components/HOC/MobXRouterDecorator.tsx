@@ -1,8 +1,10 @@
 import { withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
-import { StoresNames } from '@globalTypes';
+import RootStore from '../../stores/Root.store';
 
 export default function (component, router = true) {
-  if (!router) return inject('services', ...Object.values(StoresNames))(observer(component));
-  return withRouter(inject('services', ...Object.values(StoresNames))(observer(component)));
+  const obj = RootStore;
+
+  if (!router) return inject('services', ...Object.keys(obj))(observer(component));
+  return withRouter(inject('services', ...Object.keys(obj))(observer(component)));
 }

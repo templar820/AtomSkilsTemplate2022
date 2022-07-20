@@ -32,7 +32,9 @@
       "@styles/*": ["styles/*"],
       "@globalTypes": ["globals.d.ts"],
       "@api": ["./api/Api.service.ts"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@assets/*": ["assets/*"],
+      "@images/*": ["img/*"],
     },
     "jsx": "react-jsx"
   },

@@ -1,0 +1,37 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g class="normal">
+        <rect width="8" height="8" transform="translate(64)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(48 16)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(64 16)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(32 32)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(48 32)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(64 32)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(16 48)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(32 48)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(48 48)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(64 48)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(0 64)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(16 64)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(32 64)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(48 64)" fill="#F9F9FB"/>
+        <rect width="8" height="8" transform="translate(64 64)" fill="#F9F9FB"/>
+    </g>
+
+    <g class="hover">
+        <rect width="8" height="8" transform="translate(64)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(48 16)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(64 16)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(32 32)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(48 32)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(64 32)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(16 48)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(32 48)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(48 48)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(64 48)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(0 64)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(16 64)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(32 64)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(48 64)" fill="#D2D5FE"/>
+        <rect width="8" height="8" transform="translate(64 64)" fill="#D2D5FE"/>
+    </g>
+</svg>

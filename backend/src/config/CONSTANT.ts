@@ -1,12 +1,15 @@
-import { ConfigService } from '@nestjs/config';
+import path from 'path';
 
+require('dotenv').config({
+  path: path.resolve(__dirname, '../../../.env'),
+});
 
 export default {
-  POSTGRES_USER: process.env.POSTGRES_USER || 'user',
-  POSTGRES_PASSWORD: process.env.POSTGRES_PASSWORD || 'pass',
-  PORT: process.env.BACKEND_PORT || 8000,
-  POSTGRES_PORT: process.env.POSTGRES_PORT || 5432,
-  POSTGRES_DB: process.env.POSTGRES_DB || 'hacktemplate',
-  // POSTGRES_HOST: process.env.POSTGRESS_HOST || 'host.docker.internal', // 172.17.01 for unix
-  POSTGRES_HOST: process.env.POSTGRESS_HOST || 'localhost', // 172.17.01 for unix
+  SECRET_KEY: process.env.SECRET_KEY,
+  POSTGRES_USER: process.env.POSTGRES_USER,
+  POSTGRES_PASSWORD: process.env.POSTGRES_PASSWORD,
+  PORT: process.env.BACKEND_PORT,
+  POSTGRES_PORT: process.env.POSTGRES_PORT,
+  POSTGRES_DB: process.env.POSTGRES_DB,
+  POSTGRES_HOST: process.env.MY_POSTGRESS_HOST,
 };

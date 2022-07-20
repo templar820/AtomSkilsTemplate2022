@@ -1,5 +1,5 @@
 import BaseNotification from '@components/notifications/BaseNotification';
-import AppStore, { TutorialStatus } from '../stores/App.store';
+import AppStore  from '../stores/App.store';
 import NotificationManager from '../helpers/NotificationManager';
 
 export default class AppService {
@@ -17,15 +17,6 @@ export default class AppService {
     // this.registerTutorialStatus();
     window.onerror = (msg, url, lineNo, columnNo, error) => { this.errorListener(error); };
     window.onunhandledrejection = e => { this.errorListener(e.reason); };
-  }
-
-  registerTutorialStatus() {
-    let tutorialStatus = localStorage.getItem(this.pickSpotTutorialStatusKey);
-    if (!tutorialStatus) {
-      tutorialStatus = TutorialStatus.NOT_PASSED;
-    }
-    this.appStore.setTutorialStatus(tutorialStatus);
-    localStorage.setItem(this.pickSpotTutorialStatusKey, tutorialStatus);
   }
 
   errorListener(e: Error) {

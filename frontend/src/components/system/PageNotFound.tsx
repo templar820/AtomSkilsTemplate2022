@@ -298,8 +298,8 @@ function PageNotFound(props: PageNotFoundProps) {
           </div>
           <div className="col-md-6 align-self-center">
             <Typography variant="h1">{props.statusCode ? 404 : null}</Typography>
-            {props.title || <Typography variant="subtitle1">Oops</Typography>}
-            {props.description || <Typography variant="subtitle2">Запрашиваемой страницы не существует</Typography>}
+            {props.title || <Typography variant="subtitle1" className="my-2">Oops</Typography>}
+            {props.description || <Typography variant="subtitle2" className="my-2">Запрашиваемой страницы не существует</Typography>}
             {props.action || null}
           </div>
         </div>

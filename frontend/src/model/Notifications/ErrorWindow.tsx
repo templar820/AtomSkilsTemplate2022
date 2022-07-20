@@ -1,8 +1,11 @@
 import React from 'react';
 import {
-  Dialog, Slide
+  Button,
+  CardHeader,
+  Dialog, Slide, Typography,
 } from '@mui/material';
 import ErrorIcon from '@mui/icons-material/Error';
+import { DialogActions, DialogContent } from 'ui-kit';
 import BaseNotification from './BaseNotification';
 import BaseNotificationWindow from './BaseNotificationWindow';
 
@@ -27,11 +30,11 @@ export default class ErrorWindow extends BaseNotification implements BaseNotific
   }
 
   getMessage(): React.ReactNode {
-    return <h5 className="text-center m-0">{this.message}</h5>;
+    return <Typography variant="subtitle2" className="text-center m-0">{this.message}</Typography>;
   }
 
   getIcon(): React.ReactNode {
-    return <ErrorIcon style={{ fontSize: '80px' }} color="error" />;
+    return <ErrorIcon style={{ fontSize: '40px' }} color="error" />;
   }
 
   closeNotification() {
@@ -43,35 +46,28 @@ export default class ErrorWindow extends BaseNotification implements BaseNotific
 
   getNotificationWindow(): React.ReactNode {
     return (
-      <Dialog
-        onClose={() => this.closeNotification()}
-        TransitionComponent={Slide}
-        open
-      >
-        <div className="modal-dialog modal-confirm">
-          <div className="modal-content">
-            <div className="modal-header">
-              <div className="icon-box">
-                {this.getIcon()}
-              </div>
-              <h4 className="modal-title w-100">
-                Ошибка:
-                {this.status}
-              </h4>
+      <Dialog open maxWidth="lg" aria-labelledby="simple-dialog-title">
+        <DialogContent className="dialogContent">
+          <CardHeader avatar={this.getIcon()} subheader={this.getMessage()} />
+          <DialogContent>
+            <div className="extraField">
+              <Typography variant="body2">
+                {this.message}
+              </Typography>
             </div>
-            <div className="modal-body">
-              {this.getMessage()}
-            </div>
-            <div className="modal-footer">
-              <button
-                className="btn btn-danger btn-block"
-                onClick={() => { this.closeNotification(); }}
-              >
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
+          </DialogContent>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={() => {
+              this.close();
+            }}
+            variant="contained"
+            color="primary"
+          >
+            Закрыть
+          </Button>
+        </DialogActions>
       </Dialog>
     );
   }

@@ -14,6 +14,15 @@ $gray-4: rgba(185,185,203,1);
 $gray-3: rgba(219,219,229,1);
 $gray-2: rgba(240,240,245,1);
 $gray-1: rgba(249,249,251,1);
+$violet-1: #ebedff;
+$violet-2: #d2d5fe;
+$violet-3: #afb6fd;
+$violet-5: #4e4ee4;
+$violet-6: #3237b3;
+$violet-8: #0e105d;
+$violet-7: #1d188b;
+$violet-9: #06073d;
+$violet-10:  #050624;
 $red-10: rgba(94,0,0,1);
 $red-9: rgba(127,0,30,1);
 $red-8: rgba(162,19,54,1);
@@ -35,12 +44,8 @@ $green-3: rgba(184,239,226,1);
 $green-2: rgba(195,248,235,1);
 $green-1: rgba(223,251,244,1);
 
-
-
-$primary: $gray-10;
-$secondary: $gray-6;
-
-
+$primary: $violet-5;
+$secondary: #30da14;
 
 $primaryText: $gray-10;
 $black: $gray-10;
@@ -51,7 +56,7 @@ $backgroundColor: $gray-1;
 
 $primaryChipsColor: $red-6;
 
-$menuBackgroundColor: #2F4050;
+$menuBackgroundColor: #2a2c39;
 $menuTextColor: #a7b1c2;
 
 :export {
@@ -76,6 +81,15 @@ $menuTextColor: #a7b1c2;
   gray8: $gray-8;
   gray9: $gray-9;
   gray10: $gray-10;
+  violet1: $violet-1;
+  violet2: $violet-2;
+  violet3: $violet-3;
+  violet5: $violet-5;
+  violet6: $violet-6;
+  violet7: $violet-7;
+  violet8: $violet-8;
+  violet9: $violet-9;
+  violet10: $violet-10;
   green1: $green-1;
   green2: $green-2;
   green3: $green-3;

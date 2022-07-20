@@ -20,6 +20,15 @@ declare const styles: {
   readonly "gray8": string;
   readonly "gray9": string;
   readonly "gray10": string;
+  readonly "violet1": string;
+  readonly "violet2": string;
+  readonly "violet3": string;
+  readonly "violet5": string;
+  readonly "violet6": string;
+  readonly "violet7": string;
+  readonly "violet8": string;
+  readonly "violet9": string;
+  readonly "violet10": string;
   readonly "green1": string;
   readonly "green2": string;
   readonly "green3": string;
