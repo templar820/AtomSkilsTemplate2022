@@ -14,6 +14,7 @@ import logger from './middleware/logger';
 import IoModel from './socket/IoModel';
 import startFileManagerServer from './filemanager';
 import router from './routes';
+import initData from './models/initData';
 
 const PORT = process.env.BACKEND_PORT || 8080;
 const app = express();
@@ -52,7 +53,8 @@ app.use((req, res) => {
   res.json({ error: 'notFound' });
 });
 
-Promise.all([db.authenticate(), db.sync()]).then(() => {
+Promise.all([db.authenticate(), db.sync()]).then(async () => {
   console.log('DB CONNECT');
+  await initData(db);
   io.http.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
 });
