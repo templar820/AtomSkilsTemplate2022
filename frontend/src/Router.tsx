@@ -11,6 +11,7 @@ import TablePage from '@pages/Table';
 import ProductPage from '@pages/Product';
 import NotificationWindow from './NotificationWindow';
 import Pdf from "@pages/Pdf/Pdf";
+import FileManagerPage from "@pages/FileManager"
 
 function Router(props: MOBXDefaultProps) {
   const getPage = (routerProps, Component, type?:any) => {
@@ -45,6 +46,11 @@ function Router(props: MOBXDefaultProps) {
             exact
             path="/examples/pdf"
             render={p => getPage(p, Pdf)}
+          />
+          <Route
+              exact
+              path="/examples/filemanager"
+              render={p => getPage(p, FileManagerPage)}
           />
           <Route exact path="/">
             <Redirect to="/home" />

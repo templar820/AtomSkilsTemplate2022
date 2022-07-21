@@ -13,6 +13,8 @@
     "@mui/lab": "^5.0.0-alpha.88",
     "@mui/material": "^5.8.5",
     "@mui/styles": "^5.8.4",
+    "@opuscapita/react-filemanager": "^1.1.12",
+    "@opuscapita/react-filemanager-connector-node-v1": "^1.1.12",
     "@react-pdf/renderer": "^2.3.0",
     "@tanstack/match-sorter-utils": "8.1.1",
     "@tanstack/react-table": "8.1.3",
