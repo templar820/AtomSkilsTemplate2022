@@ -103,6 +103,7 @@
     "generate:modules": "concurrently \"npm:ts:css \"",
     "start": "craco start",
     "build": "craco build",
+    "build:full": "craco --max_old_space_size=4096 build",
     "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
