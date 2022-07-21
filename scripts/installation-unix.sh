@@ -20,6 +20,23 @@ docker-compose --version
 
 ## make
 sudo apt install make
+##### linux swap space
+
+## должно быть все кратно степеням двойки это важно
+dd if=/dev/zero of=/swapf1 bs=4096 count=2097152
+mkswap /swapf1
+swapon /swapf1
+sudo nano /etc/fstab # /swapf1 swap swap defaults 0 0
+free -m
+
+
+## удаление swap пространства
+cat /proc/swaps
+sudo swapoff /swapf1
+sudo rm /swapf1
+
+
+
 
 
 
