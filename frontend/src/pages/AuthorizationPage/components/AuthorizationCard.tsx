@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {TextField, Button, makeStyles, MenuItem, FormControl, InputLabel, Select} from "ui-kit";
+import {Button, FormControl, InputLabel, makeStyles, MenuItem, Select, TextField} from "ui-kit";
 import MobXRouterDecorator from "@components/HOC/MobXRouterDecorator";
 import {MOBXDefaultProps} from "@globalTypes";
+import {Roles} from "@services/Auth.service";
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -14,7 +15,7 @@ const AuthorizationCard = (props: MOBXDefaultProps) => {
   const [loginValue, setLoginValue] = useState('');
   const [cardState, setCardState] = useState<'authorization' | 'registration'>('authorization')
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState<'ADMIN' | 'USER'>('ADMIN');
+  const [role, setRole] = useState<Roles>(Roles.ADMIN);
   const classes = useStyles();
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -32,7 +33,7 @@ const AuthorizationCard = (props: MOBXDefaultProps) => {
     e.preventDefault();
     setPassword('');
     setLoginValue('');
-    setRole('ADMIN');
+    setRole(Roles.ADMIN);
     setCardState(cardState === 'authorization' ? 'registration': 'authorization')
   }
 
@@ -74,8 +75,8 @@ const AuthorizationCard = (props: MOBXDefaultProps) => {
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
               >
-                <MenuItem value={'ADMIN'}>Администратор</MenuItem>
-                <MenuItem value={'USER'}>Пользователь</MenuItem>
+                <MenuItem value={Roles.ADMIN}>Администратор</MenuItem>
+                <MenuItem value={Roles.USER}>Пользователь</MenuItem>
               </Select>
             </FormControl>)
         }

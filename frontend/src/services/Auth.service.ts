@@ -3,6 +3,11 @@ import {Api} from '../api/api';
 import AppService from "@services/App.service";
 import {SnackType} from "../model/Notifications/PageNotification";
 
+export enum Roles {
+  ADMIN = 'ADMIN',
+  USER = 'USER',
+}
+
 export default class AuthService {
   private apiService: Api<any>;
   private userStore: UserStore;
@@ -25,7 +30,7 @@ export default class AuthService {
     }
   }
 
-  async register(login: string, password: string, role: "ADMIN" | 'USER') {
+  async register(login: string, password: string, role: Roles) {
     try {
       const {data} = await this.apiService.user.createUser({ email: login, password, role}, {});
       const {token} = data.data;
@@ -56,7 +61,6 @@ export default class AuthService {
   }
 
   async logout() {
-    // await this.networkService.fetch({alias: 'user/logout', type: 'GET'});
     await this.apiService.user.logoutUser();
     this.userStore.setUser({}, false);
     localStorage.removeItem('token');

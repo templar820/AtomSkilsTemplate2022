@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { Redirect, Route, Switch } from 'react-router';
-import WindowFactory, { WindowType } from '@components/HOC/WindowFactory';
+import {BrowserRouter} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router';
+import WindowFactory, {WindowType} from '@components/HOC/WindowFactory';
 import Page from '@components/system/Page/Page';
 import ErrorBoundary from '@components/system/ErrorBoundary';
-import { MOBXDefaultProps } from '@globalTypes';
+import {MOBXDefaultProps} from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import HomePage from '@pages/HomePage';
 import TablePage from '@pages/Table';
@@ -13,17 +13,18 @@ import NotificationWindow from './NotificationWindow';
 import Pdf from "@pages/Pdf/Pdf";
 import AuthorizationPage from "@pages/AuthorizationPage/AuthorizationPage";
 import Auth from "@components/system/Auth";
+import {Roles} from "@services/Auth.service";
 
 function Router(props: MOBXDefaultProps) {
   const userStore = props.UserStore;
 
-  const getPage = (routerProps, Component, type?:any) => {
-    if (!userStore.isLogin) {
-      return <Redirect to="/authorization" />
+  const getPage = (routerProps, Component, allowedRoles?: Roles[]) => {
+    if (allowedRoles && !allowedRoles.includes(userStore.user?.role)) {
+      return <WindowFactory type={WindowType.NotFoundPage} />;
     }
     return (
       <Page>
-        <Component type={type} {...routerProps} />
+        <Component {...routerProps} />
       </Page>
     );
   };
@@ -38,6 +39,13 @@ function Router(props: MOBXDefaultProps) {
               userStore.isLogin
               && <Redirect from="/authorization" to="/" />
             }
+            <Route path="/authorization">
+              <AuthorizationPage />
+            </Route>
+            {
+              !userStore.isLogin
+              && <Redirect to="/authorization" />
+            }
             <Route
               exact
               path="/home"
@@ -46,23 +54,20 @@ function Router(props: MOBXDefaultProps) {
             <Route
               exact
               path="/examples/table"
-              render={p => getPage(p, TablePage)}
+              render={p => getPage(p, TablePage, [Roles.ADMIN])}
             />
             <Route
               exact
               path="/examples/products"
-              render={p => getPage(p, ProductPage)}
+              render={p => getPage(p, ProductPage, [Roles.ADMIN])}
             />
             <Route
               exact
               path="/examples/pdf"
-              render={p => getPage(p, Pdf)}
+              render={p => getPage(p, Pdf, [Roles.ADMIN])}
             />
             <Route exact path="/">
               <Redirect to="/home" />
-            </Route>
-            <Route path="/authorization">
-              <AuthorizationPage />
             </Route>
             <Route exact path="*" render={p => <WindowFactory type={WindowType.NotFoundPage} />} />
           </Switch>
