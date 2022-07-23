@@ -9,7 +9,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce -y
-sudo systemctl status docker
+#sudo systemctl status docker
 sudo usermod -aG docker ${USER}
 su - ${USER}
 sudo usermod -aG docker ${USER}
@@ -26,7 +26,7 @@ sudo apt install make
 dd if=/dev/zero of=/swapf1 bs=4096 count=2097152
 mkswap /swapf1
 swapon /swapf1
-sudo nano /etc/fstab # /swapf1 swap swap defaults 0 0
+sudo sh -c "echo '/swapf1 swap swap defaults 0 0' >> /etc/fstab"
 free -m
 
 
