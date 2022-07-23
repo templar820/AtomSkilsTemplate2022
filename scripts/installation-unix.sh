@@ -27,7 +27,7 @@ sudo apt install make
 
 
 echo "############## SWAP MEMORY ##############"
-dd if=/dev/zero of=/swapf1 bs=4096 count=2097152
+dd if=/dev/zero of=/swapf1 bs=8192 count=4194304
 mkswap /swapf1
 swapon /swapf1
 sudo sh -c "echo '/swapf1 swap swap defaults 0 0' >> /etc/fstab"

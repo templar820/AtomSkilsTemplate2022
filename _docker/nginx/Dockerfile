@@ -1,4 +1,4 @@
-FROM node:14.19.0-buster AS build-stage
+FROM node:14.19.3 AS build-stage
 
 ARG ESLINT_NO_DEV_ERRORS
 ARG DISABLE_ESLINT_PLUGIN
