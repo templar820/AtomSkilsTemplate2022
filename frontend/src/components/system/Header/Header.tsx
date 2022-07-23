@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react';
-
-import {ButtonGroup, DropdownButton, Dropdown} from "react-bootstrap";
+import React, {useEffect, useRef, useState} from 'react';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import { MOBXDefaultProps } from '@globalTypes';
 import './styles.scss';
+import AccountMenu from "@components/system/Header/components/AccountMenu";
 
 function Header(props: MOBXDefaultProps) {
-  const userStore = props.UserStore;
-  const authService = props.services.authService;
+  const headerRef = useRef(null);
   return (
-    <header className="d-flex align-items-center px-2 header">
+    <header ref={headerRef} className="d-flex align-items-center px-4 header">
       <div className="header__right">
-        <DropdownButton
-          variant="outlined text-white pr-0"
-          as={ButtonGroup}
-          title={userStore.user.email}
-        >
-          <Dropdown.Item
-            onClick={() => {
-              authService.logout();
-            }}
-          >
-            Выйти
-          </Dropdown.Item>
-        </DropdownButton>
+        <AccountMenu headerRef={headerRef}/>
       </div>
     </header>
   );

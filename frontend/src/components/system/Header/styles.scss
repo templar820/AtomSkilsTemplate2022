@@ -2,7 +2,8 @@
 
 .header {
   background-color: $menuBackgroundColor;
-  height: 70px;
+  height: 60px;
+  position: relative;
   &__right {
     margin-left: auto;
   }
