@@ -1,7 +1,4 @@
-#sudo apt update
-#sudo apt install git -y
-#sudo apt update
-
+#!/bin/bash
 
 
 echo "############## SETUP DOCKER ##############"
