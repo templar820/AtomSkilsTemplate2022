@@ -13,7 +13,8 @@ function initAdminPanel(path='/admin', app) {
         }],
         rootPath: path,
     })
-    app.use(adminJs.options.rootPath, AdminJSExpress.buildRouter(adminJs))
+
+    app.use(adminJs.options.rootPath, AdminJSExpress.buildRouter(adminJs));
 }
 
 export default initAdminPanel;

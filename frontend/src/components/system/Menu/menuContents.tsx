@@ -1,5 +1,5 @@
 import {Roles} from "@services/Auth.service";
-import {Home, Settings} from "@mui/icons-material";
+import {Home, Settings, Person} from "@mui/icons-material";
 
 const handler = {
   get: function(target, name){
@@ -15,6 +15,12 @@ export default new Proxy({
     path: '/home',
     icon: <Home />
   },
+    {
+      id: 'admin',
+      name: 'Администрирование',
+      path: '/admin-panel',
+      icon: <Person />
+    },
     {
       id: 'examples',
       name: 'Примеры',
