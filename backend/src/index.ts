@@ -15,6 +15,7 @@ import IoModel from './socket/IoModel';
 import startFileManagerServer from './filemanager';
 import router from './routes';
 import initData from './models/initData';
+import initAdminPanel from './utils/adminPanel';
 
 const PORT = process.env.BACKEND_PORT || 8080;
 const app = express();
@@ -26,6 +27,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('static'));
 app.use(fileUpload({}));
+
+initAdminPanel('/admin', app);
 
 app.get('/erd', (req: Request, res: Response) => {
   SequelizeErd({ source: db }).then((erd: string) => {
