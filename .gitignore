@@ -3,6 +3,7 @@ node_modules/
 /frontend/build
 /frontend/coverage
 /backend/dist
+/backend/access.log
 /backend/node_modules
 /backend/coverage
 /backend/log
