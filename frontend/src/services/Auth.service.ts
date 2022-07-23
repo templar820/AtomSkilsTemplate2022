@@ -4,8 +4,8 @@ import AppService from "@services/App.service";
 import {SnackType} from "../model/Notifications/PageNotification";
 
 export enum Roles {
-  ADMIN = 'ADMIN',
-  USER = 'USER',
+  ADMIN = 'admin',
+  USER = 'user',
 }
 
 export default class AuthService {

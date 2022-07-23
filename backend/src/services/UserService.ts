@@ -48,15 +48,9 @@ class UserService extends BaseService{
           'email',
           'role',
       ],
-      include: [{
-        model: UserDetails,
-        as: UserDetails.name,
-        attributes: ['language'],
-        required: true,
-      }],
       raw: true,
     })
-    if (user) return this.flatKeysForObject(user, UserDetails.name);
+    if (user) return user;
     throw new ServerError(401, "Неавторизованный пользователь")
   }
 }

@@ -1,13 +1,20 @@
 import {Roles} from "@services/Auth.service";
 import {Home, Settings} from "@mui/icons-material";
 
-export default {
+const handler = {
+  get: function(target, name){
+    return name in target?
+      target[name] : target[Roles.ADMIN];
+  }
+};
+
+export default new Proxy({
   [Roles.ADMIN]: [{
-      id: 'home',
-      name: 'Главная',
-      path: '/home',
-      icon: <Home />
-    },
+    id: 'home',
+    name: 'Главная',
+    path: '/home',
+    icon: <Home />
+  },
     {
       id: 'examples',
       name: 'Примеры',
@@ -37,4 +44,4 @@ export default {
     path: '/home',
     icon: <Home />
   }]
-}
+}, handler);
