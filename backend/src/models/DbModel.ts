@@ -40,13 +40,13 @@ const Order = db.define('order', {
   name: { type: DataTypes.STRING },
 });
 
-// const UserDetails = db.define('user_details', {
-//   language: { type: DataTypes.STRING },
-// });
+const UserDetails = db.define('user_details', {
+  language: { type: DataTypes.STRING },
+});
 
 // User.hasOne(UserDetails, {as: "user_details", foreignKey: 'fk_user_id', targetKey: 'id'});
 // User.hasOne(UserDetails, {as: 'user_details'});
-// User.belongsTo(UserDetails, { as: 'user_details' });
+User.belongsTo(UserDetails, { as: 'user_details' });
 
 export interface ISubstance {
   name: string;
@@ -62,12 +62,12 @@ export interface JWTUser {
 
 export {
   User,
-  // UserDetails,
+  UserDetails,
   Order
 };
 
 export default {
-      User,
-      // UserDetails,
-      Order
+  User,
+  UserDetails,
+  Order
 };
