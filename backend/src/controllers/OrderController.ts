@@ -3,8 +3,6 @@ import {
 } from 'tsoa';
 import autoBind from 'auto-bind';
 import OrderService from '../services/OrderService';
-import { SwaggerResponse } from './interfaces';
-import { IExample } from './BoilerplateController';
 
 export interface IOrder{
   id: string;
@@ -25,30 +23,31 @@ class OrderController extends Controller {
 
   @Get('{id}')
   public async getOne(id: number): Promise<IOrder> {
-    const answer = this.service.getOne(id as number);
-    return answer;
+    return Promise.resolve(id);
+    // const answer = this.service.getOne(body as IOrder);
+    // return answer;
   }
 
   @Get()
-  public async getAll(): Promise<SwaggerResponse<IOrder>> {
+  public async getAll(): Promise<IOrder> {
     const answer = this.service.getAll();
     return answer;
   }
 
   @Post()
-  public async create(@Body() body: IOrder): Promise<SwaggerResponse<IOrder>> {
+  public async create(@Body() body: IOrder): Promise<IOrder> {
     const answer = this.service.create(body as IOrder);
     return answer;
   }
 
   @Patch()
-  public async update(@Body() body: IOrder): Promise<SwaggerResponse<IOrder>> {
+  public async update(@Body() body: IOrder): Promise<IOrder> {
     const answer = this.service.update(body as IOrder);
     return answer;
   }
 
   @Delete('{id}')
-  public async delete(@Body() body: IOrder): Promise<SwaggerResponse<IOrder>> {
+  public async delete(@Body() body: IOrder): Promise<IOrder> {
     const answer = this.service.delete(body as IOrder);
     return answer;
   }

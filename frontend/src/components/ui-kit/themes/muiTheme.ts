@@ -505,7 +505,7 @@ const theme = createTheme({
           paddingLeft: 0,
         },
         '& legend': {
-          width: 0,
+          width: '0 !important',
         },
       },
     },

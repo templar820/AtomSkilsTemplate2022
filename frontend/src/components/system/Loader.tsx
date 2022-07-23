@@ -3,11 +3,12 @@ import { Backdrop, CircularProgress } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import { MOBXDefaultProps } from '@globalTypes';
+import Colors from '@colors';
 
 const useStyles = makeStyles(theme => ({
   backdrop: {
     zIndex: 111111,
-    backgroundColor: 'transparent !important'
+    backgroundColor: `${Colors.white} !important`
   },
 }));
 
@@ -16,11 +17,9 @@ function Loader(props: MOBXDefaultProps) {
   const open = props.AppStore.isLoader;
   return (
     <Backdrop className={classes.backdrop} open={open || false}>
-      <CircularProgress color="error" />
+      <CircularProgress color="primary"/>
     </Backdrop>
   );
 }
-
-// export default Loader;
 
 export default MobXRouterDecorator(Loader, false);

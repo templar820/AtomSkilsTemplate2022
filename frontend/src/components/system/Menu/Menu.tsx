@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@mui/styles';
 import {
   ListItem, ListItemIcon, ListItemText, SvgIcon,
@@ -15,6 +15,7 @@ import { MOBXDefaultProps } from '@globalTypes';
 import MobXRouterDecorator from '@components/HOC/MobXRouterDecorator';
 import { SvgIcons, Tooltip } from 'ui-kit';
 import logo from '@images/logo3.png';
+import menuContents from "@components/system/Menu/menuContents";
 
 // const drawerWidth = 190;
 
@@ -118,9 +119,16 @@ const useStyles = makeStyles(theme => ({
 function Menu(props: MOBXDefaultProps) {
   const classes = useStyles();
   const appStore = props.AppStore;
+  const userStore = props.UserStore;
   const open = appStore.openMenu;
   const currentPath = useLocation().pathname;
   const [openNodes, setOpenNodes] = useState<string[]>([]);
+
+  useEffect(() => {
+    const role = userStore.user?.role;
+    if (!role) return;
+    appStore.setMainMenu(menuContents[role]);
+  }, [userStore.user?.role]);
 
   const getChildren = array => {
     if (!(array && array.length)) return null;

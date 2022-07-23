@@ -517,10 +517,19 @@ const theme = createTheme({
             paddingLeft: 0,
           },
           '& legend': {
-            width: 0,
+            width: '0 !important',
           },
         },
       },
+    },
+    MuiFormControl: {
+      styleOverrides: {
+        root: {
+          '& legend': {
+            width: '0 !important',
+          },
+        }
+      }
     },
     MuiFormControlLabel: {
       styleOverrides: {

@@ -1,6 +1,7 @@
 import AppService from '@services/App.service';
 import { RouteComponentProps } from 'react-router';
 import { RootStore } from './stores/Root.store';
+import AuthService from "@services/Auth.service";
 
 declare namespace NodeJS {
   export interface ProcessEnv {
@@ -12,6 +13,7 @@ declare module '*.scss';
 
 export interface IServices {
   appService: AppService;
+  authService: AuthService;
 }
 export interface IStores extends RootStore{
 }

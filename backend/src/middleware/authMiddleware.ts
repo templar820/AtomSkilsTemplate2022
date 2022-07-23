@@ -31,6 +31,7 @@ const auth = (req, res, next) => {
       if (err || !user) {
         throw new ServerError(401);
       } else {
+        req.user = user;
         next();
       }
     })(req, res, next);

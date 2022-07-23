@@ -4,83 +4,6 @@
 		"application/json"
 	],
 	"definitions": {
-		"IExample": {
-			"properties": {
-				"id": {
-					"type": "string"
-				},
-				"name": {
-					"type": "string"
-				},
-				"surname": {
-					"type": "string"
-				},
-				"status": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"id",
-				"name",
-				"surname",
-				"status"
-			],
-			"type": "object",
-			"additionalProperties": false
-		},
-		"SwaggerResponseIExample": {
-			"properties": {
-				"status": {
-					"type": "number",
-					"format": "double"
-				},
-				"isError": {
-					"type": "boolean"
-				},
-				"data": {
-					"$ref": "#/definitions/IExample"
-				},
-				"message": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"status",
-				"isError",
-				"data",
-				"message"
-			],
-			"type": "object",
-			"additionalProperties": false
-		},
-		"SwaggerResponseIExampleArray": {
-			"properties": {
-				"status": {
-					"type": "number",
-					"format": "double"
-				},
-				"isError": {
-					"type": "boolean"
-				},
-				"data": {
-					"items": {
-						"$ref": "#/definitions/IExample"
-					},
-					"type": "array"
-				},
-				"message": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"status",
-				"isError",
-				"data",
-				"message"
-			],
-			"type": "object",
-			"additionalProperties": false
-		},
 		"IOrder": {
 			"properties": {
 				"id": {
@@ -93,31 +16,6 @@
 			"required": [
 				"id",
 				"name"
-			],
-			"type": "object",
-			"additionalProperties": false
-		},
-		"SwaggerResponseIOrder": {
-			"properties": {
-				"status": {
-					"type": "number",
-					"format": "double"
-				},
-				"isError": {
-					"type": "boolean"
-				},
-				"data": {
-					"$ref": "#/definitions/IOrder"
-				},
-				"message": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"status",
-				"isError",
-				"data",
-				"message"
 			],
 			"type": "object",
 			"additionalProperties": false
@@ -199,160 +97,6 @@
 		}
 	},
 	"paths": {
-		"/example/{id}": {
-			"get": {
-				"operationId": "GetOne",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIExample"
-						}
-					}
-				},
-				"tags": [
-					"example"
-				],
-				"security": [
-					{
-						"api_key": []
-					}
-				],
-				"parameters": [
-					{
-						"in": "path",
-						"name": "id",
-						"required": true,
-						"format": "double",
-						"type": "number"
-					}
-				]
-			},
-			"delete": {
-				"operationId": "Delete",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIExample"
-						}
-					}
-				},
-				"tags": [
-					"example"
-				],
-				"security": [
-					{
-						"api_key": []
-					}
-				],
-				"parameters": [
-					{
-						"in": "body",
-						"name": "body",
-						"required": true,
-						"schema": {
-							"$ref": "#/definitions/IExample"
-						}
-					}
-				]
-			}
-		},
-		"/example": {
-			"get": {
-				"operationId": "GetAll",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIExampleArray"
-						}
-					}
-				},
-				"tags": [
-					"example"
-				],
-				"security": [
-					{
-						"api_key": []
-					}
-				],
-				"parameters": []
-			},
-			"post": {
-				"operationId": "Create",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIExample"
-						}
-					}
-				},
-				"tags": [
-					"example"
-				],
-				"security": [
-					{
-						"api_key": []
-					}
-				],
-				"parameters": [
-					{
-						"in": "body",
-						"name": "body",
-						"required": true,
-						"schema": {
-							"$ref": "#/definitions/IExample"
-						}
-					}
-				]
-			},
-			"patch": {
-				"operationId": "Update",
-				"produces": [
-					"application/json"
-				],
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIExample"
-						}
-					}
-				},
-				"tags": [
-					"example"
-				],
-				"security": [
-					{
-						"api_key": []
-					}
-				],
-				"parameters": [
-					{
-						"in": "body",
-						"name": "body",
-						"required": true,
-						"schema": {
-							"$ref": "#/definitions/IExample"
-						}
-					}
-				]
-			}
-		},
 		"/order/{id}": {
 			"get": {
 				"operationId": "GetOne",
@@ -394,7 +138,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIOrder"
+							"$ref": "#/definitions/IOrder"
 						}
 					}
 				},
@@ -428,7 +172,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIOrder"
+							"$ref": "#/definitions/IOrder"
 						}
 					}
 				},
@@ -451,7 +195,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIOrder"
+							"$ref": "#/definitions/IOrder"
 						}
 					}
 				},
@@ -483,7 +227,7 @@
 					"200": {
 						"description": "Ok",
 						"schema": {
-							"$ref": "#/definitions/SwaggerResponseIOrder"
+							"$ref": "#/definitions/IOrder"
 						}
 					}
 				},
@@ -581,6 +325,28 @@
 						}
 					}
 				]
+			}
+		},
+		"/user/logout": {
+			"get": {
+				"operationId": "LogoutUser",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"properties": {},
+							"type": "object"
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": []
 			}
 		},
 		"/user/userInfo": {

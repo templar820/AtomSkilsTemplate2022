@@ -33,6 +33,7 @@
       "@globalTypes": ["globals.d.ts"],
       "@api": ["./api/Api.service.ts"],
       "@services/*": ["services/*"],
+      "@stores/*": ["stores/*"],
       "@assets/*": ["assets/*"],
       "@images/*": ["img/*"],
     },

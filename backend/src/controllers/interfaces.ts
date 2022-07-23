@@ -5,10 +5,3 @@ export interface ASController<T> {
   update(body: T): Promise<T>;
   delete(id: number): Promise<T>;
 }
-
-export interface SwaggerResponse<T> {
-  status: number;
-  isError: boolean;
-  data: T;
-  message: string;
-}

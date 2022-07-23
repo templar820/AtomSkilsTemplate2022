@@ -50,6 +50,11 @@ export default class AppStore {
     localStorage.as_menu = this.openMenu;
   }
 
+  @action
+  setMainMenu(menu) {
+    this.mainMenu = menu;
+  }
+
   getLoader = () => toJS(this.isLoader);
 
   startLoader() {
@@ -64,36 +69,7 @@ export default class AppStore {
   }
 
   @observable
-  mainMenu = [
-    {
-      id: 'home',
-      name: 'Главная',
-      path: '/home',
-      icon: <Home />
-    },
-    {
-      id: 'examples',
-      name: 'Примеры',
-      icon: <Settings />,
-      children: [
-        {
-          id: 'table',
-          name: 'Таблицы',
-          path: '/examples/table'
-        },
-        {
-          id: 'products',
-          name: 'Сущности в списке',
-          path: '/examples/products'
-        },
-        {
-          id: 'pdf',
-          name: 'Pdf',
-          path: '/examples/pdf'
-        },
-      ]
-    },
-  ];
+  mainMenu = [];
 
   @observable
   botMenu = [

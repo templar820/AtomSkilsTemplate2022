@@ -388,6 +388,22 @@ export class Api<SecurityDataType extends unknown> {
      * No description
      *
      * @tags User
+     * @name LogoutUser
+     * @request GET:/user/logout
+     * @response `200` `object` Ok
+     */
+    logoutUser: (params: RequestParams = {}) =>
+      this.http.request<object, any>({
+        path: `/user/logout`,
+        method: "GET",
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags User
      * @name GetUserByToken
      * @request GET:/user/userInfo
      * @response `200` `IUserExport` Ok
