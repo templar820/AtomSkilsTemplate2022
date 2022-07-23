@@ -1,5 +1,5 @@
 #!/bin/bash
-
+git config --global credential.helper cache
 
 echo "############## SETUP DOCKER ##############"
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -12,8 +12,9 @@ sudo apt update
 sudo apt install docker-ce -y
 echo "############## 33333333 ##############"
 sudo usermod -aG docker ${USER}
-su - ${USER}
 echo "############## 4444444 ##############"
+su - ${USER}
+echo "############## 55555555 ##############"
 sudo usermod -aG docker ${USER}
 
 
