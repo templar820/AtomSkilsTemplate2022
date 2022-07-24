@@ -107,6 +107,7 @@
     "generate:modules": "concurrently \"npm:ts:css \"",
     "start": "cross-env NODE_ENV=development craco start",
     "build": "cross-env NODE_ENV=production craco build",
+    "build:full": "craco --max_old_space_size=2048 build",
     "test": "react-scripts start",
     "eject": "react-scripts eject"
   },
