@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd web3academy.pro && make build-production
+            cd AtomSkilsTemplate2022 && make build-production
       - name: deploy
         uses: appleboy/ssh-action@master
         with:
@@ -42,4 +42,4 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd web3academy.pro && make start-production
+            cd AtomSkilsTemplate2022 && make start-production
