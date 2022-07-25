@@ -1,6 +1,6 @@
 image: ubuntu:latest
 variables:
-  WORK_DIR: ${AS_TEMPLATE_2022}
+  WORK_DIR: ${AtomSkilsTemplate2022}
   BRANCH: ${CI_COMMIT_REF_NAME}
   REPO: https://github.com/templar820/AtomSkilsTemplate2022.git
   SERVER_URL: ${SERVER_URL}
