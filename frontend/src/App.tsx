@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 function App() {
   const endpoint = process.env.NODE_ENV === 'development'
     ? process.env.REACT_APP_ENDPOINT_DEVELOP : process.env.REACT_APP_ENDPOINT_PRODUCTION;
-  console.log(endpoint);
+  console.log("REACT_APP_ENDPOINT", endpoint);
   const httpClient = new HttpClient<any>({
     securityWorker: securityData => securityData,
     baseUrl: endpoint,
