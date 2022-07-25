@@ -21,6 +21,7 @@ const useStyles = makeStyles({
 
 interface ProductCardProps {
   product: ProductModel;
+  onEdit: () => void
 }
 
 function ProductCard(props: ProductCardProps) {
@@ -104,10 +105,11 @@ function ProductCard(props: ProductCardProps) {
               <MenuItem
                 onClick={(e) => {
                   e.stopPropagation();
+                  props.onEdit();
                   handleCloseSettingsMenu(e);
                 }}
               >
-                {t('edit')}
+                Редактировать
               </MenuItem>
               <MenuItem
                 onClick={(e) => {
