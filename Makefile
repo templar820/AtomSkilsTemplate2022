@@ -10,7 +10,7 @@ start-frontend:
 build-production:
 	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml -f docker-compose.production.yaml build
 start-production:
-	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml -f docker-compose.production.yaml up -d
+	docker-compose -f docker-compose.develop_backend.yaml -f docker-compose.develop_frontend.yaml -f docker-compose.production.yaml up
 
 
 

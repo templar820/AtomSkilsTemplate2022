@@ -10,6 +10,8 @@ x-backend: &backend
   volumes:
     - ./backend:/backend
     - /backend/node_modules
+  depends_on:
+    - pghost
   restart: unless-stopped
   env_file: .env
 
