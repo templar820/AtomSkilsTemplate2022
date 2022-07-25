@@ -15,6 +15,7 @@ import AuthorizationPage from "@pages/AuthorizationPage/AuthorizationPage";
 import Auth from "@components/system/Auth";
 import {Roles} from "@services/Auth.service";
 import AdminPanel from '@pages/AdminPanel';
+import Analytics from "@pages/Analytics";
 
 function Router(props: MOBXDefaultProps) {
   const userStore = props.UserStore;
@@ -66,6 +67,11 @@ function Router(props: MOBXDefaultProps) {
               exact
               path="/examples/pdf"
               render={p => getPage(p, Pdf, [Roles.ADMIN])}
+            />
+            <Route
+              exact
+              path="/examples/analytics"
+              render={p => getPage(p, Analytics, [Roles.ADMIN])}
             />
             <Route
               exact

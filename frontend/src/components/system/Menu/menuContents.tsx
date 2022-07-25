@@ -41,6 +41,11 @@ export default new Proxy({
           name: 'Pdf',
           path: '/examples/pdf'
         },
+        {
+          id: 'analytics',
+          name: 'Аналитика',
+          path: '/examples/analytics'
+        },
       ]
     },
   ],

@@ -8,13 +8,17 @@ ARG REACT_APP_ENDPOINT_PRODUCTION
 ARG REACT_APP_SWAGGER_ENDPOINT
 
 
-ADD /frontend /frontend
+RUN mkdir -p /frontend
 WORKDIR /frontend
 
-RUN npm install --legacy-peer-deps
+# Установка зависимостей
+COPY ./frontend/package*.json ./
+RUN npm install
+# Для использования в продакшне
+# RUN npm install --production
 
-
-
+# Копирование файлов проекта
+COPY ./frontend .
 
 
 ENV ESLINT_NO_DEV_ERRORS ${ESLINT_NO_DEV_ERRORS}
