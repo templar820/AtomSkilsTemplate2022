@@ -46,6 +46,11 @@ export default new Proxy({
           name: 'Аналитика',
           path: '/examples/analytics'
         },
+        {
+          id: 'form-generator',
+          name: 'Генератор форм',
+          path: '/examples/form-generator'
+        },
       ]
     },
   ],
