@@ -14,8 +14,8 @@ import logger from './middleware/logger';
 import IoModel from './socket/IoModel';
 import startFileManagerServer from './filemanager';
 import router from './routes';
-import initData from './models/initData';
 import initAdminPanel from './utils/adminPanel';
+const server = require('http');
 
 const PORT = process.env.BACKEND_PORT || 8080;
 const app = express();
@@ -45,11 +45,13 @@ app.get('/api/docs/swagger.json', (req, res) => res.json(swaggerDocument));
 app.use('/api/docs', swaggerUi.serveFiles(null, options), swaggerUi.setup(null, options));
 app.use(responseHandler);
 app.use(authMiddleware);
-const io = new IoModel(app);
+const httpServer = server.Server(app);
+
+app.set('socketService', new IoModel(server));
 
 app.use('/api', router);
 
-createTerminus(io.http, healthCheck);
+createTerminus(httpServer, healthCheck);
 
 app.use((req, res) => {
   res.status(404);
@@ -58,5 +60,5 @@ app.use((req, res) => {
 
 Promise.all([db.authenticate(), db.sync()]).then(() => {
   console.log('DB CONNECT');
-  io.http.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
+  httpServer.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
 });
