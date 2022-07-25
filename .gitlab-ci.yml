@@ -1,8 +1,8 @@
 image: ubuntu:latest
 variables:
-  WORK_DIR: ${CI_PROJECT_NAME}
+  WORK_DIR: ${AS_TEMPLATE_2022}
   BRANCH: ${CI_COMMIT_REF_NAME}
-  REPO: https://gitlab.com/trade-s/portal.git
+  REPO: https://github.com/templar820/AtomSkilsTemplate2022.git
   SERVER_URL: ${SERVER_URL}
   SSH_PRIVATE_KEY: ${SSH_PRIVATE_KEY}
 stages:
@@ -23,4 +23,4 @@ deploy:
     - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
-    - ssh root@"$SERVER_URL" 'cd portal; git pull; make stop; make build; make start;'
+    - ssh root@"$SERVER_URL" 'cd AtomSkilsTemplate2022; git pull; make stop; make build-production; make start-production;'
