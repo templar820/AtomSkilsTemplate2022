@@ -36,6 +36,7 @@
       "@stores/*": ["stores/*"],
       "@assets/*": ["assets/*"],
       "@images/*": ["img/*"],
+      "@rjsf/material-ui/*": ["node_modules/@rjsf/material-ui/dist/*"]
     },
     "jsx": "react-jsx"
   },
