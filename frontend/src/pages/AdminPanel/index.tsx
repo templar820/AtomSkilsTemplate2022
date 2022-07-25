@@ -8,7 +8,7 @@ function AdminPanel(props: MOBXDefaultProps) {
    */
   const endpoint = process.env.NODE_ENV === 'development'
       ? process.env.REACT_APP_ADMIN_ENDPOINT_DEVELOP : process.env.REACT_APP_ADMIN_ENDPOINT_PRODUCTION;
-  console.log(endpoint);
+  console.log(endpoint, process.env.NODE_ENV, process.env.REACT_APP_ADMIN_ENDPOINT_DEVELOP, process.env.REACT_APP_ADMIN_ENDPOINT_PRODUCTION);
   return (
     <iframe width={'100%'} height={'100%'} src={endpoint}/>
   );
