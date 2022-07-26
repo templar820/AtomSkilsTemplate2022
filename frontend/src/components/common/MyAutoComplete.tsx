@@ -29,6 +29,7 @@ export default function (props: IAutoCompleteProps) {
           {...params}
           label={props.label}
           required={props.required}
+          disabled={params.disabled || props.readOnly}
           InputProps={{
             ...params.InputProps,
             disableUnderline: true,

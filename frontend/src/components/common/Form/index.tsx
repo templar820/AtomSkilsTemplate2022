@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import RjsfForm from '@rjsf/material-ui/v5';
 import {FormProps, WidgetProps} from '@rjsf/core';
-import {getAutocompleteSchema, getObjectProperties} from './utils';
+import {ArrayFieldTemplate, FormAutoComplete, getAutocompleteSchema, getObjectProperties} from './utils';
 
 interface Autocompletes {
   [fieldName: string]: {
@@ -38,10 +38,6 @@ const Form: React.FC<FormProps<any> & MyFormProps> = (props) => {
 
     return {
       ...props.uiSchema,
-      "ui:options":  {
-        orderable: false,
-        removable: false
-      },
       ...autocompleteSchema,
     }
 
@@ -57,6 +53,7 @@ const Form: React.FC<FormProps<any> & MyFormProps> = (props) => {
         setFormData(e.formData);
         props.onChange?.(e);
       }}
+      ArrayFieldTemplate={ArrayFieldTemplate}
     />
   ), [resultSchema, uiSchema]);
 

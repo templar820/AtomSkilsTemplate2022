@@ -18,11 +18,14 @@ const FormGenerator = () => {
       <div>
         <Form
           schema={exampleSchema}
-          defaultValues={{autoComplete: 'name3', test: {autoComplete1: 'name2'}}}
+          defaultValues={{string: 'str', autoComplete: 'name3', test: {autoComplete1: 'name2'}, array: [{name: 'name1', age: 100}]}}
           autocompletes={{
             autoComplete: {options},
             test: {
               autoComplete1: {options}
+            },
+            array: {
+              items: {name: {options}}
             }
           }}
           onSubmit={(e) => console.log(e.formData)}

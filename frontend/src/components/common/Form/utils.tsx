@@ -1,15 +1,39 @@
-import React from "react";
+import React, {useMemo} from "react";
 import {WidgetProps} from "@rjsf/core";
 import MyAutoComplete from "@common/MyAutoComplete";
+import {Button, Paper, Typography, IconButton} from "@mui/material";
+import {Close} from '@mui/icons-material'
 
+export const ArrayFieldTemplate = (props) => {
+  return (
+    <Paper variant="outlined" className="p-3">
+      <Typography variant="h5" className="mb-3">{props.title}</Typography>
+      {props.items.map(element => (
+        <Paper variant="outlined" className="p-2 mb-3 position-relative">
+          {element.hasRemove && !props.readonly && (
+            <IconButton style={{position: 'absolute', right: '0', zIndex: 1}} onClick={element.onDropIndexClick(element.index)}><Close/></IconButton>
+          )}
+          {element.children}
+        </Paper>
+      ))}
+      {props.canAdd && !props.readonly && (
+        <div className="d-flex">
+          <Button variant="contained" type="button" className="ms-auto" onClick={props.onAddClick}>Добавить</Button>
+        </div>
+      )}
+    </Paper>
+  );
+}
 
-const FormAutoComplete = (props: WidgetProps) => {
+export const FormAutoComplete = (props: WidgetProps) => {
   const options = props.options.props.options;
+  const defaultValue = useMemo((() => options.find(o => o.value === props.value)), []);
+
   return <MyAutoComplete
-    readOnly={props.readOnly}
+    readOnly={props.readonly}
     required={props.required}
     options={options}
-    defaultValue={options.find(o => o.value === props.schema.default)}
+    defaultValue={defaultValue}
     onChange={(e) => props.onChange(e?.value || undefined)}
     label={props.schema.title}
   />
