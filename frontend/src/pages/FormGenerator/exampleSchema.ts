@@ -9,9 +9,33 @@ const exampleSchema: JSONSchema7 = {
       title: "Строка",
       default: 'string'
     },
+    textArea: {
+      type: "string",
+      format: "textarea"
+    },
+    checkBox: {
+      type: 'boolean',
+      format: 'radio',
+    },
+    radio: {
+      type: 'string',
+      format: 'radio',
+      enum: ['one', 'two', 'tree'],
+    },
+    range: {
+      type: "number",
+      format: "range",
+      maximum: 150,
+      minimum: -10,
+    },
     number: {
       type: "number",
+      minimum: 0,
       title: "Число"
+    },
+    color: {
+      type: "string",
+      format: 'color'
     },
     date: {
       title: 'Дата',

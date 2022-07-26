@@ -16,7 +16,6 @@ const FormGenerator = () => {
         <Button className="me-3" onClick={() => setDialogMode('update')}>Редактировать</Button>
       </div>
       <div>
-
         <Form
           schema={exampleSchema}
           defaultValues={{autoComplete: 'name3', test: {autoComplete1: 'name2'}}}
@@ -27,7 +26,6 @@ const FormGenerator = () => {
             }
           }}
           onSubmit={(e) => console.log(e.formData)}
-
         >
           <Button type="submit" variant="contained">Отправить</Button>
         </Form>
