@@ -3,8 +3,9 @@ import {CommonDialog} from "ui-kit";
 import Form from '../Form';
 import {JSONSchema7} from "json-schema";
 import './styles.scss';
+import {MyFormProps} from "@common/Form";
 
-interface FormDialogProps {
+interface FormDialogProps extends MyFormProps{
   close: () => void;
   schema: JSONSchema7;
   title: string;
@@ -12,10 +13,9 @@ interface FormDialogProps {
   onSave?: (value: any) => void;
   onUpdate?: (value: any) => void;
   onChange?: (value: any) => void;
-  defaultValues?: {[key: string]: any};
   width?: number;
   height?: number;
-}
+};
 
 export type FormDialogMode = 'create' | 'update' | null;
 
@@ -27,6 +27,7 @@ const FormDialog: React.FC<FormDialogProps> = ({
   schema,
   title,
   defaultValues,
+  autocompletes,
   mode = 'create',
   width,
   height
@@ -44,6 +45,7 @@ const FormDialog: React.FC<FormDialogProps> = ({
         }
       }}
       defaultValues={mode === 'update' ? defaultValues : undefined}
+      autocompletes={autocompletes}
       onChange={(e) => onChange?.(e.formData)}
     >
       <button type="submit" className="d-none" ref={submitButtonRef}></button>

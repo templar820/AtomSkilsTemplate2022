@@ -9,7 +9,7 @@ interface Autocompletes {
   } | Autocompletes;
 }
 
-interface MyFormProps {
+export interface MyFormProps {
   defaultValues?: {[key: string]: any};
   autocompletes?: Autocompletes;
 }
