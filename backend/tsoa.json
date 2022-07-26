@@ -7,14 +7,6 @@
       "title": "User Login Auth and Registration"
     },
     "tags":[
-      {
-        "name":"Products",
-        "description":"Операции доступные с продуктами"
-      },
-      {
-        "name":"User",
-        "description":"Операции с пользователем"
-      }
     ],
     "outputDirectory": "./",
     "entryFile": "./src/index.ts",

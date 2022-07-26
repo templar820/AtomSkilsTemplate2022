@@ -1,4 +1,4 @@
-import models from '../models/DbModel';
+import {User} from '../models/DbModel';
 const AdminJS = require('adminjs')
 const AdminJSExpress = require('@adminjs/express')
 const AdminJSSequelize = require('@adminjs/sequelize')
@@ -8,7 +8,7 @@ AdminJS.registerAdapter(AdminJSSequelize)
 function initAdminPanel(path='/admin', app) {
     const adminJs = new AdminJS({
         resources: [{
-            resource: models.User,
+            resource: User,
             options: {}
         }],
         rootPath: path,
