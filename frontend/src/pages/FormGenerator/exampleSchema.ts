@@ -7,6 +7,7 @@ const exampleSchema: JSONSchema7 = {
     string: {
       type: "string",
       title: "Строка",
+      default: 'string'
     },
     number: {
       type: "number",
@@ -22,13 +23,44 @@ const exampleSchema: JSONSchema7 = {
       type: "string",
       format: "date-time"
     },
+    autoComplete: {
+      type: "string",
+      title: "AutoComplete",
+    },
+    test: {
+      type: "object",
+      required: ['autoComplete1'],
+      properties: {
+        autoComplete1: {
+          type: "string",
+          title: "AutoComplete",
+        },
+      }
+    },
     select: {
       title: 'Select',
       type: "number",
       enum: [1, 2, 3],
       enumNames: ["Один", "Два", "Три"]
     },
+    array: {
+      type: 'array',
+      title: 'Массив',
+      items: {
+        type: "object",
+        properties: {
+          name: {
+            title: "Имя",
+            type: "string"
+          },
+          age: {
+            title: "Возраст",
+            type: "number"
+          }
+        }
+      }
+    }
   },
-};
+}
 
 export default exampleSchema;
