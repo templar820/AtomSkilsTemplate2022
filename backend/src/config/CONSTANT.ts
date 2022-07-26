@@ -12,4 +12,6 @@ export default {
   POSTGRES_PORT: process.env.POSTGRES_PORT,
   POSTGRES_DB: process.env.POSTGRES_DB,
   POSTGRES_HOST: process.env.MY_POSTGRESS_HOST,
+  LOGIN_PASSWORD: process.env.LOGIN_PASSWORD,
+  ADMIN_EMAIL: process.env.ADMIN_EMAIL,
 };

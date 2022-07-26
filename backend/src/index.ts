@@ -15,6 +15,7 @@ import IoModel from './socket/IoModel';
 import startFileManagerServer from './filemanager';
 import router from './routes';
 import initAdminPanel from './utils/adminPanel';
+import initData from './models/initData';
 const server = require('http');
 
 const PORT = process.env.BACKEND_PORT || 8080;
@@ -60,5 +61,6 @@ app.use((req, res) => {
 
 Promise.all([db.authenticate(), db.sync()]).then(() => {
   console.log('DB CONNECT');
+  initData();
   httpServer.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
 });

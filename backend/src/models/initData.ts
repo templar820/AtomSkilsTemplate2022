@@ -5,8 +5,7 @@ const initData = async () => {
   const users = await User.findAll();
   if (!users.length) {
     await User.bulkCreate([
-      {email: constant.ADMIN_EMAIL, password: constant.LOGIN_PASSWORD, role: 'admin'},
-      {email: constant.USER_EMAIL, password: constant.LOGIN_PASSWORD, role: 'user'}
+      {email: constant.ADMIN_EMAIL, password: constant.LOGIN_PASSWORD, role: 'ADMIN'},
     ])
   }
 }
