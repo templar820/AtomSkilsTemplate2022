@@ -59,8 +59,8 @@ app.use((req, res) => {
   res.json({ error: 'notFound' });
 });
 
-Promise.all([db.authenticate(), db.sync()]).then(() => {
+Promise.all([db.authenticate(), db.sync({ alter: true })]).then(async() => {
   console.log('DB CONNECT');
-  initData();
+  await initData();
   httpServer.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
 });

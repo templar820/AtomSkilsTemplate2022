@@ -5,10 +5,15 @@ export class ServerError{
 
   message: string;
 
-  constructor(code: number) {
-    const error = ERRORS[code] || ERRORS[0];
-    this.status = error.status;
-    this.message = error.message;
+  constructor(code: number, message?: string) {
+      if (message) {
+          this.message = message;
+          this.status = code;
+      } else {
+          const error = ERRORS[code] || ERRORS[0];
+          this.message = message || error.message;
+          this.status = error.status;
+      }
   }
 }
 
