@@ -11,6 +11,6 @@ node_modules/
 /phone/node_modules
 /verdaccio/storage
 
-
+/backend/swagger.json
 *.idea
 *package-lock.json

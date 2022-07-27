@@ -1,6 +1,19 @@
 version: '3.8'
 
 
+#x-frontend: &frontend
+#  build:
+#    context: .
+#    dockerfile: _docker/frontend/Dockerfile
+#  image: frontend
+#  stdin_open: true
+#  ports:
+#    - ${PORT}:${PORT}
+#  volumes:
+#    - ./frontend:/frontend
+#    - /frontend/node_modules
+#  env_file:
+#    - .env
 
 
 services:
@@ -24,4 +37,9 @@ services:
         - REACT_APP_ADMIN_ENDPOINT_PRODUCTION=$REACT_APP_ADMIN_ENDPOINT_PRODUCTION
     env_file:
       - .env
+
+#  frontend:
+#    container_name: "frontend"
+#    <<: *frontend
+#    command: npm run start
 
