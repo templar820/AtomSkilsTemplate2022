@@ -52,7 +52,7 @@ class AuthRouter extends BaseRouter {
         return next(err);
       }
       if (!user) {
-        return next(new ServerError(400, 'Incorrect login or password'));
+        return next(new ServerError(400, 'Некоректный логин или пароль'));
       }
       req.logIn(user, { session: false }, (err) => {
         if (err) {

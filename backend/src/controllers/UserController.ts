@@ -31,6 +31,10 @@ class UserController extends Controller {
     return { token };
   }
 
+  /**
+   * login для пользователя
+   * @param body
+   */
   @Post('/login')
   public async loginUser(@Body() body: AuthCred) : Promise<{ token: string }> {}
 

@@ -68,6 +68,15 @@ export default class BaseRouter {
     });
   }
 
+  createHandleMiddleware(request: requestType, path: string, handler: (body: any) => any, options?:RequestOptions) {
+    this.router[request](path, asyncMiddleware(async (req: MyRequest, res: MyResponse, next) => {
+      if (this.checkRole(req?.user?.role, options?.access)) {
+        const answer = await handler(req.body);
+        this.sendAnswer(answer, req, res, next, options);
+      }
+    }));
+  }
+
   createHandleWithBody(request: requestType, path: string, handler: (body: any) => any, options?:RequestOptions) {
     this.router[request](path, asyncMiddleware(async (req: MyRequest, res: MyResponse, next) => {
       if (this.checkRole(req?.user?.role, options?.access)) {

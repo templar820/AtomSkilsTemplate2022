@@ -54,4 +54,4 @@ class ExampleController extends Controller implements ASController<IExample>{
   }
 }
 
-export default ExampleController;
+export default new ExampleController();
