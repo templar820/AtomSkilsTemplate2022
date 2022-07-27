@@ -4,7 +4,8 @@ sudo apt update
 sudo apt install git -y
 git config --global credential.helper store
 git config --global credential.helper cache
-
+git config --global user.email "ttemplar820@gmail.com"
+git config --global user.name "templar820"
 
 
 echo "############## SETUP DOCKER ##############"
