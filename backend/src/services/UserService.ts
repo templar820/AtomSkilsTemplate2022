@@ -6,8 +6,7 @@ import {ServerError} from "../middleware/errorHandler";
 
 class UserService extends BaseService{
   async create({email, password, language = "RU", role = 'USER'}) {
-    const hashPassword = await this.getPassword(password)
-    return await User.create({email, password: hashPassword, role, user_details: {language}}, {
+    return await User.create({email, password: password, role, user_details: {language}}, {
       include: {
         model: UserDetails,
         as: UserDetails.name
@@ -22,7 +21,7 @@ class UserService extends BaseService{
     return await this.checkPassword(user.password, dbUser.password) ? dbUser : null;
   }
 
-  getPassword = async (password) => await bcrypt.hash(password, 5)
+  getPassword = async (password) => await bcrypt.hash(password, 10)
 
   checkPassword = async (password, passwordHash) => await bcrypt.compare(password, passwordHash)
 
