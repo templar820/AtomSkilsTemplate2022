@@ -467,6 +467,7 @@ const theme = createTheme({
     MuiCheckbox: {
       styleOverrides: {
         root: {
+          marginRight: '6px',
           padding: '8px',
           width: 16,
           height: 16,
@@ -535,6 +536,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           padding: 0,
+          marginLeft: 0,
         },
       },
     },

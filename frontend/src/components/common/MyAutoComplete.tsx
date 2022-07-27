@@ -6,6 +6,7 @@ import React from 'react';
 interface IAutoCompleteProps extends Omit<AutocompleteProps<any, any, any, any>, 'renderInput'>{
   icon: React.ReactNode;
   // eslint-disable-next-line react/require-default-props
+  required?: boolean;
   label?: string;
   onChange: (value: any) => void;
 
@@ -24,9 +25,11 @@ export default function (props: IAutoCompleteProps) {
       }}
       renderInput={params => (
         <TextField
-          variant="standard"
+          variant="outlined"
           {...params}
           label={props.label}
+          required={props.required}
+          disabled={params.disabled || props.readOnly}
           InputProps={{
             ...params.InputProps,
             disableUnderline: true,
