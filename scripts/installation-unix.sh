@@ -2,6 +2,7 @@
 echo "############## UPDATE GIT CREDENTIALS ##############"
 sudo apt update
 sudo apt install git -y
+git config --global credential.helper store
 git config --global credential.helper cache
 
 
