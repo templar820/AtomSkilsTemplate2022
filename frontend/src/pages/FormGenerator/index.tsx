@@ -3,6 +3,7 @@ import Form from '@components/common/Form';
 import {Button} from "@mui/material";
 import FormDialog, {FormDialogMode} from "@common/FormDialog";
 import exampleSchema from "@pages/FormGenerator/exampleSchema";
+import {formatDate} from "../../utils/getDataSet";
 
 const FormGenerator = () => {
   const [dialogMode, setDialogMode] = useState<FormDialogMode>(null);
@@ -38,7 +39,16 @@ const FormGenerator = () => {
         mode={dialogMode}
         close={() => setDialogMode(null)}
         schema={exampleSchema}
-        defaultValues={{string: '123'}}
+        defaultValues={{string: '123', date: formatDate(new Date(), 'yyyy-mm-dd')}}
+        autocompletes={{
+          autoComplete: {options},
+          test: {
+            autoComplete1: {options}
+          },
+          array: {
+            items: {name: {options}}
+          }
+        }}
         onChange={(value) => console.log('onChange', value)}
         onSave={(value) => console.log('onSubmit', value)}
         onUpdate={(value) => console.log('onSubmit', value)}

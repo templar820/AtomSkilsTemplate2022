@@ -24,7 +24,7 @@ const typeConfigs = {
   }
 }
 
-const formatDate = (date, format) => {
+export const formatDate = (date, format) => {
   const map = {
     mm: ("0" + (date.getMonth() + 1)).slice(-2),
     dd: date.getDate(),
