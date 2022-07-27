@@ -3,11 +3,11 @@ import BaseRouter, { requestType } from './BaseRouter';
 import IoModel from '../socket/IoModel';
 import OrderController, { IOrder } from '../controllers/OrderController';
 
-class ProductRouter extends BaseRouter {
-  constructor() {
-    super();
-    this.generateCrud('/order', OrderController);
-  }
+class OrderRouter extends BaseRouter {
+    constructor() {
+        super();
+        this.generateCrud('/order', OrderController);
+    }
 }
 
-export default new ProductRouter().router;
+export default new OrderRouter().router;

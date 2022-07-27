@@ -69,6 +69,24 @@ const UserDetails = db.define('user_details', {
   language: { type: DataTypes.STRING },
 });
 
+const Product = db.define('product', {
+  name: {type: DataTypes.STRING},
+  price: {type: DataTypes.FLOAT}
+});
+
+const ProductType = db.define('product_type', {
+   name: {type: DataTypes.STRING, unique: true}
+})
+
+ProductType.hasOne(Product, {foreignKey: 'typeId'});
+Product.belongsTo(ProductType, {foreignKey: 'typeId'});
+
+Product.hasOne(Order, {foreignKey: 'productId'});
+Order.belongsTo(Product, {foreignKey: 'productId'});
+User.hasOne(Order, {foreignKey: 'userId'});
+Order.belongsTo(User, {foreignKey: 'userId'});
+
+
 // User.hasOne(UserDetails, {as: "user_details", foreignKey: 'fk_user_id', targetKey: 'id'});
 // User.hasOne(UserDetails, {as: 'user_details'});
 User.belongsTo(UserDetails, { as: 'user_details' });
@@ -88,11 +106,8 @@ export interface JWTUser {
 export {
   User,
   UserDetails,
-  Order
+  Order,
+  Product,
+  ProductType
 };
 
-export default {
-  User,
-  UserDetails,
-  Order
-}
