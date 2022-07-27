@@ -1,69 +1,48 @@
-import React from 'react';
-import Form from '@rjsf/material-ui/v5';
-import {JSONSchema7} from "json-schema";
+import React, {useEffect, useState} from 'react';
+import Form from '@components/common/Form';
+import {Button} from "@mui/material";
+import FormDialog, {FormDialogMode} from "@common/FormDialog";
+import exampleSchema from "@pages/FormGenerator/exampleSchema";
 
 const FormGenerator = () => {
+  const [dialogMode, setDialogMode] = useState<FormDialogMode>(null);
+  const options = [{name: 'Чиковани', value: 'name1'}, {name: 'Иванов', value: 'name2'}, {name: 'Кузнецов', value: 'name3'}];
 
-  const schema: JSONSchema7 = {
-    type: "object",
-    required: ['string', 'number'],
-    properties: {
-      string: {
-        type: "string",
-        title: "Строка"
-      },
-      number: {
-        type: "number",
-        title: "Число"
-      },
-      date: {
-        title: 'Дата',
-        "type": "string",
-        "format": "date"
-      },
-      datetime: {
-        title: 'Дата и Время',
-        "type": "string",
-        "format": "date-time"
-      },
-      select: {
-        title: 'Select',
-        type: "number",
-        enum: [1, 2, 3],
-        enumNames: ["Один", "Два", "Три"]
-      },
-      array: {
-        type: 'array',
-        title: 'Массив',
-        items: {
-          type: "object",
-          properties: {
-            name: {
-              title: "Имя",
-              type: "string"
-            },
-            age: {
-              title: "Возраст",
-              type: "number"
-            }
-          }
-        }
-      }
-    },
-  };
-
-  const uiSchema = {
-    "ui:options":  {
-      orderable: false,
-      removable: false
-    }
-  };
   return (
     <div>
-      <h3 className="mb-3">Генератор форм</h3>
-      <div>
-        <Form schema={schema} uiSchema={uiSchema}/>
+      <div className="d-flex align-items-center mb-3">
+        <h3 className="me-3">Генератор форм</h3>
+        <Button className="me-3" onClick={() => setDialogMode('create')}>Создать</Button>
+        <Button className="me-3" onClick={() => setDialogMode('update')}>Редактировать</Button>
       </div>
+      <div>
+        <Form
+          schema={exampleSchema}
+          defaultValues={{string: 'str', autoComplete: 'name3', test: {autoComplete1: 'name2'}, array: [{name: 'name1', age: 100}]}}
+          autocompletes={{
+            autoComplete: {options},
+            test: {
+              autoComplete1: {options}
+            },
+            array: {
+              items: {name: {options}}
+            }
+          }}
+          onSubmit={(e) => console.log(e.formData)}
+        >
+          <Button type="submit" variant="contained">Отправить</Button>
+        </Form>
+      </div>
+      <FormDialog
+        title="Чего-то"
+        mode={dialogMode}
+        close={() => setDialogMode(null)}
+        schema={exampleSchema}
+        defaultValues={{string: '123'}}
+        onChange={(value) => console.log('onChange', value)}
+        onSave={(value) => console.log('onSubmit', value)}
+        onUpdate={(value) => console.log('onSubmit', value)}
+      />
     </div>
   );
 };
