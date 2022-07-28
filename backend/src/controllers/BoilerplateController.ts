@@ -25,7 +25,7 @@ class ExampleController extends Controller implements ASController<IExample>{
 
   @Get('{id}')
   public async getOne(id: number): Promise<IExample> {
-    const answer = this.service.getOne(body as IExample);
+    const answer = this.service.getOne(id);
     return answer;
   }
 
