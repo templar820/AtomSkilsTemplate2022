@@ -26,7 +26,7 @@ class ProductController extends Controller implements ASController<IProduct>{
 
     @Get('{id}')
     public async getOne(id: number): Promise<IProduct> {
-        const answer = this.service.getOne(body as IProduct);
+        const answer = this.service.getOne(id);
         return answer;
     }
 

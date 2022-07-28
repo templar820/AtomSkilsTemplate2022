@@ -78,8 +78,8 @@ const ProductType = db.define('product_type', {
    name: {type: DataTypes.STRING, unique: true}
 })
 
-ProductType.hasOne(Product, {foreignKey: 'typeId'});
-Product.belongsTo(ProductType, {foreignKey: 'typeId'});
+ProductType.hasOne(Product, {foreignKey: 'typeId', as: 'productType'});
+Product.belongsTo(ProductType, {foreignKey: 'typeId', as: 'productType'});
 
 Product.hasOne(Order, {foreignKey: 'productId'});
 Order.belongsTo(Product, {foreignKey: 'productId'});
