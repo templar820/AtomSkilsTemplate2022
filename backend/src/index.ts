@@ -24,12 +24,13 @@ startFileManagerServer();
 app.use(cors());
 app.use(cookieParser());
 app.use(logger);
+initAdminPanel('/admin', app);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('static'));
 app.use(fileUpload({}));
 
-initAdminPanel('/admin', app);
 
 app.get('/erd', (req: Request, res: Response) => {
   SequelizeErd({ source: db }).then((erd: string) => {
