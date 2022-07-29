@@ -44,6 +44,23 @@
 			"type": "object",
 			"additionalProperties": false
 		},
+		"IProductType": {
+			"properties": {
+				"id": {
+					"type": "number",
+					"format": "double"
+				},
+				"name": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"name"
+			],
+			"type": "object",
+			"additionalProperties": false
+		},
 		"IUser": {
 			"properties": {
 				"email": {
@@ -115,7 +132,7 @@
 	},
 	"info": {
 		"title": "backend",
-		"version": "1.0.1",
+		"version": "1.0.2",
 		"license": {
 			"name": "ISC"
 		}
@@ -467,6 +484,163 @@
 					}
 				],
 				"parameters": []
+			}
+		},
+		"/product-type/{id}": {
+			"get": {
+				"operationId": "GetOne",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				},
+				"tags": [
+					"ProductType"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"format": "double",
+						"type": "number"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "Delete",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				},
+				"tags": [
+					"ProductType"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				]
+			}
+		},
+		"/product-type": {
+			"get": {
+				"operationId": "GetAll",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"items": {
+								"$ref": "#/definitions/IProductType"
+							},
+							"type": "array"
+						}
+					}
+				},
+				"tags": [
+					"ProductType"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			},
+			"post": {
+				"operationId": "Create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				},
+				"tags": [
+					"ProductType"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "Update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				},
+				"tags": [
+					"ProductType"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/IProductType"
+						}
+					}
+				]
 			}
 		},
 		"/user/register": {
