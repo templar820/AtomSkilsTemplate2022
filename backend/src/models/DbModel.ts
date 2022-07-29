@@ -65,10 +65,6 @@ const Order = db.define('order', {
   name: { type: DataTypes.STRING },
 });
 
-const UserDetails = db.define('user_details', {
-  language: { type: DataTypes.STRING },
-});
-
 const Product = db.define('product', {
   name: {type: DataTypes.STRING},
   price: {type: DataTypes.FLOAT}
@@ -89,7 +85,6 @@ Order.belongsTo(User, {foreignKey: 'userId'});
 
 // User.hasOne(UserDetails, {as: "user_details", foreignKey: 'fk_user_id', targetKey: 'id'});
 // User.hasOne(UserDetails, {as: 'user_details'});
-User.belongsTo(UserDetails, { as: 'user_details' });
 
 export interface ISubstance {
   name: string;
@@ -105,7 +100,6 @@ export interface JWTUser {
 
 export {
   User,
-  UserDetails,
   Order,
   Product,
   ProductType

@@ -6,12 +6,7 @@ import {ServerError} from "../middleware/errorHandler";
 
 class UserService extends BaseService{
   async create({email, password, language = "RU", role = 'USER'}) {
-    return await User.create({email, password: password, role, user_details: {language}}, {
-      include: {
-        model: UserDetails,
-        as: UserDetails.name
-      }
-    });
+    return await User.create({email, password: password, role});
   }
 
   async loginUser(user){
