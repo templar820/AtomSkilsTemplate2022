@@ -62,5 +62,10 @@ app.use((req, res) => {
 Promise.all([db.authenticate(), db.sync({ alter: true })]).then(async() => {
   console.log('DB CONNECT');
   await initData();
-  httpServer.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
+  if (process.env.NODE_ENV === 'development') {
+    console.log('start dev server')
+    httpServer.listen(PORT, process.env.BACKEND_DEV_HOST, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
+  } else {
+    httpServer.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${ PORT}`));
+  }
 });
